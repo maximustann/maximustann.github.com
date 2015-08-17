@@ -10,6 +10,8 @@ tags: ["Machine Learning"]
 This post only shows the intuition of multivariate gaussian.
 It does not contain any detailed explaination.
 
+<!--more-->
+
 You can use R or other language plot the multivariate gaussian:
 
 	bivn <- mvrnorm(1000, mu = c(0, 0), Sigma = matrix(c(1, 0, 0, 1), 2))
