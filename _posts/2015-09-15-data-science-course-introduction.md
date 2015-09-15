@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Data Science Course Introduction"
+description: ""
+category: 
+tags: ["Data Science"]
+---
+{% include JB/setup %}
+
++ Covers topics in the area of data-intensive science, programming to computational methods
++ Computational science rather than computer science 
+
+One of the important point of the report *Frontiers in the Analysis of Massive Data*
+is that **The need to look at the end-to-end data life cycle.** It is going to be an 
+important scence in all material.
+
+![Imgur](http://i.imgur.com/iT5xEQm.png)
+
