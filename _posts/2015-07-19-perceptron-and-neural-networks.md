@@ -18,6 +18,11 @@ whether the neuron fires for the current inputs
 
 ![Imgur](http://i.imgur.com/83irn3l.png)
 
+###Hebb's rule
+
+Hebb's rule says that the changes in the strength of synaptic connections are proportional
+to the correlation in the firing of the two connecting neurons.
+
 ---
 
 ##Limitations

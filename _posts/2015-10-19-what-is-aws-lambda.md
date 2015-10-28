@@ -41,6 +41,18 @@ Then, the Lambda function in response to it by applying sentiment analysis over 
 
 ---
 
+###Workflow
+
+1. Make a crawler that could crawl (Lambda service) some news websites according to needs (50%)
+2. Make a Lambda service that could automatically do the sentiment analysis and put the right file in the right place(50%)
+3. Make a Web service to do the request (0%)
+4. Write a test to test the scalability of lambda service (0%)
+5. Write the god damn report (30%)
+
+
+---
+
+
 ##How to evaluate?
 
 How to test the scalability of lambda ?
