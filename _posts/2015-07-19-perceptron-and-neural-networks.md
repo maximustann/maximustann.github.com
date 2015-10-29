@@ -102,6 +102,21 @@ So the neural networks implement a kind of bias that says Prefer correct
 over incorrect but all things being equal, the simpler explanation, is 
 preferred. $\rightarrow$ **Occam's Razor**.
 
+##The Auto-Associative Network 
+
+An interesting type of MLP. Suppose that we train the network to reproduce the inputs at the output layer (
+also called autoencoder). The network is trained tso that whatever you show it at the input is reproduced at the 
+output, which doesn't seem very useful at frist. But suppose we use a hidden layer that has fewer neurons than 
+the input layer. This bottleneck hidden layer has to represent all of the information in the input, so that it can be 
+reproduced at the output. It therefore performs some compression of the data, representing it using fewer 
+dimensions than were used in the input. This gives us some idea of what the hidden layers of MLP are doing.
+They are finding a different representation of the input data that extracts important components of the data.
+
+![Imgur](http://i.imgur.com/dGFFUUH.png)
+
+
+
+
 ##Softmax
 
 It is a kind of soft continuous version of the maximum function. 
