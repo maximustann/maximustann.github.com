@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Generative vs Discriminative models</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Mach-ref" title="Mach">
+	Mach
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Generative vs Discriminative models<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<!--more-->
+
+<h2 id="generative-model">Generative model</h2>
+
+<hr />
+
+<p>For example, we have a classification task. We have a dataset which contains a bunch of features:
+$x_1, x_2, \dots, x_n$, and we have a a bunch of class labels $c_1, c_2, \dots, c_m$</p>
+
+<p>In generative model, we try to generate the distribution of $p(x \mid c)$.</p>
+
+<p>We want to get the distribution of $x$ on each class label. For example:</p>
+
+<p><img src="http://i.imgur.com/BGFVgNl.png?1" alt="Imgur" /></p>
+
+<p>We want to get the distribution of $P(x \mid c=1)$ and $P(x \mid c=2)$.</p>
+
+<hr />
+
+<h2 id="discriminative-model">Discriminative model</h2>
+
+<hr />
+
+<p>In discriminative model, we try to model the decision boundary. We try to find the 
+distribution of $P(c \mid x)$.</p>
+
+<h2 id="difference-and-comparison">Difference and comparison</h2>
+
+<p>Give an intuitive example of these two models. Say you and a kid visit the zoo. After coming back from
+the zoo, you give the kid two pictures of horse and elephant. Then you ask him to tell which one is 
+elephant. This is a discriminative model. The kid knows how to separate them, because he captures some 
+features of elephant.</p>
+
+<p>And then, you give him a paper and ask him to draw a picture of an elephant. This is a generative model,
+because the kid is acutally needs to know which part of the elephant looks like and generate a sample.</p>
+
+<p>You see, the generative model is much expensive than discriminative model.</p>
+
+<p>In summary.</p>
+
+<p><strong>Discriminative model</strong>:</p>
+
+<p>Pros:</p>
+
+<ul>
+  <li>Easy to model, require fewer observation</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+  <li>We can not generate samples from it. Just to classify, not to generate</li>
+</ul>
+
+<p><strong>Generative model</strong>:</p>
+
+<p>Pros:</p>
+
+<ul>
+  <li>We get the underlying idea of what the class is built on.</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+  <li>Very expensive, lots of parameters/data</li>
+</ul>
+
+<p>Examples:</p>
+
+<p>Naive bayes: generative model</p>
+
+<p>logistic regression: Discriminative model</p>
+
+				</span>
+				<div class="journal-date">Published 11 August 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Machine Learning-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Machine Learning</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

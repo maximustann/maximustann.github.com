@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Explicit semantic analysis</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#IA-ref" title="IA">
+	IA
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Explicit semantic analysis<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<blockquote>
+  <p>Explicit semantic analysis (ESA) is a vectorial representation of text that uses a document corpus as a knowledge base.</p>
+</blockquote>
+
+<p>In ESA, a word is represented as a column vector in the tf-idf matrix of the text corpus and a document is represented as the 
+centroid of the vectors representing its words. Typicall, the text corpus is Wikipedia, though other corpora have been used.</p>
+
+<ol>
+  <li>
+    <p>Represent texts as weighted mix of predetermined set of natural concepts</p>
+  </li>
+  <li>
+    <p>Natrual concepts: Defined by humans, easily explained</p>
+  </li>
+</ol>
+
+<!--more-->
+<p>Wikipedia titles are the source of the concepts.</p>
+
+<p>Utilised machine learning techniques to build a Semantic Interpreter, this maps fragments of text wo wiki concepts (attribute vector 
+of words weighted by TF-IDF)</p>
+
+<hr />
+
+<p>Wikipedia is a large and diverse knowledge base where each article can be considered a distinct concepts. In Wikipedia based ESA, a 
+concept is generated for each article. Each concept is then represented as a vector of the words which occur in the article, weighted
+by their tf-idf score.</p>
+
+<p>Every Wikipedia article represents a <strong>concept</strong>.</p>
+
+<p><img src="http://i.imgur.com/5pwYXbV.jpg?1" alt="catwiki" /></p>
+
+<blockquote>
+  <p>The <strong>semantics</strong> of a word is the vector of its <strong>associations</strong> with Wikipedia concepts.</p>
+</blockquote>
+
+<p><img src="http://i.imgur.com/pqHMvyh.png?1" alt="vector" /></p>
+
+<p>The meaning of any given word can then be represented as vector of that word’s relatedness, or “association weighting” to the Wikipedia
+based concepts.</p>
+
+<pre><code>"word" &lt;concept1, weight1&gt;, &lt;concept2, weight2&gt;, &lt;concept3, weight3&gt;...
+"Mars" &lt;planet, 0.90&gt;, &lt;Solar system, 0.85&gt;, &lt;jupiter, 0.30&gt;...
+</code></pre>
+
+<hr />
+
+<h3 id="explicit-semantic-analysis-documents">Explicit Semantic Analysis Documents</h3>
+
+<p>Large documents are represented as a combination of individual word vectors derived from the words within a document.
+The resultant document vectors are known as “concept” vectors.</p>
+
+<p>For example, a concept vector might look like this:</p>
+
+<pre><code>"Mars" &lt;planet, 0.90&gt;, &lt;Solar system, 0.85&gt;, &lt;jupiter, 0.30&gt;...
+"explorer" &lt;adventurer, 0.90&gt;, &lt;pioneer, 0.85&gt; ...
+...
+...
+</code></pre>
+
+<p>Graphically, we can represent a concept vector as the centroid of the word vectors it is composed of. The image below illustrates
+the centroid of a set of vectors.</p>
+
+<p><img src="http://i.imgur.com/Z3hbLfK.png" alt="centroid" /></p>
+
+<p>So, to compare how similar two phrases are we can create their concept vectors from their constituent word vectors and then
+compare the two, again using cosine similarity.</p>
+
+
+				</span>
+				<div class="journal-date">Published 10 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

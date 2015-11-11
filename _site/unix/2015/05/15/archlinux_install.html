@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Arch Linux Installation Guide</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Unix-ref" title="Unix">
+	Unix
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Arch Linux Installation Guide<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<p>This is a simple guild that is much simpler than the official guild. It tells you how to install an Arch Linux &amp; Windows dual system step by step. <strong>Don’t Panic!</strong></p>
+
+<!--more-->
+
+<ol>
+  <li><a href="#Prepare">Prepare USB stick</a></li>
+  <li><a href="#Partition">Partition the disks &amp; Formats the partitions</a></li>
+  <li><a href="#Internet">Connect to the Internet</a></li>
+  <li><a href="#Mirrors">Select the mirrors</a></li>
+  <li><a href="#Packages">Install the base packages</a></li>
+  <li><a href="#Configuration">Configure the System</a></li>
+  <li><a href="#Bootloader">Install a bootloader</a></li>
+  <li><a href="#Reboot">Reboot</a></li>
+</ol>
+
+<hr />
+
+<h1 id="prepare-usb-stick-a-idpreparea">Prepare USB stick <a id="Prepare"></a></h1>
+
+<p><strong>Warning:</strong> Remember to backup the USB, the <strong>dd</strong> command will erase the USB completely. 
+Use <strong>lsblk</strong> command to find out the name of your USB drive.
+DO <strong>not</strong> append a partition number, so do <strong>not</strong> use something like <code>/dev/sdb1</code></p>
+
+<p><code>
+lsblk
+</code></p>
+
+<p><code>
+dd bs=4M if=archlinux.iso of=/dev/sdx &amp;&amp; sync
+</code></p>
+
+<p>Then, you can use the USB stick boot the system.
+Remember, if your system is 64 bit, then choose x86 64 archlinux. i686 is for 32 bit.</p>
+
+<h1 id="partition-the-disks--formats-the-partitionsa-idpartitiona">Partition the disks &amp; Formats the partitions<a id="Partition"></a></h1>
+
+<p>Partition can be tricky.</p>
+
+<h4 id="identify-the-devices">Identify the devices</h4>
+
+<p><code>
+lsblk
+</code></p>
+
+<h4 id="partitioning-tools">Partitioning tools</h4>
+
+<ul>
+  <li>parted</li>
+  <li>fdisk</li>
+  <li>others</li>
+</ul>
+
+<h4 id="fdisk-usage">fdisk usage</h4>
+
+<p>I start fdisk from the shell prompt:</p>
+
+<p><code>
+fdisk /dev/sdb
+</code></p>
+
+<p><code>
+Command (m for help): p
+</code></p>
+
+<pre><code>Command (m for help): n
+
+Command action
+
+	e extend
+
+	p primary partition (1-4)
+
+p
+
+Partition number (1-4): 1
+</code></pre>
+
+<p>Then , you need to follow the fdisk, calculate the size of each partition.
+After you finish all the partitioning, use <strong>w</strong> to write to disk.</p>
+
+<p>The partition plan can be different. Personally, I choose 20G for <code>'/'</code>, then 40G for <code>'/home'</code>.</p>
+
+<h4 id="create-filesystems">Create filesystems</h4>
+
+<p><code>
+mkfs.ext4 /dev/sdxY
+</code></p>
+
+<h4 id="mount-the-partitions">Mount the partitions</h4>
+
+<p>The <code>/</code>  (root) partition must be mounted <strong>first</strong>.  If the root partition’s name is sdxR. Do:</p>
+
+<p><code>
+mount /dev/sdxR /mnt
+</code></p>
+
+<p>The general procedure is to first create the mount point, and then mount the partition to it.</p>
+
+<pre><code>mkdir -p /mnt/home
+mount /dev/sdxB /mnt/home
+</code></pre>
+
+<h1 id="connect-to-the-interneta-idinterneta">Connect to the Internet<a id="Internet"></a></h1>
+
+<p>use wifi-menu to connect to a wireless network:</p>
+
+<p><code>
+wifi-menu
+</code></p>
+
+<h1 id="select-the-mirrorsa-idmirrorsa">Select the mirrors<a id="Mirrors"></a></h1>
+
+<p>You may want to edit the mirrorlist file and place your preferred mirror first.</p>
+
+<p><code>
+vi /etc/pacman.d/mirrorlist
+</code></p>
+
+<p>If you want, you can delete all other lines but leave your favourite one. For example, I leave 3 US servers and a NZ server.</p>
+
+<p>After change the file, use:</p>
+
+<p><code>
+pacman -Syyu
+</code></p>
+
+<p>To refresh all package lists.</p>
+
+<h1 id="install-the-base-packagesa-idpackagesa">Install the base packages<a id="Packages"></a></h1>
+
+<h4 id="install-the-base-system">Install the base system</h4>
+
+<p>The base system is installed using the pacstrap script.</p>
+
+<p><code>
+pacstrap -i /mnt base base-devel
+</code></p>
+
+<h1 id="configure-the-system-a-idconfigurationa">Configure the System <a id="Configuration"></a></h1>
+
+<p><br /></p>
+
+<h4 id="configure-fstab">Configure fstab</h4>
+
+<pre><code>genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+cat /mnt/etc/fstab
+</code></pre>
+
+<p><strong>Warning:</strong> The fstab file should always be checked after genering it. If you encounter errors running genfstab or later in the install process, do <strong>not</strong> run genfstab; just edit the fstab file.</p>
+
+<h4 id="choot-and-configure-the-base-system">Choot and configure the base system</h4>
+
+<p>chroot into your newly installed system:</p>
+
+<p><code>
+arch-chroot /mnt /bin/bash
+</code></p>
+
+<h4 id="locale">Locale</h4>
+
+<p><code>
+vi /etc/locale.gen
+</code></p>
+
+<p>Un comment en_US.UTF-8 UTF-8 or other locale.
+Before locaes can be enabled, they must be generated:</p>
+
+<p><code>
+locale-gen
+</code></p>
+
+<p>Create <code>/etc/locale.conf</code>, where LANG refers to the first column of an uncommented entry in <code>/etc/locale.gen</code></p>
+
+<p><code>
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</code></p>
+
+<p>Export the chosen locale:</p>
+
+<p><code>
+export LANG=en_US.UTF-8
+</code></p>
+
+<h4 id="time-zone">Time zone</h4>
+<p>Available time zones and subzones can be found in the <code>/usr/share/zoneinfo/Zone/subZone</code> directories.</p>
+
+<p><code>
+ln -s /usr/share/zoneinfo/Zone/SubZone /etc/locatime
+</code></p>
+
+<h4 id="hardware-clock">Hardware clock</h4>
+
+<p>Use UTC time</p>
+
+<p><code>
+hwclock --systohc --utc
+</code></p>
+
+<h4 id="hostname">Hostname</h4>
+
+<p>Define a name replace the ‘myhostname’ below:</p>
+
+<p><code>
+echo myhostname &gt; /etc/hostname
+</code></p>
+
+<p>Add the same hostname to /etc/hosts:</p>
+
+<pre><code>#&lt;ip-address&gt; &lt;hostname.domain.org&gt; &lt;hostname&gt;
+127.0.0.1 localhost.localdomain localhost myhostname
+::1 localhost.localdomain localhost myhostname
+</code></pre>
+
+<h4 id="configure-the-network">Configure the network</h4>
+
+<p>Install <code>iw</code> and <code>wpa-supplicant</code> which you will need to connect to a network:</p>
+
+<p><code>
+pacman -S iw wpa_supplicant
+</code></p>
+
+<h5 id="adding-wireless-networks">Adding wireless networks</h5>
+
+<p>using <code>wifi-menu</code>
+install <code>dialog</code>, which is required for <code>wifi-menu</code>:</p>
+
+<p><code>
+pacman -S dialog
+</code></p>
+
+<p>Next time you start the system, use wifi-menu to connect to the Internet.</p>
+
+<h4 id="set-the-root-password">Set the root password</h4>
+<p>Set the root password with</p>
+
+<p><code>
+passwd
+</code></p>
+
+<h1 id="install-a-bootloadera-idbootloadera">Install a bootloader<a id="Bootloader"></a></h1>
+
+<p>Install the grub package, to have search for other installed operating system, install os-prober in addition:</p>
+
+<p><code>
+pacman -S grub os-prober
+</code></p>
+
+<p>Install the bootloader to the drive Arch was installed to.</p>
+
+<p><code>
+grub-install --target=i386-pc --recheck /dev/sda
+</code></p>
+
+<p>Automatically generate grub.cfg:</p>
+
+<p><code>
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></p>
+
+<h1 id="reboota-idreboota">Reboot<a id="Reboot"></a></h1>
+
+<p><code>
+exit
+</code></p>
+
+<p><code>
+reboot
+</code></p>
+
+				</span>
+				<div class="journal-date">Published 15 May 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Unix-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Unix</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

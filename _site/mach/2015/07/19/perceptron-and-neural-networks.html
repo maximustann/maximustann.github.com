@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Perceptron and Neural Networks</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Mach-ref" title="Mach">
+	Mach
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Perceptron and Neural Networks<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<!--more-->
+
+<h2 id="mcculloch-and-pitts-neuron">McCulloch and Pitts’ Neuron:</h2>
+
+<ol>
+  <li>a set of weighted inputs $w_i$ that correspond to the synapses</li>
+  <li>an adder that sums the input signals</li>
+  <li>an activation function (initially a threshold function) that decides
+whether the neuron fires for the current inputs</li>
+</ol>
+
+<p><img src="http://i.imgur.com/83irn3l.png" alt="Imgur" /></p>
+
+<h3 id="hebbs-rule">Hebb’s rule</h3>
+
+<p>Hebb’s rule says that the changes in the strength of synaptic connections are proportional
+to the correlation in the firing of the two connecting neurons.</p>
+
+<hr />
+
+<h2 id="limitations">Limitations</h2>
+
+<p>One question that is worth considering is how realistic is this model of
+a neuron? The answer is <strong>Not very</strong>.</p>
+
+<p>The inputs to a real neuron are not necessarily summed linearly: there
+may be non-linear summations. However, the most noticeable difference is
+that real neurons do not output a single output response. Furthermore,
+the neurons are not updated sequentially according to a computer clock,
+but update themselves randomly.</p>
+
+<p>It is possible to improve the model to include many of these features,
+but it is already complicated enough. M and P’s neurons already 
+provide a great deal of interesting behavior that resembles the action 
+of the brain.</p>
+
+<hr />
+
+<h2 id="problems-with-squared-error">Problems with squared error</h2>
+
+<p>The squared error measure has some drawbacks:</p>
+
+<ol>
+  <li>If the desired output is 1 and the actual output is 0.000000001
+there is almost no gradient for a logistic unit to fix up the error</li>
+  <li>If we are trying to assign probabilities to mutually exclusive class
+labels, we know that the outputs should sum to 1, but we are depriving
+the network of the knowledge.</li>
+</ol>
+
+<p><strong>Is there a different cost function that works better?</strong></p>
+
+<p><strong>Yes</strong>: Force the outputs to represent a probability distribution across
+discrete alternatives.</p>
+
+<hr />
+
+<h1 id="restriction-bias">Restriction bias</h1>
+
+<p>Restriction bias tells you something about the representational power
+of whatever data structure that you’re using.
+So in this case, the network of neurons.</p>
+
+<p>And it tells you the set of hypotheses that you’re willing to consider.</p>
+
+<p>So in Perceptron, we were only considering planes.</p>
+
+<p>Sigmoids: much more complex, not much restriction.</p>
+
+<p>$\rightarrow$ Boolean function: network of threshold-like units</p>
+
+<p>$\rightarrow$ Continuous function: “Connected”, a single hidden layer,
+as long as we have enough hidden unit, each unit can worry about one
+little patch of the function, and the patch get set at the hidden layer.
+And output layer get stitched together.</p>
+
+<p>$\rightarrow$ Arbitrary, add one more layer, so two layer.</p>
+
+<hr />
+
+<h2 id="preference-bias">Preference bias</h2>
+
+<p>Preference bias tells you something about the algorithm that you are using 
+to learn. That tells you, given two representations, why I would 
+prefer one over the other.</p>
+
+<h3 id="initial-weights">Initial weights</h3>
+
+<p>Small random values.</p>
+
+<p>$\rightarrow$ Local minima variability</p>
+
+<p>$\rightarrow$ low complexity: because the large weights could lead to 
+overfitting.</p>
+
+<p>So the neural networks implement a kind of bias that says Prefer correct
+over incorrect but all things being equal, the simpler explanation, is 
+preferred. $\rightarrow$ <strong>Occam’s Razor</strong>.</p>
+
+<h2 id="the-auto-associative-network">The Auto-Associative Network</h2>
+
+<p>An interesting type of MLP. Suppose that we train the network to reproduce the inputs at the output layer (
+also called autoencoder). The network is trained tso that whatever you show it at the input is reproduced at the 
+output, which doesn’t seem very useful at frist. But suppose we use a hidden layer that has fewer neurons than 
+the input layer. This bottleneck hidden layer has to represent all of the information in the input, so that it can be 
+reproduced at the output. It therefore performs some compression of the data, representing it using fewer 
+dimensions than were used in the input. This gives us some idea of what the hidden layers of MLP are doing.
+They are finding a different representation of the input data that extracts important components of the data.</p>
+
+<p><img src="http://i.imgur.com/dGFFUUH.png" alt="Imgur" /></p>
+
+<h2 id="softmax">Softmax</h2>
+
+<p>It is a kind of soft continuous version of the maximum function. 
+So the way the units in a softmax group work, is that they each 
+receive some total import to they have accumulated from below.</p>
+
+<p><img src="http://i.imgur.com/Tp55CUW.png" alt="Imgur" /></p>
+
+<p>That $Z_i$ for the unit is called the ‘logit’.</p>
+
+<p>Because of the bottom of that equation, is the some of the top line over 
+all possibilities.</p>
+
+<p>So we force the $y_i$ to represent a probability distribution over
+mutually exclusive alternatives just the the equation.</p>
+
+<p>This equation has a nice derivative. If you ask how $z_i$ affect $y_i$.
+It is obvious depending on other $z_i$.</p>
+
+<p><strong>If we are using softmax group as the output, what is the right cost
+function</strong>.</p>
+
+<p>The answer is the negative log probability of the correct answer.
+That is we want to maximize the log probability of getting answer right.</p>
+
+<p>So if one of the target values is the one when the remaining ones are
+zero. Then we simply sum of all possible answers. We put zeros in front
+of wrong answers.</p>
+
+<p><img src="http://i.imgur.com/n0HtEJE.png" alt="Imgur" /></p>
+
+<p>That’s called cross-entropy cost function.</p>
+
+<p>$C$ has a very big gradient when the target value is 1 and the output 
+is almost zero.</p>
+
+<p>For example, a value of 0.000001 is much better than 0.000000001
+The value $c$ increase a lot.</p>
+
+<p>That cost function $C$ has a very steep derivative when the answer is very
+wrong, and exactly balanced the fact with the way that output changes It
+should change the input divided by $z$. It is very flat when the answer 
+is very well.</p>
+
+<p><img src="http://i.imgur.com/EhO7CA0.png" alt="Imgur" /></p>
+
+<p>And when you multiply together, to get the derivative of the cross entropy.
+with respect the logit going into $i$ per unit $i$.</p>
+
+<p>So that derivative is how fast the cost function changes as you change 
+the output of the unit times how fast the output as you change the $i$.
+And notice we need to add up across the $j$, because when you change the 
+$i$, the output of all different unit changes.</p>
+
+<hr />
+
+<h2 id="a-more-detailed-explanation-of-softmax">A more detailed explanation of Softmax</h2>
+
+<p>Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where 
+we want to handle multiple classes. In logistic regression we assumed that the labels 
+were binary: $y^{(i)} \in \{0,1\}$. 
+We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us 
+to handle $y^{(i)} \in \{1,\ldots,K\}$ where $K$ is the number of classes.</p>
+
+<p>Recall that in logistic regression, we had a training set $\{ (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)}) \}$ 
+of $m$ labeled examples, where the input features are $x^{(i)} \in \Re^{n}$. 
+With logistic regression, we were in the binary classification setting, so the labels were $y^{(i)} \in \{0,1\}$. 
+Our hypothesis took the form:</p>
+
+<p>$\begin{align}
+h_\theta(x) = \frac{1}{1+\exp(-\theta^\top x)},
+\end{align}$</p>
+
+<p>and the model parameters $\theta$ were trained to minimize the cost function</p>
+
+<script type="math/tex; mode=display">\begin{align}
+J(\theta) = -\left[ \sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1-h_\theta(x^{(i)})) \right]
+\end{align}</script>
+
+<p>In the softmax regression setting, we are interested in multi-class classification (as opposed to only binary 
+classification), and so the label $y$ can take on $K$ different values, rather than only two. 
+Thus, in our training set $\{ (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)}) \}$, we now have that 
+$y^{(i)} \in \{1, 2, \ldots, K\}$. (Note that our convention will be to index the classes starting from 1, 
+rather than from 0.) For example, in the MNIST digit recognition task, we would have $K=10$ different classes.</p>
+
+<p>Given a test input $x$, we want our hypothesis to estimate the probability that $P(y=k \mid x)$ 
+for each value of $k = 1, \ldots, K$. I.e., we want to estimate the probability of the class label taking on each of 
+the $K$ different possible values. Thus, our hypothesis will output a $K$-dimensional vector (whose elements sum to 1) 
+giving us our $K$ estimated probabilities. Concretely, our hypothesis $h_{\theta}(x)$ takes the form:</p>
+
+<script type="math/tex; mode=display">\begin{align}
+h_\theta(x) = 
+\begin{bmatrix} 
+P(y = 1 | x; \theta) \\
+P(y = 2 | x; \theta) \\
+\vdots \\
+P(y = K | x; \theta)
+\end{bmatrix}
+=
+\frac{1}{ \sum_{j=1}^{K}{\exp(\theta^{(j)\top} x) }}
+\begin{bmatrix}
+\exp(\theta^{(1)\top} x ) \\
+\exp(\theta^{(2)\top} x ) \\
+\vdots \\
+\exp(\theta^{(K)\top} x ) \\
+\end{bmatrix}
+\end{align}</script>
+
+<p>Here $\theta^{(1)}, \theta^{(2)}, \ldots, \theta^{(K)} \in \Re^{n}$ are the parameters of our model. 
+Notice that the term $\frac{1}{ \sum_{j=1}^{K}{\exp(\theta^{(j)\top} x) } }$ 
+normalizes the distribution, so that it sums to one.</p>
+
+<p>For convenience, we will also write $\theta$ to denote all the parameters of our model. When you implement 
+softmax regression, it is usually convenient to represent $\theta$ as a $n$-by-$K$ matrix obtained by 
+concatenating $\theta^{(1)}, \theta^{(2)}, \ldots, \theta^{(K)}$ into columns, so that</p>
+
+<p><img src="http://i.imgur.com/7515z0b.png" alt="Imgur" /></p>
+
+<h2 id="cost-function">Cost function</h2>
+
+<p>We now describe the cost function that we’ll use for softmax regression. In the equation below, 
+$1\{\cdot\}$ is the ”‘indicator function,”’ so that $1\{\hbox{a true statement}\}=1$, and 
+$1\{\hbox{a false statement}\}=0$. For example, $1\{2+2=4\}$ evaluates to 1; whereas $1\{1+1=5\}$ evaluates to 0. 
+Our cost function will be:</p>
+
+<script type="math/tex; mode=display">\begin{align}
+J(\theta) = - \left[ \sum_{i=1}^{m} \sum_{k=1}^{K}  1\left\{y^{(i)} = k\right\} \log \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)})}\right]
+\end{align}</script>
+
+<p>Notice that this generalizes the logistic regression cost function, which could also have been written:</p>
+
+<script type="math/tex; mode=display">\begin{align}
+J(\theta) = - \left[ \sum_{i=1}^m   (1-y^{(i)}) \log (1-h_\theta(x^{(i)})) + y^{(i)} \log h_\theta(x^{(i)}) \right] \\
+= - \left[ \sum_{i=1}^{m} \sum_{k=0}^{1} 1\left\{y^{(i)} = k\right\} \log P(y^{(i)} = k | x^{(i)} ; \theta) \right]
+\end{align}</script>
+
+<p>The softmax cost function is similar, except that we now sum over the $K$ different possible values of the class label. 
+Note also that in softmax regression, we have that</p>
+
+<p>$
+P(y^{(i)} = k | x^{(i)} ; \theta) = \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)}) }
+$</p>
+
+<p>We cannot solve for the minimum of $J(\theta)$ analytically, and thus as usual we’ll resort to an 
+iterative optimization algorithm. Taking derivatives, one can show that the gradient is:</p>
+
+<script type="math/tex; mode=display">\begin{align}
+\nabla_{\theta^{(k)}} J(\theta) = - \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = k\}  - P(y^{(i)} = k | x^{(i)}; \theta) \right) \right]  }
+\end{align}</script>
+
+<p>Recall the meaning of the</p>
+
+<p>$\nabla_{\theta^{(k)}}$</p>
+
+<p>notation. In particular,</p>
+
+<p>$\nabla_{\theta^{(k)}} J(\theta)$</p>
+
+<p>is itself a vector, so that its $j$-th element is</p>
+
+<p>$\frac{\partial J(\theta)}{\partial \theta_{lk}}$</p>
+
+<p>the partial derivative of $J(\theta)$ with respect to the $j$-th 
+element of $\theta^{(k)}$.</p>
+
+<p>Armed with this formula for the derivative, one can then plug it into a standard optimization package 
+and have it minimize $J(\theta)$.</p>
+
+<hr />
+
+<h2 id="properties-of-softmax-regression-parameterization">Properties of softmax regression parameterization</h2>
+
+<p>Softmax regression has an unusual property that it has a “redundant” set of parameters. 
+To explain what this means, suppose we take each of our parameter vectors $\theta^{(j)}$, and subtract some 
+fixed vector $\psi$ from it, so that every $\theta^{(j)}$ is now replaced with $\theta^{(j)} - \psi$ 
+(for every $j=1, \ldots, k$). Our hypothesis now estimates the class label probabilities as</p>
+
+<script type="math/tex; mode=display">\begin{align}
+P(y^{(i)} = k | x^{(i)} ; \theta)
+= \frac{\exp((\theta^{(k)}-\psi)^\top x^{(i)})}{\sum_{j=1}^K \exp( (\theta^{(j)}-\psi)^\top x^{(i)})}  \\
+= \frac{\exp(\theta^{(k)\top} x^{(i)}) \exp(-\psi^\top x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)}) \exp(-\psi^\top x^{(i)})} \\
+= \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)})}.
+\end{align}</script>
+
+<p>In other words, subtracting $\psi$ from every $\theta^{(j)}$ does not affect our hypothesis’ predictions at all! 
+This shows that softmax regression’s parameters are “redundant.” More formally, we say that our softmax model 
+is ”‘overparameterized,”’ meaning that for any hypothesis we might fit to the data, there are multiple parameter 
+settings that give rise to exactly the same hypothesis function $h_\theta$ mapping from inputs $x$ to the predictions.</p>
+
+<p>Further, if the cost function $J(\theta)$ is minimized by some setting of the parameters 
+$(\theta^{(1)}, \theta^{(2)},\ldots, \theta^{(k)})$, then it is also minimized by 
+$(\theta^{(1)} - \psi, \theta^{(2)} - \psi,\ldots,\theta^{(k)} - \psi)$ for any value 
+of $\psi$. Thus, the minimizer of $J(\theta)$ is not unique. (Interestingly, $J(\theta)$ is 
+still convex, and thus gradient descent will not run into local optima problems. But the Hessian is 
+singular/non-invertible, which causes a straightforward implementation of Newton’s method to run into 
+numerical problems.)</p>
+
+<p>Notice also that by setting $\psi = \theta^{(K)}$, one can always replace $\theta^{(K)}$ with 
+$\theta^{(K)} - \psi = \vec{0}$ (the vector of all 0’s), without affecting the hypothesis. 
+Thus, one could “eliminate” the vector of parameters $\theta^{(K)}$ (or any other 
+$\theta^{(k)}$, for any single value of $k$), without harming the representational power of our hypothesis. 
+Indeed, rather than optimizing over the $K\cdot n$ parameters $(\theta^{(1)}, \theta^{(2)},\ldots, \theta^{(K)})$ 
+(where $\theta^{(k)} \in \Re^{n}$), one can instead set $\theta^{(K)} = \vec{0}$ and optimize only with 
+respect to the $K \cdot n$ remaining parameters.</p>
+
+<hr />
+
+<h2 id="relationship-to-logistic-regression">Relationship to Logistic regression</h2>
+
+<p>In the special case where $K = 2$, one can show that softmax regression reduces to logistic regression. 
+This shows that softmax regression is a generalization of logistic regression. Concretely, 
+when $K=2$, the softmax regression hypothesis outputs</p>
+
+<script type="math/tex; mode=display">\begin{align}
+h_\theta(x) =
+
+\frac{1}{ \exp(\theta^{(1)\top}x)  + \exp( \theta^{(2)\top} x^{(i)} ) }
+\begin{bmatrix}
+\exp( \theta^{(1)\top} x ) \\
+\exp( \theta^{(2)\top} x )
+\end{bmatrix}
+\end{align}</script>
+
+<p>Taking advantage of the fact that this hypothesis is overparameterized and setting $\psi = \theta^{(2)}$, 
+we can subtract $\theta^{(2)}$ from each of the two parameters, giving us</p>
+
+<script type="math/tex; mode=display">\begin{align}
+h(x) =
+
+\frac{1}{ \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) + \exp(\vec{0}^\top x) }
+\begin{bmatrix}
+\exp( (\theta^{(1)}-\theta^{(2)})^\top x )\\
+\exp( \vec{0}^\top x ) \\
+\end{bmatrix} \\
+
+=
+\begin{bmatrix}
+\frac{1}{ 1 + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+\frac{\exp( (\theta^{(1)}-\theta^{(2)})^\top x )}{ 1 + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) }
+\end{bmatrix} \\
+
+=
+\begin{bmatrix}
+\frac{1}{ 1  + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+1 - \frac{1}{ 1  + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+\end{bmatrix}
+\end{align}</script>
+
+<p>Thus, replacing $\theta^{(2)}-\theta^{(1)}$ with a single parameter vector $\theta’$, 
+we find that softmax regression predicts the probability of one of the classes as 
+$\frac{1}{ 1  + \exp(- (\theta’)^\top x^{(i)} ) }$, and that of the other class as 
+$1 - \frac{1}{ 1 + \exp(- (\theta’)^\top x^{(i)} ) }$, same as logistic regression.</p>
+
+
+				</span>
+				<div class="journal-date">Published 19 July 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Machine Learning-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Machine Learning</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>17</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

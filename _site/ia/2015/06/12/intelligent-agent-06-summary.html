@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Intelligent Agent 06 Summary</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#IA-ref" title="IA">
+	IA
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Intelligent Agent 06 Summary<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<ol>
+  <li><a href="#extraction">Feature Extraction</a></li>
+  <li><a href="#selection">Feature Selection</a>
+    <ul>
+      <li><a href="#filter">Filter</a></li>
+      <li><a href="#wrapper">Wrapper</a></li>
+    </ul>
+  </li>
+</ol>
+
+<!--more-->
+
+<h2 id="feature-extraction-a-idextractiona">Feature Extraction <a id="extraction"></a></h2>
+
+<blockquote>
+  <p>Feature extraction is an attribute reduction process. Unlike feature selection, which ranks the existing attributes according to their
+predictive significance, feature extraction actually transforms the attributes. The transformed attributes, or <strong>features</strong>, are linear
+combination of the original attributes.</p>
+</blockquote>
+
+<p>The feature extraction process results in a much smaller and richer set of attributes.</p>
+
+<p>Feature extraction projects a data set with higher dimensionality onto a smaller number of dimensions.</p>
+
+<p>Feature extraction can be used to extract the themes of a document collection, where documents are represents by a set of key words and 
+their frequencies.</p>
+
+<hr />
+
+<h2 id="feature-selection-a-idselectiona">Feature Selection <a id="selection"></a></h2>
+
+<p>Performance of text classification algorithms can be optimized by selecting only a subset of the discriminative terms.</p>
+
+<ol>
+  <li>
+    <p><strong>Filter:</strong> <a id="filter"></a>
+Filter model relies on general characteristics of the data to evaluate and select feature subsets without involving any mining 
+algorithm. Filter type methods select variables regardless of the model. It tend to select redundant variables because they does 
+not consider the relationships between variables.</p>
+  </li>
+  <li>
+    <p><strong>Wrapper:</strong> <a id="wrapper"></a>
+The wrapper model requires one predetermined mining algorithm and uses its performance as the evaluation criterion. It searches 
+for features better suited to the mining algorithm aimming to improve mining performance, but it also tends to be more 
+computationally expensive than the filter model.</p>
+  </li>
+</ol>
+
+<h3 id="general-procedure-of-feature-selection">General procedure of feature selection</h3>
+
+<ol>
+  <li>
+    <p>Subset generation, this is a process of heuristic search with each state in the search space specifying a candidate subset for
+evaluation</p>
+  </li>
+  <li>
+    <p>Subset evaluation</p>
+  </li>
+</ol>
+
+<h3 id="approach">Approach</h3>
+<ul>
+  <li>Greedy Search
+    <ul>
+      <li>Start from empty set or full set and add/delete one at a time</li>
+      <li>Heuristic for adding/deleting</li>
+    </ul>
+  </li>
+</ul>
+
+
+				</span>
+				<div class="journal-date">Published 12 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

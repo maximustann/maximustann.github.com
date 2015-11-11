@@ -1,0 +1,4235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Max's Tech Blog</title>
+        <description>Max's Tech Blog - Max</description>
+        <link>http://maximustann.github.io</link>
+        <link>http://maximustann.github.io</link>
+        <lastBuildDate>2015-10-21T10:42:11+13:00</lastBuildDate>
+        <pubDate>2015-10-21T10:42:11+13:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>What is AWS lambda</title>
+                <description>
+&lt;blockquote&gt;
+  &lt;p&gt;AWS Lambda is a compute service where you can upload
+your code to AWS Lambda and the service can run the code on your behalf using AWS infrastructure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;what-lambda-can-do&quot;&gt;What Lambda can do?&lt;/h2&gt;
+
+&lt;p&gt;You can use Lambda as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;As an event-driven compute service where Lambda runs your code in response to events&lt;/li&gt;
+  &lt;li&gt;As a compute service to run your code in response to HTTP requests using API calls&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how-to-test-lambda&quot;&gt;How to test lambda?&lt;/h2&gt;
+
+&lt;p&gt;In order to test the lambda service, we design a project which makes use of the two features of lambda service.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/crpUnGS.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the Figure shows,&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-evaluate&quot;&gt;How to evaluate?&lt;/h2&gt;
+
+&lt;p&gt;Using the CloudWatch Metrics.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/cloud/2015/10/19/what-is-aws-lambda</link>
+                <guid>http://maximustann.github.io/cloud/2015/10/19/what-is-aws-lambda</guid>
+                <pubDate>2015-10-19T00:00:00+13:00</pubDate>
+        </item>
+
+        <item>
+                <title>Boltzmann machine</title>
+                <description>
+&lt;p&gt;&lt;strong&gt;The key idea of restricted Boltzmann machine:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A restricted Boltzmann machine which
+consists of a layer of stochastic binary “visible”
+units that represent binary input data connected
+to a layer of chochastic binary hidden units that learn 
+to model significant nonindependencies between the visible units.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are undirected connections between visible and hidden units but no visible-visible or hidden-hidden
+connections.&lt;/p&gt;
+
+&lt;p&gt;An RBM is type of Markov random field (MRF) but differs
+from most of MRFs in several ways: it has a bipartite
+connectivity graph, it does not usually share weights
+between different units, and a subset of the variables
+are unobserved, even during training.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/09/30/boltzmann-machine</link>
+                <guid>http://maximustann.github.io/mach/2015/09/30/boltzmann-machine</guid>
+                <pubDate>2015-09-30T00:00:00+13:00</pubDate>
+        </item>
+
+        <item>
+                <title>Statistic terms</title>
+                <description>
+&lt;p&gt;&lt;strong&gt;Null hypothesis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In inferential statistics the &lt;strong&gt;null hypothesis&lt;/strong&gt; usually refers to a general statement or default
+position that there is no relationship between measured phenomena, or no difference among groups.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The concept of a null hypothesis is used differently in two approaches to Statistical inference.
+In the significance testing approach, a null hypothesis is rejected on the basis of data 
+that is significantly unlikely if the null is true, but the null hypothesis is never accepted or proved.
+This is analogous to a criminal trial, in which the defendant is assumed to be innocaent (null is not 
+rejected) until proven guilty (null is rejected) beyond a reasonable double.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/2015/09/26/statistic-terms</link>
+                <guid>http://maximustann.github.io/2015/09/26/statistic-terms</guid>
+                <pubDate>2015-09-26T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Data Science Course Introduction</title>
+                <description>
+&lt;ul&gt;
+  &lt;li&gt;Covers topics in the area of data-intensive science, programming to computational methods&lt;/li&gt;
+  &lt;li&gt;Computational science rather than computer science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One of the important point of the report &lt;em&gt;Frontiers in the Analysis of Massive Data&lt;/em&gt;
+is that &lt;strong&gt;The need to look at the end-to-end data life cycle.&lt;/strong&gt; It is going to be an 
+important scence in all material.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/iT5xEQm.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/2015/09/15/data-science-course-introduction</link>
+                <guid>http://maximustann.github.io/2015/09/15/data-science-course-introduction</guid>
+                <pubDate>2015-09-15T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>multivariate gaussian</title>
+                <description>
+&lt;p&gt;This post only shows the intuition of multivariate gaussian.
+It does not contain any detailed explaination.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;You can use R or other language plot the multivariate gaussian:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bivn &amp;lt;- mvrnorm(1000, mu = c(0, 0), Sigma = matrix(c(1, 0, 0, 1), 2))
+bivn.kde &amp;lt;- kde2d(bivn[,1], bivn[,2], n = 50)
+persp3D(bivn.kde$x, bivn.kde$y, bivn.kde$z, phi=20, theta=0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tVbRPvF.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ce0u0PY.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UMR4ad5.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/JK20Pmm.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/OUzBqip.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/MkjK0t2.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last several pictures are coming from Andrew Ng’s lecture.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/08/17/multivariate-gaussian</link>
+                <guid>http://maximustann.github.io/mach/2015/08/17/multivariate-gaussian</guid>
+                <pubDate>2015-08-17T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Some terminologies in Markov Chain</title>
+                <description>
+&lt;h2 id=&quot;stochastic-matrix&quot;&gt;Stochastic matrix&lt;/h2&gt;
+
+&lt;p&gt;In math, a Stochastic matrix (also termed probability matrix, transition matrix,
+substitution matrix or Markov matrix) is a matrix used to describe the transitions 
+of a Markov Chain.&lt;/p&gt;
+
+&lt;p&gt;Each of its entries is a nonnegative real number representing a probability.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A right Stochastic matrix&lt;/strong&gt; is a real square matrix, with row summing to 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Left Stochastic matrix&lt;/strong&gt; is a real square matrix, with each column summing to 1.&lt;/p&gt;
+
+&lt;p&gt;A stationary probability vector $\pi$ is defined as a distribution, that does 
+not change under application of the transition matrix. It is defined as a probability
+distribution on the set ${1,\dots,n}$ which is also a row eigenvector of the probability matrix, associated with eigenvalue 1.&lt;/p&gt;
+
+&lt;p&gt;$\pi P = \pi$&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/08/13/some-terminologies-in-markov-chain</link>
+                <guid>http://maximustann.github.io/mach/2015/08/13/some-terminologies-in-markov-chain</guid>
+                <pubDate>2015-08-13T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Generative vs Discriminative models</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;generative-model&quot;&gt;Generative model&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For example, we have a classification task. We have a dataset which contains a bunch of features:
+$x_1, x_2, \dots, x_n$, and we have a a bunch of class labels $c_1, c_2, \dots, c_m$&lt;/p&gt;
+
+&lt;p&gt;In generative model, we try to generate the distribution of $p(x \mid c)$.&lt;/p&gt;
+
+&lt;p&gt;We want to get the distribution of $x$ on each class label. For example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/BGFVgNl.png?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We want to get the distribution of $P(x \mid c=1)$ and $P(x \mid c=2)$.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;discriminative-model&quot;&gt;Discriminative model&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In discriminative model, we try to model the decision boundary. We try to find the 
+distribution of $P(c \mid x)$.&lt;/p&gt;
+
+&lt;h2 id=&quot;difference-and-comparison&quot;&gt;Difference and comparison&lt;/h2&gt;
+
+&lt;p&gt;Give an intuitive example of these two models. Say you and a kid visit the zoo. After coming back from
+the zoo, you give the kid two pictures of horse and elephant. Then you ask him to tell which one is 
+elephant. This is a discriminative model. The kid knows how to separate them, because he captures some 
+features of elephant.&lt;/p&gt;
+
+&lt;p&gt;And then, you give him a paper and ask him to draw a picture of an elephant. This is a generative model,
+because the kid is acutally needs to know which part of the elephant looks like and generate a sample.&lt;/p&gt;
+
+&lt;p&gt;You see, the generative model is much expensive than discriminative model.&lt;/p&gt;
+
+&lt;p&gt;In summary.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Discriminative model&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Pros:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Easy to model, require fewer observation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We can not generate samples from it. Just to classify, not to generate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Generative model&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Pros:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We get the underlying idea of what the class is built on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Very expensive, lots of parameters/data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+
+&lt;p&gt;Naive bayes: generative model&lt;/p&gt;
+
+&lt;p&gt;logistic regression: Discriminative model&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/08/11/generative-vs-discriminative-models</link>
+                <guid>http://maximustann.github.io/mach/2015/08/11/generative-vs-discriminative-models</guid>
+                <pubDate>2015-08-11T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Sum Product</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;p&gt;What problem is NP-hard in Probability graph model ?&lt;/p&gt;
+
+&lt;p&gt;Given a Probability graph model $P$. A variable $X$ and a value $x \in Val(X)$ compute $P_\Phi(X = x)$ is 
+&lt;strong&gt;NP-hard&lt;/strong&gt;. Or even decide if $P_\Phi(X = x) &amp;gt; 0$ is also NP-hard.&lt;/p&gt;
+
+&lt;h2 id=&quot;sum-product&quot;&gt;Sum-Product&lt;/h2&gt;
+
+&lt;p&gt;Given a graph model&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9BmZ03n.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To compute $P(x_4)$, we just need to:&lt;/p&gt;
+
+&lt;p&gt;$P(x_4) = \displaystyle\sum_{x_1,x_2,x_3,x_5} = \phi x_1(x_1) \phi x_2(x_1, x_2) \phi x_3(x_2, x_3) \phi x_5(x_5, x_3) \phi x_4(x_2, x_3, x_4)$&lt;/p&gt;
+
+&lt;p&gt;$\phi x_1(x_1)$ denotes a factor who scope is $x_1$.&lt;/p&gt;
+
+&lt;p&gt;The inference of Markov model take exactly same form.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/1KwcJDP.png?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$P(D) = \displaystyle\sum_{ABC} \phi_1(AB)\phi_2(BC)\phi_3(CD)\phi_4(AD)$&lt;/p&gt;
+
+&lt;p&gt;$\tilde{P}(ABCD)$ is the unnormalized measure. In order to normalize it. We need to divide by the partition function $Z$.&lt;/p&gt;
+
+&lt;p&gt;Marginalize all produce. That’s why it is called Sum-Product.&lt;/p&gt;
+
+&lt;p&gt;$Z$ is called normalizing constant.&lt;/p&gt;
+
+&lt;p&gt;$P(D) = \frac{1}{Z} \tilde{P}(D)$ We can compute $\tilde{P}(D)$ first and then renormalizing it.&lt;/p&gt;
+
+&lt;p&gt;But, what if we already know some evidence, say $E = e$ ? We could do &lt;em&gt;Reduced Factors&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;$P(Y \mid E = e) = \frac{P(Y, E = e)}{P(E = e)}$&lt;/p&gt;
+
+&lt;p&gt;$P(Y, E = e) = \displaystyle\sum_w P(Y, W, E = e) = \displaystyle\sum_w \frac{1}{Z} \prod\phi(D_k, E = e)$&lt;/p&gt;
+
+&lt;p&gt;$w$ is remaining variable.&lt;/p&gt;
+
+&lt;p&gt;In plain english, we could eliminate those factor that contains $E \neq e$.&lt;/p&gt;
+
+&lt;p&gt;Why is the equation $\displaystyle\sum_w P(Y, w, E = e)$ hard to compute in general?&lt;/p&gt;
+
+&lt;p&gt;Answer: The summation over all $w$ is exponential. If $w$ has 100 binary values, then summing take $2^{100}$.
+$P(Y, W, E = e)$ is always easy to compute because it is just the proudct of all conditional Probability distribution.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/08/10/sum-product</link>
+                <guid>http://maximustann.github.io/mach/2015/08/10/sum-product</guid>
+                <pubDate>2015-08-10T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>MCMC</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;intuition-of-high-dimensional-space&quot;&gt;Intuition of high dimensional space&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Sample from $p$ or approximate $Ef(x)$ where the distribution $p$
+is super complicated, very very high dimension.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem 1&lt;/strong&gt;: This $p$ is just too complicated and doing analytical analysis is just impossible&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem 2&lt;/strong&gt;: So, we want to sample from $p$, but it is also too complicated&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem 3&lt;/strong&gt;: We can’t come up a good proposal distribution because of the high dimension&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Intuition&lt;/strong&gt;: In high dimentional region, the space might be very small. You want to sample from 
+this small space. Obviously, doing randomly search is just not feasible.&lt;/p&gt;
+
+&lt;p&gt;The idea is, you start from somewhere and start &lt;strong&gt;moving around&lt;/strong&gt;. And you try to move towards high
+probability. And you get there, you try to stay at region of high probability. You sort of doing 
+this random walk. And you trying to stay at this high probability region. Just moving around and
+exploring this space. And you doing this by &lt;strong&gt;forming a Markov chain&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/w53jpzt.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;monte-carlo-principle&quot;&gt;Monte Carlo principle&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you take independent and identically distributed samples x from an unknown high-dimentional distribution p(x),
+then as the number of samples gets larger the sample distribution will converge to the true distribution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If we use methods that don’t know anything about the probability (such as sampling based on a uniform grid and 
+using splines), then we have to treat all areas of the space as equally likely, which means that there is going 
+to be a lot of computational resources wasted.&lt;/p&gt;
+
+&lt;p&gt;In addition to using the samples to approximate the expectation, we can also find a maximum, that is, the most 
+likely outcome.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;markov-chain-monte-carlo&quot;&gt;Markov Chain Monte Carlo&lt;/h2&gt;
+
+&lt;p&gt;In probabilitic terms a chain is a sequence of possible states, where the probability of being in state $s$
+ at time $t$ is a function of the previous states. A &lt;strong&gt;Markov chain&lt;/strong&gt; is a chain with the Markov propoerty, 
+i.e., the probability at time $t$ depends only on the state at $t - 1$. The set of possible states are linked
+together by transition probabilities that say how likely it is that you move from the current state to each 
+of the others, and they are generally written as a matrix $T$.&lt;/p&gt;
+
+&lt;h3 id=&quot;regular-markov-chain&quot;&gt;Regular Markov chain&lt;/h3&gt;
+
+&lt;p&gt;A regular markov chain converge to a unique stationary distribution regardless of start state.&lt;/p&gt;
+
+&lt;p&gt;Sufficient condition for regularity:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every two states are connected with a path of probability greater than 0&lt;/li&gt;
+  &lt;li&gt;For every state, there is a self transition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using a Markov chain&lt;/p&gt;
+
+&lt;p&gt;Goal: compute $P(x \in S)$, this distribution. But $P$ is hard to sample from directly&lt;/p&gt;
+
+&lt;p&gt;Construct a Markov chain $T$ whose unique stationary distribution is $P$&lt;/p&gt;
+
+&lt;p&gt;Sample $x^0$ from some $P(0)$&lt;/p&gt;
+
+&lt;p&gt;For $t = 0, 1, 2, \dots$, generate $x^{t+1}$ from $T(x^t \rightarrow x)$&lt;/p&gt;
+
+&lt;p&gt;Because the Chain converge, so eventually, we are going to get $P$.&lt;/p&gt;
+
+&lt;p&gt;We only want to use samples that are sampled from a distribution closed to $P$, at early iteration, $p(t)$ is usually far from $P$, therefore, start collecting samples only after 
+the chain has run long enough to “mix”.&lt;/p&gt;
+
+&lt;p&gt;Mixing&lt;/p&gt;
+
+&lt;p&gt;How do you know if a chain has mixed? &lt;strong&gt;You don’t&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In general, you can never prove it mixed&lt;/li&gt;
+  &lt;li&gt;But in many cases you can show it has &lt;strong&gt;not&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using the samples&lt;/p&gt;
+
+&lt;p&gt;Once the chain mixed, all samples $x^t$ are from the stationary
+distribution $\pi$&lt;/p&gt;
+
+&lt;h2 id=&quot;metropolis-hastings-algorithm&quot;&gt;Metropolis-Hastings Algorithm&lt;/h2&gt;
+
+&lt;p&gt;Where the Markov chain comes from?
+How to we design a Markov chain with a desirable stationary
+distribution?&lt;/p&gt;
+
+&lt;p&gt;Reversible Chains&lt;/p&gt;
+
+&lt;p&gt;So the key idea behind the Metropolis-Hastings is the notion
+of reversible chain.&lt;/p&gt;
+
+&lt;p&gt;Imagine we have a chain with a particular 
+stationary distribution $\pi$. We pick a state according to the 
+stationary distribution $\pi$ (red one) and we pick a random 
+edge from the state that we picked according to the transition 
+model defined by the chain T. We do this experiment 
+again, and this time we pick the green one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/IMlkFZL.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A chain is reversible, if the probability of traverse from 
+the red edge is the same with the green edge.&lt;/p&gt;
+
+&lt;p&gt;$\pi(x)T(x \rightarrow x’) = \pi(x’)T(x’ \rightarrow x)$&lt;/p&gt;
+
+&lt;p&gt;Theorem: If detailed balance holds, and T is regular, then 
+T has a unique stationary distribution $\pi$&lt;/p&gt;
+
+&lt;p&gt;Metropolis Hastings Chain&lt;/p&gt;
+
+&lt;p&gt;It starts out by saying, we want to move around broadly in 
+the state space, so we are going to have a distribution queue,
+which looks like a transition model. $Q$ is going to roam
+freely around the state space. Unlike gibbs, it could explore 
+a wide range of the state space.&lt;/p&gt;
+
+&lt;p&gt;I’m going to have a critic. The critic is going to say, you 
+can not go to take space because it is not going to give you 
+the right stationary distribution.&lt;/p&gt;
+
+&lt;p&gt;The critic listens to the proposal that was made by the Proposal
+distribution $Q$.&lt;/p&gt;
+
+&lt;p&gt;Proposal distribution $Q(x \rightarrow x’)$&lt;/p&gt;
+
+&lt;p&gt;Acceptance proability: $A(x \rightarrow x’)$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At each state $x$, sample $x’$ from $Q(x \rightarrow x’$&lt;/li&gt;
+  &lt;li&gt;Accept proposal with probability $A(x \rightarrow x’)$
+    &lt;ul&gt;
+      &lt;li&gt;If proposal accepted, move to $x’$&lt;/li&gt;
+      &lt;li&gt;Otherwise stay at $x$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So it gives us a tansition model T,&lt;/p&gt;
+
+&lt;p&gt;$T(x \rightarrow x’) = Q(x \rightarrow x’)A(x \rightarrow x’)$
+if $x’ \neq x$&lt;/p&gt;
+
+&lt;p&gt;$T(x \rightarrow x) = Q(x \rightarrow x) + \displaystyle\sum_{x’ \neq x}Q(x \rightarrow x’)(1 - A(x \rightarrow x’))$&lt;/p&gt;
+
+&lt;p&gt;We we are going to use the detailed balance to construct the 
+Acceptance probability that we want.&lt;/p&gt;
+
+&lt;p&gt;$\pi(x)T(x \rightarrow x’) = \pi(x’)T(x’ \rightarrow x)$&lt;/p&gt;
+
+&lt;p&gt;The goal is to construct $A$ so that the detailed balance
+holds for $Q$.&lt;/p&gt;
+
+&lt;p&gt;$\pi(x)Q(x \rightarrow x’)A(x \rightarrow x’) = \pi(x’)Q(x’ \rightarrow x)A(x’ \rightarrow x)$&lt;/p&gt;
+
+&lt;p&gt;$\frac{A(x \rightarrow x’)}{A(x’ \rightarrow x)} = \frac{\pi(x’)Q(x’ \rightarrow x)}{\pi(x)Q(x \rightarrow x’)}$&lt;/p&gt;
+
+&lt;p&gt;we pick, $A(x \rightarrow x’) = p, A(x’ \rightarrow x) = 1$&lt;/p&gt;
+
+&lt;p&gt;$A(x \rightarrow x’) = min[1, \frac{\pi(x’)Q(x’ \rightarrow x)}{\pi(x)Q(x \rightarrow x’)}]$&lt;/p&gt;
+
+&lt;p&gt;Choice of Q&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Q must be reversible&lt;/li&gt;
+  &lt;li&gt;Opposing forces
+    &lt;ul&gt;
+      &lt;li&gt;Q should try to spread out, to improve Mixing&lt;/li&gt;
+      &lt;li&gt;But then acceptance probability often low&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/08/03/mcmc</link>
+                <guid>http://maximustann.github.io/mach/2015/08/03/mcmc</guid>
+                <pubDate>2015-08-03T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Computational Learning Theory</title>
+                <description>
+&lt;p&gt;Addressing three important problems.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;defining learning problems&lt;/li&gt;
+  &lt;li&gt;showing specific algorithms work&lt;/li&gt;
+  &lt;li&gt;show these problems are fundamentally hard&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The tools that used to analyse learning question also are the tools to 
+analyse the Algorithm in Computing.&lt;/p&gt;
+
+&lt;p&gt;Three important thing to a learning algorithm:&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Time&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Space&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Sample (data sample) or generaliazation&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;inductive-learning&quot;&gt;Inductive learning&lt;/h2&gt;
+
+&lt;p&gt;Inductive learning : &lt;strong&gt;Learning from sample&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Probability of successful training (it might not work)&lt;/li&gt;
+  &lt;li&gt;Number of examples to train on&lt;/li&gt;
+  &lt;li&gt;Complexity of hypothesis class&lt;/li&gt;
+  &lt;li&gt;Accuracy to which target concept is approximated&lt;/li&gt;
+  &lt;li&gt;Manner in which training examples presented (batch)&lt;/li&gt;
+  &lt;li&gt;Manner in which training examples selected&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;select-training-examples&quot;&gt;Select training Examples&lt;/h3&gt;
+
+&lt;p&gt;It matters that how we select training examples when a learner is 
+needing to learn.&lt;/p&gt;
+
+&lt;p&gt;Learner/Teachers&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Learners asks questions of teachers. given sample x, ask c(x)&lt;/li&gt;
+  &lt;li&gt;Teacher give examples to help learners, teacher chooses x, tells c(x)&lt;/li&gt;
+  &lt;li&gt;Fixed distribution, x chosen from $D$ by nature&lt;/li&gt;
+  &lt;li&gt;Evils asked questions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;to be continue..&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/27/computational-learning-theory</link>
+                <guid>http://maximustann.github.io/mach/2015/07/27/computational-learning-theory</guid>
+                <pubDate>2015-07-27T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Discussion with Yi</title>
+                <description>
+&lt;p&gt;I had a nice discussion with Yi Mei last week.&lt;/p&gt;
+
+&lt;p&gt;Some important intuition was mentioned in the conversation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Heuristic algorithm can be interpreter as a sampling process&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/VTC1wZ9.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We are basically sampling from the search space. 
+Two main concerns, because there are many local minima, we have two criterions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Diversity&lt;/li&gt;
+  &lt;li&gt;Convergence&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We mainly want to keep the sampling diversity enough so that we 
+don’t stuck at local minima(although it is inevitable because the 
+global optimal is unknown). Meanwhile, we also want to quickly converge so that the algorithm runs fast.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It is hard to do theoretical over the heuristic algorithms, 
+because it involve not only stochastic parameters but also highly depend on the test dataset(overfitting to the data).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But the most important fact is that it works, it works perfectly well and beyond what the most advanced math could do. Because so far the apply math could not really solve the complicated real world problems. Math always try to simplified problems until it can be solved but when it looks back, the problem is over simplified so that it becomes useless.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, heuristic algorithms does not have many concrete the theory. Basically what it does is sampling. Based on the simple assumption of affinity. The search space might not be completely discrete. However, because in the high dimensionality world, no algorithm could guarantee to find global minima. Everyone just care about find a reasonably good result in a feasible period of time. The heuristic algorithm does just that.&lt;/p&gt;
+
+&lt;p&gt;Every “genetic operator” like mutation, crossover serves the two main criterions mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Crossover can be see as a convergence mechanism. Mutation can be see as a “jump out” mechanism that jump out the local minima and keep the population diverse enough.&lt;/p&gt;
+
+&lt;p&gt;So as we can’t really do theoretical study of heuristic algorithms. What we can do is sensitivity analysis which can be interpreted as:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;intuition&lt;/li&gt;
+  &lt;li&gt;empirical&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Okay, so intuition comes from (might be) background knowledge or domain specific knowledge of the problem that you’re going to solve.&lt;/p&gt;
+
+&lt;p&gt;So, heuristic algorithm is just like other machine learning algorithms, you have to has more or less domain specific knowledge about the problem.&lt;/p&gt;
+
+&lt;p&gt;Empirical can be explained as, when we don’t have such intuition, maybe we don’t really know what kind of parameter will do well in this kind of data or problem. What we can do is basically try.&lt;/p&gt;
+
+&lt;p&gt;It kinds make the study an experimental study. That’s kind of strange in terms of computer science because there is no guarantee about the results where in computer science, most of things are deterministic.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;First we make a convergence graph so that it is easy for us to analyze the behavior of the heuristic algorithm. It allows us easily compare between different algorithms and see if they are stuck at local minima.&lt;/p&gt;
+
+&lt;p&gt;The phenotype-genotype redundancy problem seems an issue. Which should be considered as the main problem with the current algorithm.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For the NSGA-II initialization,  because adding an instance could potentially drag the population toward to this instance, therefore, it still tend to cause the population “not” diversity enough. Because when the population starts to move towards this instance, they already miss the chance to go the opposite way where might exist better solutions. Therefore, one of the important measure is convergence.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9Zedvtd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe the NSGA-II with initialization would be fast at first, because adding an instance would accelerate the convergence. But after a certain generations, because NSGA-II does not really moving towards any direction, it is less likely to stuck at same local minimum, so it could find better solutions.&lt;/p&gt;
+
+&lt;p&gt;Therefore, as we analyse the convergence, we will confident to claim whether our algorithm is better than the original in both time efficiency and solution quality.&lt;/p&gt;
+
+&lt;p&gt;So there are mainly two convergence measurements that everyone in the field would do:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Inverted generational Distance (IGP)&lt;/li&gt;
+  &lt;li&gt;Hypervolume&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Both are try to measure the quality of the Pareto front in terms of diversity and convergence.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Discussion about Memetic search
+The basic idea is doing local search when there is a local minima found.&lt;/p&gt;
+
+&lt;p&gt;Therefore, we could apply local search over (maybe) 5% top results.
+This kind of idea could accelerate the convergence as well as does not affect diversity. If we apply incremental fitness function evaluation, the cost of local search is actually small. It seems like a quite reasonable thing to do.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Discussion about:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Constructive Heuristic:
+    &lt;ul&gt;
+      &lt;li&gt;greedy&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Meta-heuristic: like a superset of constructive heuristic
+    &lt;ul&gt;
+      &lt;li&gt;PSO&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hyper-heuristic
+    &lt;ul&gt;
+      &lt;li&gt;automatically decide of what meta-heuristic algorithm to use&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The above is for the NSGA-II.
+Now the PSO issue, because of the phenotype and genotype mapping issue. It potentially waste some computation power therefore the continuous PSO can be improved. The first thing we might do is observed the results from every generation, which we would see how much computation power is actually wasted.&lt;/p&gt;
+
+&lt;p&gt;Because it is mainly a representation issue, the most straightforward solution is use a binary algorithm to solve this problem. Therefore, we are going to use binary PSO. So far we compared two multi-objective algorithms Multi-objective PSO and NSGA-II, but we don’t have a single-objective algorithm to compare with.&lt;/p&gt;
+
+&lt;p&gt;We can also do convergence study on multi-objective PSO, see if it fast convergence.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So basically, there are two things to do this tri:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Continue doing evaluation of the current algorithm by analysing the convergence.&lt;/li&gt;
+  &lt;li&gt;Develop a single-objective binary PSO and imply on this problem.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some new idea about the project or general heuristic algorithms.&lt;/p&gt;
+
+&lt;p&gt;Basic idea is, we are developing algorithms that applied on specific dataset, which is overfitting. Can we do generalization on the dataset first and apply algorithm on the generalization dataset, therefore, it kinds of prove the algorithm works well in this kind of problem without huge modification.&lt;/p&gt;
+
+&lt;p&gt;By applying generalization over dataset, I mean maybe we can apply clustering algorithm (e.g., EM) over the dataset and try to make an assumptions over the dataset says: the dataset is constructed by several  gaussian distribution. Maybe we can construct fake test dataset by randomly generate from these distributions. So that we can make a claim that our algorithm does not overfitting to a specific dataset.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/22/discussion-with-yi</link>
+                <guid>http://maximustann.github.io/mach/2015/07/22/discussion-with-yi</guid>
+                <pubDate>2015-07-22T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Perceptron and Neural Networks</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;mcculloch-and-pitts-neuron&quot;&gt;McCulloch and Pitts’ Neuron:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a set of weighted inputs $w_i$ that correspond to the synapses&lt;/li&gt;
+  &lt;li&gt;an adder that sums the input signals&lt;/li&gt;
+  &lt;li&gt;an activation function (initially a threshold function) that decides
+whether the neuron fires for the current inputs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/83irn3l.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;limitations&quot;&gt;Limitations&lt;/h2&gt;
+
+&lt;p&gt;One question that is worth considering is how realistic is this model of
+a neuron? The answer is &lt;strong&gt;Not very&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The inputs to a real neuron are not necessarily summed linearly: there
+may be non-linear summations. However, the most noticeable difference is
+that real neurons do not output a single output response. Furthermore,
+the neurons are not updated sequentially according to a computer clock,
+but update themselves randomly.&lt;/p&gt;
+
+&lt;p&gt;It is possible to improve the model to include many of these features,
+but it is already complicated enough. M and P’s neurons already 
+provide a great deal of interesting behavior that resembles the action 
+of the brain.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;problems-with-squared-error&quot;&gt;Problems with squared error&lt;/h2&gt;
+
+&lt;p&gt;The squared error measure has some drawbacks:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;If the desired output is 1 and the actual output is 0.000000001
+there is almost no gradient for a logistic unit to fix up the error&lt;/li&gt;
+  &lt;li&gt;If we are trying to assign probabilities to mutually exclusive class
+labels, we know that the outputs should sum to 1, but we are depriving
+the network of the knowledge.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Is there a different cost function that works better?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Yes&lt;/strong&gt;: Force the outputs to represent a probability distribution across
+discrete alternatives.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;restriction-bias&quot;&gt;Restriction bias&lt;/h1&gt;
+
+&lt;p&gt;Restriction bias tells you something about the representational power
+of whatever data structure that you’re using.
+So in this case, the network of neurons.&lt;/p&gt;
+
+&lt;p&gt;And it tells you the set of hypotheses that you’re willing to consider.&lt;/p&gt;
+
+&lt;p&gt;So in Perceptron, we were only considering planes.&lt;/p&gt;
+
+&lt;p&gt;Sigmoids: much more complex, not much restriction.&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Boolean function: network of threshold-like units&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Continuous function: “Connected”, a single hidden layer,
+as long as we have enough hidden unit, each unit can worry about one
+little patch of the function, and the patch get set at the hidden layer.
+And output layer get stitched together.&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Arbitrary, add one more layer, so two layer.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;preference-bias&quot;&gt;Preference bias&lt;/h2&gt;
+
+&lt;p&gt;Preference bias tells you something about the algorithm that you are using 
+to learn. That tells you, given two representations, why I would 
+prefer one over the other.&lt;/p&gt;
+
+&lt;h3 id=&quot;initial-weights&quot;&gt;Initial weights&lt;/h3&gt;
+
+&lt;p&gt;Small random values.&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ Local minima variability&lt;/p&gt;
+
+&lt;p&gt;$\rightarrow$ low complexity: because the large weights could lead to 
+overfitting.&lt;/p&gt;
+
+&lt;p&gt;So the neural networks implement a kind of bias that says Prefer correct
+over incorrect but all things being equal, the simpler explanation, is 
+preferred. $\rightarrow$ &lt;strong&gt;Occam’s Razor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;softmax&quot;&gt;Softmax&lt;/h2&gt;
+
+&lt;p&gt;It is a kind of soft continuous version of the maximum function. 
+So the way the units in a softmax group work, is that they each 
+receive some total import to they have accumulated from below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Tp55CUW.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That $Z_i$ for the unit is called the ‘logit’.&lt;/p&gt;
+
+&lt;p&gt;Because of the bottom of that equation, is the some of the top line over 
+all possibilities.&lt;/p&gt;
+
+&lt;p&gt;So we force the $y_i$ to represent a probability distribution over
+mutually exclusive alternatives just the the equation.&lt;/p&gt;
+
+&lt;p&gt;This equation has a nice derivative. If you ask how $z_i$ affect $y_i$.
+It is obvious depending on other $z_i$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If we are using softmax group as the output, what is the right cost
+function&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The answer is the negative log probability of the correct answer.
+That is we want to maximize the log probability of getting answer right.&lt;/p&gt;
+
+&lt;p&gt;So if one of the target values is the one when the remaining ones are
+zero. Then we simply sum of all possible answers. We put zeros in front
+of wrong answers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/n0HtEJE.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s called cross-entropy cost function.&lt;/p&gt;
+
+&lt;p&gt;$C$ has a very big gradient when the target value is 1 and the output 
+is almost zero.&lt;/p&gt;
+
+&lt;p&gt;For example, a value of 0.000001 is much better than 0.000000001
+The value $c$ increase a lot.&lt;/p&gt;
+
+&lt;p&gt;That cost function $C$ has a very steep derivative when the answer is very
+wrong, and exactly balanced the fact with the way that output changes It
+should change the input divided by $z$. It is very flat when the answer 
+is very well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/EhO7CA0.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And when you multiply together, to get the derivative of the cross entropy.
+with respect the logit going into $i$ per unit $i$.&lt;/p&gt;
+
+&lt;p&gt;So that derivative is how fast the cost function changes as you change 
+the output of the unit times how fast the output as you change the $i$.
+And notice we need to add up across the $j$, because when you change the 
+$i$, the output of all different unit changes.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-more-detailed-explanation-of-softmax&quot;&gt;A more detailed explanation of Softmax&lt;/h2&gt;
+
+&lt;p&gt;Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where 
+we want to handle multiple classes. In logistic regression we assumed that the labels 
+were binary: $y^{(i)} \in \{0,1\}$. 
+We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us 
+to handle $y^{(i)} \in \{1,\ldots,K\}$ where $K$ is the number of classes.&lt;/p&gt;
+
+&lt;p&gt;Recall that in logistic regression, we had a training set $\{ (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)}) \}$ 
+of $m$ labeled examples, where the input features are $x^{(i)} \in \Re^{n}$. 
+With logistic regression, we were in the binary classification setting, so the labels were $y^{(i)} \in \{0,1\}$. 
+Our hypothesis took the form:&lt;/p&gt;
+
+&lt;p&gt;$\begin{align}
+h_\theta(x) = \frac{1}{1+\exp(-\theta^\top x)},
+\end{align}$&lt;/p&gt;
+
+&lt;p&gt;and the model parameters $\theta$ were trained to minimize the cost function&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+J(\theta) = -\left[ \sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1-h_\theta(x^{(i)})) \right]
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;In the softmax regression setting, we are interested in multi-class classification (as opposed to only binary 
+classification), and so the label $y$ can take on $K$ different values, rather than only two. 
+Thus, in our training set $\{ (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)}) \}$, we now have that 
+$y^{(i)} \in \{1, 2, \ldots, K\}$. (Note that our convention will be to index the classes starting from 1, 
+rather than from 0.) For example, in the MNIST digit recognition task, we would have $K=10$ different classes.&lt;/p&gt;
+
+&lt;p&gt;Given a test input $x$, we want our hypothesis to estimate the probability that $P(y=k \mid x)$ 
+for each value of $k = 1, \ldots, K$. I.e., we want to estimate the probability of the class label taking on each of 
+the $K$ different possible values. Thus, our hypothesis will output a $K$-dimensional vector (whose elements sum to 1) 
+giving us our $K$ estimated probabilities. Concretely, our hypothesis $h_{\theta}(x)$ takes the form:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+h_\theta(x) = 
+\begin{bmatrix} 
+P(y = 1 | x; \theta) \\
+P(y = 2 | x; \theta) \\
+\vdots \\
+P(y = K | x; \theta)
+\end{bmatrix}
+=
+\frac{1}{ \sum_{j=1}^{K}{\exp(\theta^{(j)\top} x) }}
+\begin{bmatrix}
+\exp(\theta^{(1)\top} x ) \\
+\exp(\theta^{(2)\top} x ) \\
+\vdots \\
+\exp(\theta^{(K)\top} x ) \\
+\end{bmatrix}
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;Here $\theta^{(1)}, \theta^{(2)}, \ldots, \theta^{(K)} \in \Re^{n}$ are the parameters of our model. 
+Notice that the term $\frac{1}{ \sum_{j=1}^{K}{\exp(\theta^{(j)\top} x) } }$ 
+normalizes the distribution, so that it sums to one.&lt;/p&gt;
+
+&lt;p&gt;For convenience, we will also write $\theta$ to denote all the parameters of our model. When you implement 
+softmax regression, it is usually convenient to represent $\theta$ as a $n$-by-$K$ matrix obtained by 
+concatenating $\theta^{(1)}, \theta^{(2)}, \ldots, \theta^{(K)}$ into columns, so that&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7515z0b.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cost-function&quot;&gt;Cost function&lt;/h2&gt;
+
+&lt;p&gt;We now describe the cost function that we’ll use for softmax regression. In the equation below, 
+$1\{\cdot\}$ is the ”‘indicator function,”’ so that $1\{\hbox{a true statement}\}=1$, and 
+$1\{\hbox{a false statement}\}=0$. For example, $1\{2+2=4\}$ evaluates to 1; whereas $1\{1+1=5\}$ evaluates to 0. 
+Our cost function will be:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+J(\theta) = - \left[ \sum_{i=1}^{m} \sum_{k=1}^{K}  1\left\{y^{(i)} = k\right\} \log \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)})}\right]
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;Notice that this generalizes the logistic regression cost function, which could also have been written:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+J(\theta) = - \left[ \sum_{i=1}^m   (1-y^{(i)}) \log (1-h_\theta(x^{(i)})) + y^{(i)} \log h_\theta(x^{(i)}) \right] \\
+= - \left[ \sum_{i=1}^{m} \sum_{k=0}^{1} 1\left\{y^{(i)} = k\right\} \log P(y^{(i)} = k | x^{(i)} ; \theta) \right]
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;The softmax cost function is similar, except that we now sum over the $K$ different possible values of the class label. 
+Note also that in softmax regression, we have that&lt;/p&gt;
+
+&lt;p&gt;$
+P(y^{(i)} = k | x^{(i)} ; \theta) = \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)}) }
+$&lt;/p&gt;
+
+&lt;p&gt;We cannot solve for the minimum of $J(\theta)$ analytically, and thus as usual we’ll resort to an 
+iterative optimization algorithm. Taking derivatives, one can show that the gradient is:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+\nabla_{\theta^{(k)}} J(\theta) = - \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = k\}  - P(y^{(i)} = k | x^{(i)}; \theta) \right) \right]  }
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;Recall the meaning of the&lt;/p&gt;
+
+&lt;p&gt;$\nabla_{\theta^{(k)}}$&lt;/p&gt;
+
+&lt;p&gt;notation. In particular,&lt;/p&gt;
+
+&lt;p&gt;$\nabla_{\theta^{(k)}} J(\theta)$&lt;/p&gt;
+
+&lt;p&gt;is itself a vector, so that its $j$-th element is&lt;/p&gt;
+
+&lt;p&gt;$\frac{\partial J(\theta)}{\partial \theta_{lk}}$&lt;/p&gt;
+
+&lt;p&gt;the partial derivative of $J(\theta)$ with respect to the $j$-th 
+element of $\theta^{(k)}$.&lt;/p&gt;
+
+&lt;p&gt;Armed with this formula for the derivative, one can then plug it into a standard optimization package 
+and have it minimize $J(\theta)$.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;properties-of-softmax-regression-parameterization&quot;&gt;Properties of softmax regression parameterization&lt;/h2&gt;
+
+&lt;p&gt;Softmax regression has an unusual property that it has a “redundant” set of parameters. 
+To explain what this means, suppose we take each of our parameter vectors $\theta^{(j)}$, and subtract some 
+fixed vector $\psi$ from it, so that every $\theta^{(j)}$ is now replaced with $\theta^{(j)} - \psi$ 
+(for every $j=1, \ldots, k$). Our hypothesis now estimates the class label probabilities as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+P(y^{(i)} = k | x^{(i)} ; \theta)
+= \frac{\exp((\theta^{(k)}-\psi)^\top x^{(i)})}{\sum_{j=1}^K \exp( (\theta^{(j)}-\psi)^\top x^{(i)})}  \\
+= \frac{\exp(\theta^{(k)\top} x^{(i)}) \exp(-\psi^\top x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)}) \exp(-\psi^\top x^{(i)})} \\
+= \frac{\exp(\theta^{(k)\top} x^{(i)})}{\sum_{j=1}^K \exp(\theta^{(j)\top} x^{(i)})}.
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;In other words, subtracting $\psi$ from every $\theta^{(j)}$ does not affect our hypothesis’ predictions at all! 
+This shows that softmax regression’s parameters are “redundant.” More formally, we say that our softmax model 
+is ”‘overparameterized,”’ meaning that for any hypothesis we might fit to the data, there are multiple parameter 
+settings that give rise to exactly the same hypothesis function $h_\theta$ mapping from inputs $x$ to the predictions.&lt;/p&gt;
+
+&lt;p&gt;Further, if the cost function $J(\theta)$ is minimized by some setting of the parameters 
+$(\theta^{(1)}, \theta^{(2)},\ldots, \theta^{(k)})$, then it is also minimized by 
+$(\theta^{(1)} - \psi, \theta^{(2)} - \psi,\ldots,\theta^{(k)} - \psi)$ for any value 
+of $\psi$. Thus, the minimizer of $J(\theta)$ is not unique. (Interestingly, $J(\theta)$ is 
+still convex, and thus gradient descent will not run into local optima problems. But the Hessian is 
+singular/non-invertible, which causes a straightforward implementation of Newton’s method to run into 
+numerical problems.)&lt;/p&gt;
+
+&lt;p&gt;Notice also that by setting $\psi = \theta^{(K)}$, one can always replace $\theta^{(K)}$ with 
+$\theta^{(K)} - \psi = \vec{0}$ (the vector of all 0’s), without affecting the hypothesis. 
+Thus, one could “eliminate” the vector of parameters $\theta^{(K)}$ (or any other 
+$\theta^{(k)}$, for any single value of $k$), without harming the representational power of our hypothesis. 
+Indeed, rather than optimizing over the $K\cdot n$ parameters $(\theta^{(1)}, \theta^{(2)},\ldots, \theta^{(K)})$ 
+(where $\theta^{(k)} \in \Re^{n}$), one can instead set $\theta^{(K)} = \vec{0}$ and optimize only with 
+respect to the $K \cdot n$ remaining parameters.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;relationship-to-logistic-regression&quot;&gt;Relationship to Logistic regression&lt;/h2&gt;
+
+&lt;p&gt;In the special case where $K = 2$, one can show that softmax regression reduces to logistic regression. 
+This shows that softmax regression is a generalization of logistic regression. Concretely, 
+when $K=2$, the softmax regression hypothesis outputs&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+h_\theta(x) =
+
+\frac{1}{ \exp(\theta^{(1)\top}x)  + \exp( \theta^{(2)\top} x^{(i)} ) }
+\begin{bmatrix}
+\exp( \theta^{(1)\top} x ) \\
+\exp( \theta^{(2)\top} x )
+\end{bmatrix}
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;Taking advantage of the fact that this hypothesis is overparameterized and setting $\psi = \theta^{(2)}$, 
+we can subtract $\theta^{(2)}$ from each of the two parameters, giving us&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+h(x) =
+
+\frac{1}{ \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) + \exp(\vec{0}^\top x) }
+\begin{bmatrix}
+\exp( (\theta^{(1)}-\theta^{(2)})^\top x )\\
+\exp( \vec{0}^\top x ) \\
+\end{bmatrix} \\
+
+=
+\begin{bmatrix}
+\frac{1}{ 1 + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+\frac{\exp( (\theta^{(1)}-\theta^{(2)})^\top x )}{ 1 + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) }
+\end{bmatrix} \\
+
+=
+\begin{bmatrix}
+\frac{1}{ 1  + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+1 - \frac{1}{ 1  + \exp( (\theta^{(1)}-\theta^{(2)})^\top x^{(i)} ) } \\
+\end{bmatrix}
+\end{align}&lt;/script&gt;
+
+&lt;p&gt;Thus, replacing $\theta^{(2)}-\theta^{(1)}$ with a single parameter vector $\theta’$, 
+we find that softmax regression predicts the probability of one of the classes as 
+$\frac{1}{ 1  + \exp(- (\theta’)^\top x^{(i)} ) }$, and that of the other class as 
+$1 - \frac{1}{ 1 + \exp(- (\theta’)^\top x^{(i)} ) }$, same as logistic regression.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/19/perceptron-and-neural-networks</link>
+                <guid>http://maximustann.github.io/mach/2015/07/19/perceptron-and-neural-networks</guid>
+                <pubDate>2015-07-19T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Linear Regression</title>
+                <description>
+&lt;h2 id=&quot;linear-regression&quot;&gt;Linear Regression&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In statistics, linear regression is an approach for modeling the
+relationship between a scalar dependent variable $y$ and one or more
+explanatory variable denoted $X$.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/B9X1R7M.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In other words, we try to fit the data using a line.&lt;/p&gt;
+
+&lt;p&gt;$y = kx + b$&lt;/p&gt;
+
+&lt;p&gt;which can best represent the trainning data. We can write the function as
+following:&lt;/p&gt;
+
+&lt;p&gt;$h(x) = \theta_0 + \theta_1x$&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Then we define a cost function, which normally the least square error function.&lt;/p&gt;
+
+&lt;p&gt;$CostFunction = \frac{1}{2m}\displaystyle\sum_{i=1}^m (h(x) - y)^2$&lt;/p&gt;
+
+&lt;p&gt;$m$ denotes the number of input instance, $h(x)$ denotes the 
+linear function.$h(x) - y$ denotes a single error from an instance. So
+the meaning of this cost function is simply &lt;strong&gt;aggregation of errors&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then the task become &lt;strong&gt;Minimize the Error Function&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is easy to notices that the $CostFunction$ is a quadratic function.
+The graph of this function might looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/HvKVK0z.gif&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’d like to find the global minima (in this case there is one minima).&lt;/p&gt;
+
+&lt;p&gt;We might rewrite the $CostFunction$ in terms of two parameters $\theta_0$,
+$\theta_1$.&lt;/p&gt;
+
+&lt;p&gt;$J(\theta_0, \theta_1) = \frac{1}{2m}\displaystyle\sum_{i = 1}^m(h(\theta_0,\theta_1) - y)^2$&lt;/p&gt;
+
+&lt;p&gt;The gradient descent works like this,&lt;/p&gt;
+
+&lt;p&gt;We first compute the partial derivative of $J(\theta_0, \theta_1)$,&lt;/p&gt;
+
+&lt;p&gt;$\theta_0 = \theta_0 - \alpha\frac{\mathrm d}{\mathrm d x} J(\theta_0))$&lt;/p&gt;
+
+&lt;p&gt;$\theta_1 = \theta_1 - \alpha\frac{\mathrm d}{\mathrm d x} J(\theta_1))$&lt;/p&gt;
+
+&lt;p&gt;$\alpha$ stand for learning rate, which means moving a step forward towards
+the local minima, if the learning rate is small, then the accuracy is high
+but the iteration is large. If the learning rate is large. Then the accuracy
+is decreasing because when it is close to local minima, it will bouncing 
+around the local minima.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
+
+&lt;p&gt;We use matrix multiplication as follows.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/r8VOK6r.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$N \times 2$ Matrix $\times$ $2 \times 1$ Matrix&lt;/p&gt;
+
+&lt;p&gt;So we can use $vector$ representation&lt;/p&gt;
+
+&lt;p&gt;$h(\bar x_i) = \bar\theta \bar x_i$&lt;/p&gt;
+
+&lt;p&gt;$h(\bar x) = \bar\theta \bar x$&lt;/p&gt;
+
+&lt;p&gt;Go back to partial derivative:&lt;/p&gt;
+
+&lt;p&gt;$\theta_j = \theta_j - \alpha\frac{1}{m}\displaystyle\sum_{i = 1}^m(h(\bar x) - \bar y) \cdot \bar x$&lt;/p&gt;
+
+&lt;p&gt;where $j = 1,2$&lt;/p&gt;
+
+&lt;p&gt;This is R Implementation of gradient decent&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gradient_descent &amp;lt;- function(x, y, theta){
+	m &amp;lt;- length(y)
+		iterations &amp;lt;- 1500
+		learning_rate &amp;lt;- 0.01
+
+		for(i in 1:iterations){
+			temp &amp;lt;- (x %*% theta - y)
+				theta[1] &amp;lt;- theta[1] - learning_rate * (1 / m) * sum(temp)
+				theta[2] &amp;lt;- theta[2] - learning_rate * (1 / m) * sum(temp * x[, 2])
+				if(i %% 100 == 0){
+					abline(theta[1], theta[2], col = &quot;red&quot;)
+				}
+		}
+	theta
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/18/regression</link>
+                <guid>http://maximustann.github.io/mach/2015/07/18/regression</guid>
+                <pubDate>2015-07-18T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Planning</title>
+                <description>
+&lt;p&gt;In real world the planning is difficult. Because of the environment is:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Stochastic&lt;/li&gt;
+  &lt;li&gt;Multi-agent&lt;/li&gt;
+  &lt;li&gt;Partial observability&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Instead of planning in the world states, we planning it in the belief state.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KAZQnWg.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a simple diagram with 8 total states.
+There are three actions, moving right, moving left and suck dirt.&lt;/p&gt;
+
+&lt;p&gt;If the robot’s sensor break down, it does not know which location it is.
+Then it becomes a partially observed world.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tKz5sgF.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the belief state. We start off in the center (8 possible states).
+But if we execute actions, we could gain knwoledge about the world even without sensoring it.&lt;/p&gt;
+
+&lt;p&gt;We now know more about the world even without observering anything.&lt;/p&gt;
+
+&lt;p&gt;Noticing that we could reaches the goal without ever observing the world. 
+Plans like that care called &lt;strong&gt;conformant Plans&lt;/strong&gt;.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/14/planning</link>
+                <guid>http://maximustann.github.io/mach/2015/07/14/planning</guid>
+                <pubDate>2015-07-14T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>EM algorithm</title>
+                <description>
+&lt;h2 id=&quot;iid&quot;&gt;IID&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We assume the data is IID which means identically distributed and 
+independently drawn from same distribution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;mixture-models&quot;&gt;Mixture models&lt;/h2&gt;
+
+&lt;p&gt;Recall types of clustering methods&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;hard clustering: clusters do not overlap
+    &lt;ul&gt;
+      &lt;li&gt;element either belongs to cluster or it does not&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;soft clustering: clusters may overlap
+    &lt;ul&gt;
+      &lt;li&gt;stength of association between clusters and instances&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;mixture-models-soft-clustering&quot;&gt;Mixture models (soft clustering)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;probabilistically-sounded way of doing soft clustering&lt;/li&gt;
+  &lt;li&gt;each cluster: a generative model (Gaussian or multinomial)&lt;/li&gt;
+  &lt;li&gt;parameters(e.g. mean/covariance are unknown)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;expectation-maximization-algorithm&quot;&gt;Expectation Maximization algorithm&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Automatically discover all parameters for K 
+“sources”(k guassian distribution)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the first graph, if we already know which point come from which
+distribution, then it is easy to figure out the parameters of the 
+Guassian distribution.&lt;/p&gt;
+
+&lt;p&gt;But if we don’t know which point come from which distribution (figure 2), 
+it is going to be tricky.&lt;/p&gt;
+
+&lt;p&gt;But, if we know the parameters of the two distribution, we could 
+figure it out by calculating the probabilities of each data point.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/YImqSmE.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, we have a chicken and egg problem.&lt;/p&gt;
+
+&lt;p&gt;If somebody told you the mean and variance, you could figure out which 
+distribution the data came from. On the other hand, if you know which 
+data point came from which distribution, you could calculate the 
+mean and variance.&lt;/p&gt;
+
+&lt;p&gt;So you need one to imply the other.&lt;/p&gt;
+
+&lt;p&gt;That’s basically what &lt;strong&gt;EM&lt;/strong&gt; algorithm does for you.&lt;/p&gt;
+
+&lt;p&gt;EM algorithm&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;start with two randomly placed Guassian $(\mu_a, \sigma_a^2)(\mu_b, \sigma_b^2)$&lt;/li&gt;
+  &lt;li&gt;for each point: $P(b \mid x_i) = $ does it look like it came from b ? 
+Unlike &lt;em&gt;K-means&lt;/em&gt;, it does not assign a binary (yes or no) to a point, but 
+assign a probability to a data point. Thus, it is a soft boundary.&lt;/li&gt;
+  &lt;li&gt;adjust$(\mu_a, \sigma_a^2)$ and $(\mu_b, \sigma_b^2)$ to fit points
+assigned to them.&lt;/li&gt;
+  &lt;li&gt;Iterating until it converges&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KdzeM2r.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At first, we assign random value to two guassian distribution.&lt;/p&gt;
+
+&lt;p&gt;Then we compute the probabilities for all the points. And then assigned 
+value to these points.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UboizLz.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we have done the color assignment. We could re-compute the the mean 
+and variance for both distributions.&lt;/p&gt;
+
+&lt;p&gt;$\mu_b = \frac{b_1x_1 + b_2x_2 + \dots + b_nx_n}{b_1 + b_2 + \dots + b_n}$&lt;/p&gt;
+
+&lt;p&gt;$\sigma_b^2 = \frac{b_1(x_1 - \mu_b)^2 + \dots + b_n(x_n - \mu_b)^2}{b_1 + b_2 + \dots + b_n}$&lt;/p&gt;
+
+&lt;p&gt;After this step, your guassian distribution will looks like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/zDi4u59.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And it eventually will looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/zDkdUrP.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/13/em-algorithm</link>
+                <guid>http://maximustann.github.io/mach/2015/07/13/em-algorithm</guid>
+                <pubDate>2015-07-13T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Probabilistic inference</title>
+                <description>
+&lt;h1 id=&quot;probabilistic-inference&quot;&gt;Probabilistic Inference&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tgNl43y.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hidden variable is the variable we don’t need to know, don’t need to output,
+but we need to compute during the process.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;eumeration&quot;&gt;Eumeration&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Eumeration goes through all the possibilities, adds them up and comes with an answer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+
+&lt;p&gt;$p(+b \mid +j, +m)$ can be determined by enumerate all hidden variables.&lt;/p&gt;
+
+&lt;p&gt;$p(+b, +j, +m) = \displaystyle\sum_A \displaystyle\sum_E p(+b)p(+j \mid A)p(+m \mid A)p(E)p(B)$&lt;/p&gt;
+
+&lt;p&gt;$p(+j, +m) = \displaystyle \sum_A p(+j \mid A)p(+m \mid A)$&lt;/p&gt;
+
+&lt;p&gt;$p(+b \mid +j, +m) = \frac{p(+b, +j, +m)}{p(+j, +m)}$&lt;/p&gt;
+
+&lt;p&gt;If the network is too big, practically, it is impossible to do. Therefore,
+it needs some techniques.&lt;/p&gt;
+
+&lt;h3 id=&quot;pulling-out-terms&quot;&gt;Pulling out terms&lt;/h3&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+
+&lt;p&gt;$\sum_e\sum_a p(+b)p(e)p(a\mid +b, e), p(+j \mid a)p(+m, a)$&lt;/p&gt;
+
+&lt;p&gt;The term $p(+b)$ has nothing to do with the summing up. Therefore, we 
+can pull it out from the equation.&lt;/p&gt;
+
+&lt;h3 id=&quot;variable-elimination&quot;&gt;Variable Elimination&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KOO9SpQ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(c, a, b) = \sum_a\sum_bp(c \mid b, a)p(b \mid a)p(a)$&lt;/p&gt;
+
+&lt;p&gt;First technique is called &lt;strong&gt;elimination&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Simply, calculate $p(b \mid a)$ first.&lt;/p&gt;
+
+&lt;p&gt;Second technique is called &lt;strong&gt;marginalisation&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;It is just: $p(b, a) = \sum_a p(b \mid a)p(a)$&lt;/p&gt;
+
+&lt;p&gt;Nothing special, just doing calculation step by step.&lt;/p&gt;
+
+&lt;h3 id=&quot;approximate-inference---sampling&quot;&gt;Approximate Inference - Sampling&lt;/h3&gt;
+
+&lt;p&gt;Bascially, it is by sampling the observable result, and collect data
+from the experiments.&lt;/p&gt;
+
+&lt;p&gt;The sampling has two advantages: 1. Computationally low cost 2. If we 
+don’t know the condition, we can still do Sampling.&lt;/p&gt;
+
+&lt;p&gt;If we want to compute conditional probability. We will have to use the 
+technique called &lt;strong&gt;Rejection Sampling&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, we want to sampling $p(a \mid c = cloudy)$, if the weather
+is not cloudy, then we don’t sampling until it is a cloudy day.&lt;/p&gt;
+
+&lt;p&gt;It is also consistent.&lt;/p&gt;
+
+&lt;p&gt;But if we are sampling a small probability event, we ends up waiting 
+forever and reject most of the samples.&lt;/p&gt;
+
+&lt;h3 id=&quot;likelihood-weighting&quot;&gt;Likelihood Weighting&lt;/h3&gt;
+
+&lt;p&gt;We fix the evidence variable. We say C is always positive and we
+sample the rest variables.&lt;/p&gt;
+
+&lt;p&gt;+b, +c
+-b, +c
++b, +c&lt;/p&gt;
+
+&lt;p&gt;But we has a problem. The resulting sample end up being inconsistent.&lt;/p&gt;
+
+&lt;p&gt;We can fix this problem by assign probability to each sample and
+weighting them correctly.&lt;/p&gt;
+
+&lt;p&gt;We are going to collect sample as before. But we add a probabilitic
+weighting to each sample.&lt;/p&gt;
+
+&lt;h3 id=&quot;gibbs-sampling&quot;&gt;Gibbs Sampling&lt;/h3&gt;
+
+&lt;p&gt;Gibbs sampling uses Markov chain Monte Carlo&lt;/p&gt;
+
+&lt;p&gt;The idea is that we re-sample just one variable at a time conditioning 
+on others.&lt;/p&gt;
+
+&lt;p&gt;That is, we have a set of variables.&lt;/p&gt;
+
+&lt;p&gt;And we initialise them to random variable keep the evidence fixed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/SkjeIwJ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now at each iteration through the loop. We select just one non-evidence 
+variable and resample it. Based on all the other variables. And that will give us another sample.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+</description>
+                <link>http://maximustann.github.io/pro/2015/07/12/probabilistic-inference</link>
+                <guid>http://maximustann.github.io/pro/2015/07/12/probabilistic-inference</guid>
+                <pubDate>2015-07-12T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Occam's Razor</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Everything else being equal, choose the less complex hypothesis&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is actually state a tradeoff between &lt;em&gt;fit&lt;/em&gt; and &lt;em&gt;low complexity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/AxQM0J3.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Overfitting is the major source of poor performance of machine Learning
+algorithms.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/12/occams-razor</link>
+                <guid>http://maximustann.github.io/mach/2015/07/12/occams-razor</guid>
+                <pubDate>2015-07-12T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>naive Bayes</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;p&gt;We’re using SPAM email detection as an example.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;maximum-likelihood&quot;&gt;Maximum likelihood&lt;/h2&gt;
+
+&lt;p&gt;For example, we detect 8 emails, they are: S S S H H H H H&lt;/p&gt;
+
+&lt;p&gt;We assume:&lt;/p&gt;
+
+&lt;p&gt;$p(S) = \pi$&lt;/p&gt;
+
+&lt;p&gt;$p(y_i) = \pi\text{ if	}y_i = S$&lt;/p&gt;
+
+&lt;p&gt;$p(y_i) = 1 - \pi\text{ if	}y_i = H$&lt;/p&gt;
+
+&lt;p&gt;Then we use binary representation of SPAM and HAM.&lt;/p&gt;
+
+&lt;p&gt;$p(y_i) = \pi^{y_i} \cdot (1 - \pi)^{1 - y_i}$&lt;/p&gt;
+
+&lt;p&gt;Next, we assume every Email is independent.&lt;/p&gt;
+
+&lt;p&gt;$p(data) = \prod_{i = 1}p(y_i) = \pi^{count(y_i = 1)} \cdot (1 - \pi)^{count(y_i = 0)}$&lt;/p&gt;
+
+&lt;p&gt;In this example, we have 3 SPAMs and 5 HAMs.&lt;/p&gt;
+
+&lt;p&gt;$= \pi^3 \cdot (1 - \pi)^5$&lt;/p&gt;
+
+&lt;p&gt;Now we need to maximum this equation. Instead of directing maximum this
+equation, we could maximum the log of this equation.&lt;/p&gt;
+
+&lt;p&gt;$\log (p(data)) = 3 \cdot \log (\pi) + 5 \cdot \log (1 - \pi)$&lt;/p&gt;
+
+&lt;p&gt;The maximum value is obtained by calculate the derivative equals 0.&lt;/p&gt;
+
+&lt;p&gt;$(\log (p(data)))’ = 0 = \frac{3}{\pi} - \frac{5}{1 - \pi}$&lt;/p&gt;
+
+&lt;p&gt;$ \pi = \frac{3}{8}$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Bayes Network&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Mw4auOt.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Acutally, we construct a Bayes network, and use words as events to predict
+the posterior probability.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Laplace Smooth&lt;/p&gt;
+
+&lt;p&gt;There is huge problem in this method. If a word does not exist in SPAM in
+the learning data. Then the email that contains this word will never be 
+detect as SPAM because of the calculation of joint probability.&lt;/p&gt;
+
+&lt;p&gt;The different exist in the calculation of Maximum likelihood.&lt;/p&gt;
+
+&lt;p&gt;In previous, we calculate the maximum likelihood using derivative or
+using $p(x) = \frac{count(x)}{N}$&lt;/p&gt;
+
+&lt;p&gt;Now, with Laplace smooth, it becomes:&lt;/p&gt;
+
+&lt;p&gt;$p(x) = \frac{count(x) + k}{N + k\mid x \mid}$&lt;/p&gt;
+
+&lt;p&gt;where $k$ is laplace smooth parameter. $k \mid x \mid$ is $k$ times
+the number of different categories.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/12/naive-bayes</link>
+                <guid>http://maximustann.github.io/mach/2015/07/12/naive-bayes</guid>
+                <pubDate>2015-07-12T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Belief Network 2</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;the-impack-of-collisions&quot;&gt;The impack of collisions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 3.2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Given a path $P$, a &lt;em&gt;collider&lt;/em&gt; is a node $c$ on $P$ with neighbours $a$ and
+$b$ on $P$ such that $a \rightarrow c \leftarrow b$. Note that a collider
+is path specific.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yFrzhM8.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/IcfvIWh.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In a general BN, how can we check if $x \bot y \mid z$. In fig(3.7a), x
+and y are independent when conditioned on z since&lt;/p&gt;
+
+&lt;p&gt;$p(x, y \mid z) = p(x \mid z)p(y \mid z)$&lt;/p&gt;
+
+&lt;p&gt;Similarly, for fig(3.7b), x and y are independent conditioned on z since.&lt;/p&gt;
+
+&lt;p&gt;$p(x, y \mid z) \propto p(z \mid x)p(x)p(y \mid z)$&lt;/p&gt;
+
+&lt;p&gt;which is a function of x multiplied by a function of y. In fig(3.7c),
+however, x and y are graphically dependent since 
+$p(x, y \mid z) \propto p(z \mid x, y)p(x)p(y)$; in this situation,
+variable $z$ is a collider. The arrows of its neighbours are pointing
+towards it. In (d), when we condition on z, x and y will be graphically
+dependent, since&lt;/p&gt;
+
+&lt;p&gt;$p(x, y \mid z) = \frac{p(x, y, z)}{p(z)} \displaystyle\sum_w p(z \mid w)p(w\mid x, y)p(x)p(y) \neq p(x \mid z)p(y \mid z)$&lt;/p&gt;
+
+&lt;p&gt;The above inequality holds due to the term $p(w \mid x, y)$ only in specific
+cases such as $p(w \mid x, y) = const$, would x and y be independent. 
+Intuitively, variable w becomes dependent on the value of z, and since x 
+y are conditionally dependent on w, they are also conditionally dependent 
+on z.&lt;/p&gt;
+
+&lt;p&gt;If there is a non-collider z which is conditioned along the path between 
+x and y, then this path cannot induce dependence between x and y. 
+Similarly, if there is a path between x and y which contains a collider, 
+provided that this collider is not in the conditioning set (and neither 
+are any of its decendants) then this path does not make x and y dependent.
+If there is a path between x and y which contains no colliders and no 
+conditioning variables, then this path ‘d-connects’ x and y. Note that a 
+collider is defined &lt;em&gt;relative to a path&lt;/em&gt;. In fig(3.8a), the variable d 
+is a collider along the path a - b - d -c, but not along the path a - b -d
+-e (since, relative to the path, the two arrows do not point towards to d).&lt;/p&gt;
+
+&lt;p&gt;Consider the BN: $A \rightarrow B \leftarrow C$. Here A and C are 
+(unconditionally) independent. However, conditioning of B makes them 
+‘graphically’ dependent. Intuitively, whilst we believe the root causes
+independent, given the value of the observation, this tells us something
+about the state of &lt;em&gt;both&lt;/em&gt; the causes, coupling them and making them 
+(generally) dependent. In definition 3.3, below we describe the effect 
+that conditioning/marginalisation has on the graph of the remaining
+varirables.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 3.3 (Some properties of belief networks)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is useful to understand what effect conditioning or marginalising a 
+variable has on a belief network.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/4OX6syG.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Marginalising over C makes A and B independent. A and B are 
+(unconditionally) independent: $p(A, B) = p(A)p(B)$. In the absence of&lt;/p&gt;
+
+&lt;p&gt;any information about the effect C, we retain this belief.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/OjDJ4af.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Conditioning on C makes A and B (graphically) dependent. In general,&lt;/p&gt;
+
+&lt;p&gt;$p(A,B \mid C) \neq p(A \mid C) p (B \mid C)$. Although the causes are 
+a priori independent, knowing the effect C in general tells us something 
+about how the casuses colluded to bring about the effect observed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/gsc7FCX.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Conditioning on D, a decendent of a collider C, makes A and B (graphically)
+dependent.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/jjfT9bS.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(A, B, C) = p(A \mid C)p(B \mid C)p(C)$&lt;/p&gt;
+
+&lt;p&gt;Here there is a ‘cause’ C and independent ‘effects’ A and B.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/H6gmtod.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Marginalising over C makes A and B (graphically) dependent. In general,
+$p(A, B) \neq p(A)p(B)$. Although we don’t know the ‘cause’, the ‘effects’
+will nevertheless be dependent.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/3B1ihpM.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Conditioning on C makes A and B independent: $p(A, B \mid C) = p(A \mid C)p(B \mid C)$.
+If you know the ‘cause’ C, you know everything about how each effect occurs,
+independent of the other effect. This is also true for reversing the 
+arrow from A to C, in the case A would ‘cause’ C and then C ‘cause’ B.
+Conditioning on C blocks the ability of A to influence B.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/hHqK3fD.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;graphical-path-manipulations-for-independence&quot;&gt;Graphical path manipulations for independence&lt;/h2&gt;
+
+&lt;p&gt;Intuitively, we now have all the tools we need to understand when x is 
+independent of y conditioned on z. We need to look at each path between 
+x and y. Coloring x as red and y as green and the conditioning node z as
+yellow, we need to examine each path between x and y and adjust the edges,
+following the intuitive rules in fig(3.9)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nDJtKeK.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/DZxPDUA.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/06/belief-network-2</link>
+                <guid>http://maximustann.github.io/mach/2015/07/06/belief-network-2</guid>
+                <pubDate>2015-07-06T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Belief Networks</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;p&gt;The only way to deal with large distributions is to constrain the nature
+of the variable interactions in some manner. The key idea is to specify
+which variables are independent of others, leading to a structured
+factorisation of the joint probability distribution.&lt;/p&gt;
+
+&lt;p&gt;Belief networks are a way to depict the independence assumptions made in
+a distribution. Nevertheless, in expressing these independencies it can
+be useful (though also potentially misleading) to think of ‘what causes 
+what’.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reducing the burden of specification&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Consider a discrete variable $y$ with many discrete parental variables 
+$x_1, \dots, x_n$.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/csIwOaA.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Formally, the structure of the graph implies nothing about the form of the 
+parameterisation of the table $p(y \mid x_1, \dots, x_n)$. 
+If each parent $x_i$ has dim($x_i$) states, and there is no constraint on
+the table $p(y \mid x_1, \dots, x_n)$ contains (dim(y) - 1)$\prod_i$dim($x_i$) entries.&lt;/p&gt;
+
+&lt;p&gt;If stored explicitly for each state, this would require potentially huge 
+storage. An alternative is to constrain the table to have a simpler
+parametric form. For example, one might write a decomposition in which
+only a limited number of parental interactions are required (this is 
+called &lt;em&gt;divorcing parents&lt;/em&gt;) For example,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tLehGZR.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;we have&lt;/p&gt;
+
+&lt;p&gt;$p(y \mid x_1, \dots, x_5) = \sum_{z_1, z_2} p(y \mid z_1, z_2)p(z_1\mid
+x_1, x_2, x_3)p(z_2 \mid x_4, x_5)$&lt;/p&gt;
+
+&lt;p&gt;Assuming all variables are binary, the number of states requiring 
+specification is $2^3 + 2^2 + 2^2 = 16$, compared to the $2^5 = 32$
+states in the unconstrained case.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Logic gates&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Another technique to constrain tables uses simple classes of conditional
+tables. For example,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/75x59xi.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;one could use a logic OR gate on binary $z_i$, say&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/w4PUXZ7.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can then make a table $p(y \mid x_1, \dots, x_5)$ by including The
+additional terms $p(z_i = 1 \mid x_i)$. When each $x_i$ is binary there
+are in total only 2 + 2 + 2 + 2 + 2 = 10 quantities required fr specify 
+$p(y \mid x)$. In this case, fig(3.2c) can be used to represent any
+&lt;em&gt;noisy logic gate&lt;/em&gt;, such as the &lt;em&gt;noisy&lt;/em&gt; Or or &lt;em&gt;noisy&lt;/em&gt; AND, where the 
+number of parameters required to specify the noisy gate is linear in 
+the number of parents.&lt;/p&gt;
+
+&lt;p&gt;The noisy-OR is particularly common in disease-symptom networks in 
+which many diseases x can give rise to the same symptom $y$ provided 
+that at least one of the disease is present, the probability that the 
+symptom will be present is high.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;uncertain-and-unreliable-evidence&quot;&gt;Uncertain and Unreliable Evidence&lt;/h3&gt;
+
+&lt;p&gt;We make a distinction between evidence that is Uncertain, and evidence 
+that is reliable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Uncertain evidence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In soft or &lt;em&gt;uncertain evidence&lt;/em&gt;, the evidence variable is in more than 
+one state, with the strength of our belief about each state being 
+given by probabilities. For example, if x has the states dom(x) = 
+{red,blue,green} the vector (0.6, 0.1, 0.3) represents the belief in 
+the respective states. In contrast, for &lt;em&gt;hard evidence&lt;/em&gt; we are certain
+that a variable is in a particular state. In this case, all the probability
+mass is in one of the vector components, for example (0, 0, 1).&lt;/p&gt;
+
+&lt;p&gt;Performing inference with soft-evidence is straightforward and can be 
+achieved using Bayes’ rule. For example, for a mode $p(x, y)$, Consider
+that we have some soft evidence $\tilde{y}$ about the variable $y$, 
+and wish to know what effect this has on the variable $x$ that is 
+we wish to compute $p(x\mid \tilde{y})$. From Bayes’ rule, and 
+the assumption $p(x \mid y, \tilde{y}) = p(x \mid y)$, we have&lt;/p&gt;
+
+&lt;p&gt;$p(x \mid \tilde{y}) = \sum_y p(x, y \mid \tilde{y}) = \sum_y p(x \mid y, \tilde{y}) p(y \mid \tilde{y}) = \sum_y p(x \mid y)p(y \mid \tilde{y})$&lt;/p&gt;
+
+&lt;p&gt;where $p(y = i \mid \tilde{y})$ represents the probability that $y$ is in 
+state $i$ under the soft-evidence. This is a generalisation of hard-Evidence
+in which the vector $p(y \mid \tilde{y})$ has all zero component values,
+except for a single component. This procedure in which we first define 
+the model conditional on the evidence, and then average over the 
+distribution of the evidence is also knwon as Jeffrey’s rule.&lt;/p&gt;
+
+&lt;p&gt;In the BN we use a dashed circle to represent that a variable is in 
+a soft-evidence state.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;belief-networks&quot;&gt;Belief Networks&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 3.1 (Belief network)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A belief network is a distribution of the Formally&lt;/p&gt;
+
+&lt;p&gt;$p(x_1, \dots, x_D) = \displaystyle\prod_{i=1}^D p(x_i \mid pa(x_i))$&lt;/p&gt;
+
+&lt;p&gt;where $pa(x_i)$ represent the &lt;em&gt;parental&lt;/em&gt; variables of variable $x_i$. 
+Represented as a directed graph, with an arrow pointing from a parent 
+variable to child variable, a belief network corresponds to a 
+Directed Acyclic Graph (DAG), with the $i^{th}$ node in the graph.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark 3.2 (Graphs and distributions)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Whether or not a belief network corresponds to a specific instance
+of a distribution requiring also the numerical specification of 
+the conditional probability tables, or whether or not it refers to 
+any distribution which is consistent with the specified structure. 
+In this one can potentially distinguish between a belief network 
+distribution (containing a numerical specification) and a belief 
+network graph (which contains no numerical specification).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark 3.3 (Dependencies and the Markov Blanket)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Consider a distribution on a set of variables $X$. For a variable 
+$x_i \in X$ and corresponding belief network represented by a DAG $G$,
+let $MB(x_i)$ be the variables in the Markov blanket of $x_i$. Then 
+for any other variable $y$ that is also not in the Markov blanket of 
+$x_i$, then $x_i \bot y \mid MB(x_i)$. That is, the Markov blanket of $x_i$
+carries all information about $x_i$. As an example, for fig(3.2b), 
+$MB(z_1) = ${$x_1, x_2, x_3, y, z_2$} 
+and $z_1 \bot x_4 \mid MB(z_1)$&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tLehGZR.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The DAG corresponds to a statement of conditional independencies in the 
+model. To complete the specification of the BN we need to define all 
+elements of the conditional probability tables $p(x_i\mid pa(x_i))$. 
+Once the graphical structure is defined, the entries of the conditional
+probability tables (CPTs) $p(x_i \mid pa(x_i))$ can be expressed. For 
+every possible state of the parental variables $pa(x_i)$, a value for 
+each of the states of $x_i$ needs to be specified. For a large number of 
+parents, writing out a table of values is intractable, and the tables are
+usually parameterised in a low dimensional manner.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Conditional independence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Whilst a BN corresponds to a set of conditional independence assumptions,
+it is not always immediately clear from the DAG whether a set of variables
+is conditionally independent of a set of other variables. For example,
+in fig(3.5) are $x_1$ and $x_2$ independent, given the state of $x_4$ ?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/5QAYBIB.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(x_1, x_2 \mid x_4) = \frac{1}{p(x_4)} \displaystyle\sum_{x_3} p(x_1, x_2, x_3, x_4) = \frac{1}{p(x_4)}\displaystyle\sum_{x_3} p(x_1 \mid x_4)p(x_2 \mid x_3, x_4)p(x_3)p(x_4)$&lt;/p&gt;
+
+&lt;p&gt;$= p(x_1 \mid x_4) \displaystyle \sum_{x_3} p(x_2 \mid x_3, x_4)p(x_3)$&lt;/p&gt;
+
+&lt;p&gt;Now&lt;/p&gt;
+
+&lt;p&gt;$p(x_2 \mid x_4) = \frac{1}{p(x_4)} \displaystyle\sum_{x_1, x_3} p(x_1, x_2, x_3, x_4) = \frac{1}{p(x_4)}\displaystyle\sum_{x_1, x_3} p(x_1 \mid x_4)p(x_2 \mid x_3, x_4)p(x_3)p(x_4)$&lt;/p&gt;
+
+&lt;p&gt;$= \displaystyle \sum_{x_3} p(x_2 \mid x_3, x_4)p(x_3)$&lt;/p&gt;
+
+&lt;p&gt;Because $\displaystyle \sum_{x_1} p(x_1 \mid x_4) = 1$&lt;/p&gt;
+
+&lt;p&gt;Combining the two results above we have&lt;/p&gt;
+
+&lt;p&gt;$p(x_1, x_2 \mid x_4) = p(x_1 \mid x_4)p(x_2 \mid x_4)$&lt;/p&gt;
+
+&lt;p&gt;So that $x_1$ and $x_2$ are indeed independent conditional on $x_4$.&lt;/p&gt;
+
+&lt;p&gt;To help develop intuition, consider the three variable distribution 
+$p(x_1, x_2, x_3)$. We may write this in any of the 6 ways:&lt;/p&gt;
+
+&lt;p&gt;$p(x_1, x_2, x_3) = p(x_{i_1} \mid x_{i_2}, x_{i_3})p(x_{i_2} \mid x_{i_3}p(x_{i_3})$&lt;/p&gt;
+
+&lt;p&gt;where $(i_1, i_2, i_3)$ is any of the 6 permutations of (1, 2, 3).
+Whilst each factorisation produces a different DAG, all represent the 
+same distribution, namely one that makes no independence statements.
+If the DAGs are of the cascade form, no independence assumptions have
+been made. The minimal independence assumptions then correspond to 
+dropping a single link in the casecade graph. This gives rise to the 
+4 DAGs in fig(3.6). Are any of these graphs equivalent, in the sense that
+they represent the same distribution?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/fcShYta.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/qkUw1Pd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;so that DAGs (b), (c) and (d) represent the same conditional 
+independece (CI) assumptions, given the state of variable $x_3$, variables
+$x_1$ and $x_2$ are independent, $x_1 \bot x_2 \mid x_3$.&lt;/p&gt;
+
+&lt;p&gt;However, graph (a) represents something fundamentally different, namely:
+$p(x_1, x_2) = p(x_1)p(x_2)$. There is no way to transform the distribution
+$p(x_3 \mid x_1, x_2)p(x_1)p(x_2)$ into any of the others.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark 3.4 (Graphical Dependence)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Belief network (graphs) are good for encoding conditional independence 
+but are not well suited for encoding dependence. For example, 
+consider the graph $a \rightarrow b$. This may appear to encode the relation
+that a and b are dependent. However, a specific numerical instance of a 
+belief network distribution could be such that $p(b \mid a) = p(b)$, 
+for which $a \bot b$. When the DAG appears to show ‘graphical’ dependence,
+there can be instances of the distributions for which dependence does not
+follow. The same caveat holds for Markov networks.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/H6gmtod.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Conditionally independence:&lt;/p&gt;
+
+&lt;p&gt;$p(A \mid C, B) = p(C)$&lt;/p&gt;
+
+&lt;p&gt;If we know the variable $C$, $A$ and $B$ is conditionally independent.&lt;/p&gt;
+
+&lt;p&gt;$B \bot C \mid A$&lt;/p&gt;
+
+&lt;p&gt;So if we know $B$ and $C$ are independent basic the fact $A$, does it imply
+$B \bot C$ ?&lt;/p&gt;
+
+&lt;p&gt;Answer is No.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, given the fact $B$ would gives the information of A, therefore
+the probability of $A$ will change.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/mach/2015/07/04/belief</link>
+                <guid>http://maximustann.github.io/mach/2015/07/04/belief</guid>
+                <pubDate>2015-07-04T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Basic Graph Concepts</title>
+                <description>
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A graph is made of nodes and edges, which we will use to represent variables and relations between them&lt;/li&gt;
+  &lt;li&gt;A DAG is an acyclic graph and will be useful for representing ‘causal’ relationships between variables&lt;/li&gt;
+  &lt;li&gt;Neighbouring nodes on an undirected graph will be useful represent dependent variables.&lt;/li&gt;
+  &lt;li&gt;A graph is singly-connected if there is only one path from any node to any other - otherwise the graph is 
+multiply-connected.&lt;/li&gt;
+  &lt;li&gt;A Clique is group of nodes all of which are connected to each other&lt;/li&gt;
+  &lt;li&gt;The adjacency matrix is a machine-readable description of a graph. Powers of the adjacency matrix give information
+on the paths between nodes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;strong&gt;Cycle, loop and chord&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A cycle is directed path stat starts and returns to the same node. A &lt;em&gt;loop&lt;/em&gt; is a path containing more than two nodes, 
+irrespective of edge direction, that starts and returns to the same node. For example, 1-2-4-3-1 forms a loop, but the
+graph is &lt;em&gt;acyclic&lt;/em&gt; (contains no cycles). A &lt;em&gt;chord&lt;/em&gt; is an edge that connects two non-adjacent nodes in a loop. For 
+example, the 2-3 edge is a chord in the 1-2-4-3-1 loop.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Markov blanket&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Markov blanket of a node is its parents, children and the parents of its children (&lt;em&gt;excluding itself&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/riplQmJ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, $x_4$ is $x_1, x_2, x_3, x_5, x_6, x_7$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Singly Connected Graph&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A graph is &lt;em&gt;singly connected&lt;/em&gt; if there is only one path from any node A to any other node B. Otherwise the graph is
+&lt;em&gt;multiply connected&lt;/em&gt;. This definition applies regardless of whether or not the edges in the graph are directed. An 
+alternative name for a singly connected graph is a &lt;em&gt;tree&lt;/em&gt;. A multiply-connected graph is also called &lt;em&gt;loopy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ymN2Nps.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spanning Tree&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A spanning tree of an undirected graph G is a singly-connected subset of the existing edges such that the 
+resulting singly-connected graph covers all nodes of G. On the below is a graph and an associated spanning tree.
+A maximum weight spanning tree is a spanning tree such that the sum of all weights on the edges of the tree is at least
+as large as any other spanning tree of G.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/F9VSflr.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Finding a maximal weight spanning tree&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An algorithm to find a spanning tree with maximal weight is as follows: Start by picking the edge with the largest 
+weight and add this to the edge set. Then pick the next candidate edge which has the largest weight and add this to 
+the edge set - if this results in an edge set with cycles, the reject the candidate edge and propose the next largest
+edge weight. Note that there may be more than one maximal weight spanning tree.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;numerically-encoding-graphs&quot;&gt;Numerically Encoding Graphs&lt;/h2&gt;
+
+&lt;h3 id=&quot;edge-list&quot;&gt;Edge list&lt;/h3&gt;
+
+&lt;p&gt;As the name suggests, an edge list simply lists which node-node pairs are in the graph. For fig(2.2a), an edge
+list is L = {(1,2), (2, 1), (1, 3), (3, 1), (2, 3), (3, 2), (2, 4), (4, 2), (3, 4), (4, 3)}. Undirected edges are 
+listed twice, once for each direction.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/8BHfCrU.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ajacency-matrix&quot;&gt;Ajacency matrix&lt;/h3&gt;
+
+&lt;p&gt;An alternative is to use an &lt;em&gt;adjacency matrix&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/QAhc7kO.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where $A_{ij} = 1$ if there is an edge from node $i$ to node $j$ in the graph, and 0 otherwise.
+An undirected graph has a symmetric adjacency matrix.&lt;/p&gt;
+
+&lt;p&gt;Provided that the nodes are labelled in &lt;em&gt;ancestral order&lt;/em&gt; (parents always come before children) a directed Graph 
+(fig2.2b) can be represented as a triangular adjacency matrix:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/FtMnZ0Q.png&quot; alt=&quot;Imgur&quot; /&gt;\&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Clique matrix&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For an undirected graph with N nodes and maximal cliques $C_1, \dots, C_K$ a clique matrix is an $N \times K$ matrix in 
+which each column $c_k$ has zeros except for ones on entries describing the clique. For example&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/pzsS27P.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The interesting thing is the probability are reverted. We know 
+about evidence B, but we really care about the variable A.&lt;/p&gt;
+
+&lt;p&gt;For example B is a test result. This diagnostic reasoning which is from 
+evidence to its causes is turned up-side-down into cause-reasoning.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Graph Confusions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;State Transition Diagrams&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Such representations are used in Markov chains and finite state automata. Each state is a node and a directed edge
+between  node $i$ and $j$ (with an associated weight) represents that a transition from state $i$ to state $j$
+can occur with probability. From the graphical models perspective we use a directed graph 
+$x(t) \rightarrow x(t + 1)$ to represent this Markov chain. The state-transition diagram provides a more detailed 
+graphical description of the conditional probability table $p(x(t + 1) \mid x(t))$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Neural Networks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Neural networks also have nodes and edges. In general, however, neural networks are graphical representations of
+&lt;em&gt;functions&lt;/em&gt;, whereas graphical models are representations of distributions.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/gra/2015/06/26/basic-graph-concepts</link>
+                <guid>http://maximustann.github.io/gra/2015/06/26/basic-graph-concepts</guid>
+                <pubDate>2015-06-26T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Probability Revision</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;math-notations&quot;&gt;Math notations&lt;/h2&gt;
+
+&lt;p&gt;$\sum_x f(x) \equiv \sum_{s \in dom(x)} f(x = s)$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; (Rules of Probability for Discrete Variables)&lt;/p&gt;
+
+&lt;p&gt;The summation of the probability over all the state is 1:&lt;/p&gt;
+
+&lt;p&gt;$\sum_{x \in dom(x)} p(x = x) = 1$&lt;/p&gt;
+
+&lt;p&gt;This is called normalisation condition. We write $\sum_x p(x) = 1$ for short.&lt;/p&gt;
+
+&lt;p&gt;Two variables $x$ and $y$ can interact through&lt;/p&gt;
+
+&lt;p&gt;$p(x, y) = p(x) + p(y) - p(x \cap y)$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.2 (Set notation) An alternative notation in terms of set theory is to write&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(\text{x or y}) \equiv p(x \cup y)$&lt;/p&gt;
+
+&lt;p&gt;$p(x, y) \equiv p(x \cap y)$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.3 (Marginals)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(x) = \sum_y p(x, y)$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.4 (Conditional Probability / Bayes’ Rule)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.5 (Probability Density Functions) For a continuous variable x, the probability density f(x) is defined
+such that&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$f(x) \geq 0, \int_{-\infty}^\infty f(x) \mathrm{d}x = 1$&lt;/p&gt;
+
+&lt;p&gt;and the probability that $x$ falls in an interval [a, b] is given by&lt;/p&gt;
+
+&lt;p&gt;$p(a \leq x \leq b) = \int_a^b f(x) \mathrm{d}x$&lt;/p&gt;
+
+&lt;p&gt;Unlike probabilities, probability densities can take positive values greater than 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.6 (Independence)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$p(x, y) = p(x)p(y)$&lt;/p&gt;
+
+&lt;p&gt;Provided that $p(x) \neq \text{0 and }p(y) \neq$0 independence of x and y is equivalent to&lt;/p&gt;
+
+&lt;p&gt;$p(x \mid y) = p(x)$&lt;/p&gt;
+
+&lt;p&gt;$\Leftrightarrow$&lt;/p&gt;
+
+&lt;p&gt;$p(y \mid x) = p(y)$&lt;/p&gt;
+
+&lt;p&gt;we write $x \bot y$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 1.7 (Conditional Independence)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$X \bot Y \mid Z$&lt;/p&gt;
+
+&lt;p&gt;denotes that the two sets of variables $X$ and $Y$ are independent of each other provided we know the state of the set
+of variables $Z$. For conditional independence, $X$ and $Y$ must be independent given all states of $Z$, means:&lt;/p&gt;
+
+&lt;p&gt;$p(X, Y \mid Z) = p(X \mid Z)p(y \mid Z)$&lt;/p&gt;
+
+&lt;p&gt;If $X$ and $Y$ are not conditionally independent, they are conditionally dependent, This is written:&lt;/p&gt;
+
+&lt;p&gt;$X \top Y \mid Z$&lt;/p&gt;
+
+&lt;p&gt;Similarly $X \top Y \mid \emptyset$ can be written as $X \top Y$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;probabilistic-reasoning&quot;&gt;Probabilistic Reasoning&lt;/h2&gt;
+
+&lt;p&gt;The central paradigm of probabilistic reasoning is to identify all relevant variables $x_1, \dots, x_N$ in the 
+environment, and make a probabilistic model $p(x_1, \dots, x_N)$ of their interaction. Reasoning(inference) is then 
+performed by introducing &lt;em&gt;evidence&lt;/em&gt; that sets variables in known states, and subsequently computing probabilities
+of interest, conditioned on this evidence.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;prior-likelihood-and-posterior&quot;&gt;Prior, Likelihood and Posterior&lt;/h2&gt;
+
+&lt;p&gt;Much of science deals with problems of the form: tell me something about the variable $\theta$ given that 
+I have observed data $D$ and have some knowledge of the underlying data generating mechanism. Our interest is 
+then the quantity&lt;/p&gt;
+
+&lt;p&gt;$p(\theta \mid D) = \frac{p(D \mid \theta)p(\theta)}{p(D)}$&lt;/p&gt;
+
+&lt;p&gt;We know, for continuous situation,&lt;/p&gt;
+
+&lt;p&gt;$p(D)$ = $\int_{\theta}p(D, \theta)$&lt;/p&gt;
+
+&lt;p&gt;$= \int_{\theta} p(D \mid \theta)p(\theta)$&lt;/p&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;p&gt;$p(\theta \mid D) = \frac{p(D \mid \theta)p(\theta)}{\int_{\theta}p(D \mid \theta)p(\theta)}$&lt;/p&gt;
+
+&lt;p&gt;This shows how form a forward or &lt;em&gt;generative model&lt;/em&gt; $p(D \mid \theta)$ of the dataset, and coupled with a &lt;em&gt;prior&lt;/em&gt; belief
+$p(\theta)$ about which variable values are appropriate, we can infer the &lt;em&gt;posterior&lt;/em&gt; distribution $p(\theta \mid D)$
+of the variable in light of the observed data. The &lt;em&gt;most probable a posteriori (MAP)&lt;/em&gt; setting is that which maximises
+the posterior,$\theta{\ast} = \text{arg }max_{\theta}$ $p(\theta \mid D)$, namely that $\theta$ that maximises the Likelihood $p(D \mid \theta)$
+of the model generating the observed data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/bmWzqrR.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The interesting thing is the probability are reverted. We know 
+about evidence B, but we really care about the variable A.&lt;/p&gt;
+
+&lt;p&gt;For example B is a test result. This diagnostic reasoning which is from 
+evidence to its causes is turned up-side-down into cause-reasoning.&lt;/p&gt;
+
+&lt;p&gt;Worth noting that the marginal likelihood or evidence $p(B)$ is hard 
+to compute. It is always expanded by total probability formula.&lt;/p&gt;
+
+&lt;p&gt;$p(B) = \displaystyle\sum_a p(B \mid A = a)p(A = a)$&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/FPhy3Cu.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How many parameters does it take to specify the entire Bayes network?&lt;/p&gt;
+
+&lt;p&gt;The answer is 3.&lt;/p&gt;
+
+&lt;p&gt;It takes one parameter to specify $p(A)$, and two parameters to 
+specify $p(B \mid A)$ and $p(B \mid \neg A)$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;computing-trick&quot;&gt;Computing trick&lt;/h2&gt;
+
+&lt;p&gt;we know:&lt;/p&gt;
+
+&lt;p&gt;$p(A \mid B) + p(\neg A \mid B) = 1$&lt;/p&gt;
+
+&lt;p&gt;We specify:&lt;/p&gt;
+
+&lt;p&gt;$p’(A \mid B) = p(B \mid A)p(A)$&lt;/p&gt;
+
+&lt;p&gt;$p’(\neg A \mid B) = p(B \mid \neg A)p(\neg A)$&lt;/p&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;p&gt;$p(A \mid B) = \eta * p’(A \mid B)$&lt;/p&gt;
+
+&lt;p&gt;$p(\neg A \mid B) = \eta *  p’(\neg A \mid B)$&lt;/p&gt;
+
+&lt;p&gt;$\eta = \frac{1}{p’(A \mid B) + p’(\neg A \mid B)}$&lt;/p&gt;
+
+&lt;p&gt;This could let us avoid calculating the evidence $p(B)$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;graphs&quot;&gt;Graphs&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition 2.1 (Graphs)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A graph G consists of nodes (vertices) and edges (links) between nodes. Edges may be directed or undirected. Edges can also have associated weight.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/pro/2015/06/24/probability_revision</link>
+                <guid>http://maximustann.github.io/pro/2015/06/24/probability_revision</guid>
+                <pubDate>2015-06-24T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Suffix Tree Clustering</title>
+                <description>
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#webclustering&quot;&gt;Web Search Results Clustering&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#main&quot;&gt;Main issues&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#algorithms&quot;&gt;Clustering algorithms&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#traditional&quot;&gt;Traditional clustering algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stc&quot;&gt;Suffix Tree Clustering (STC)&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#steps&quot;&gt;Steps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#advantages&quot;&gt;Advantages&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;web-search-results-clustering-a-idwebclusteringa&quot;&gt;Web Search Results Clustering &lt;a id=&quot;webclustering&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Clustering methods are more challenging than classification methods, because they are conducted in a fully unsupervised way. 
+Moreover, most traditional clustering algorithms cannot be directly used for search result clustering because of some practical issues.&lt;/p&gt;
+
+&lt;p&gt;For example, the algorithm should take the document snippets instead of the whole documents as input, since the downloading of original documents is time-consuming. 
+The clustering algorithm should be fast enough for online calculation.&lt;/p&gt;
+
+&lt;h3 id=&quot;main-issues-a-idmaina&quot;&gt;Main issues &lt;a id=&quot;main&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Online or offline clustering?&lt;/li&gt;
+  &lt;li&gt;What to use as input?
+    &lt;ul&gt;
+      &lt;li&gt;Entire Documents&lt;/li&gt;
+      &lt;li&gt;Snippets&lt;/li&gt;
+      &lt;li&gt;Structured information&lt;/li&gt;
+      &lt;li&gt;Other data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to define similarity?
+    &lt;ul&gt;
+      &lt;li&gt;Content (i.e. vector space model)&lt;/li&gt;
+      &lt;li&gt;Link analysis&lt;/li&gt;
+      &lt;li&gt;Usage statistics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to group similar Documents?&lt;/li&gt;
+  &lt;li&gt;How to label the groups?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;clustering-algorithms-a-idalgorithmsa&quot;&gt;Clustering algorithms &lt;a id=&quot;algorithms&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Distance-based
+    &lt;ul&gt;
+      &lt;li&gt;Hierarchical
+        &lt;ol&gt;
+          &lt;li&gt;Agglomerative Hierarchical Clustering (AHC)&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Flat
+        &lt;ol&gt;
+          &lt;li&gt;K-means&lt;/li&gt;
+          &lt;li&gt;Single-pass&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Other
+    &lt;ul&gt;
+      &lt;li&gt;Suffix Tree clustering  (Grouper)&lt;/li&gt;
+      &lt;li&gt;Self-organizing maps&lt;/li&gt;
+      &lt;li&gt;LSI (reducing the dimensinality of the vector-space)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;traditional-clustering-algorithms-a-idtraditionala&quot;&gt;Traditional clustering algorithms &lt;a id=&quot;traditional&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Cluster Documents into topically-coherent groups according to content similarity and generate descriptive summaries for clusters.&lt;/p&gt;
+
+&lt;p&gt;However, these summaries are often unreadable, which make it difficult for web users to identify relevant clusters.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;suffix-tree-clustering-stc-a-idstca&quot;&gt;Suffix Tree Clustering (STC) &lt;a id=&quot;stc&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;STC not treats documents as a collection of words but as a string of words. On that way thus operates using the proximity information
+between words. STC uses suffix tree structure to efficiently identify sets of documents that share common phrases and terms and uses
+this information to create clusters and to concisely present their content.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;linear&lt;/li&gt;
+  &lt;li&gt;Incremental&lt;/li&gt;
+  &lt;li&gt;Overlapping&lt;/li&gt;
+  &lt;li&gt;Can be extended to hierarchical&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;steps-a-idstepsa&quot;&gt;Steps &lt;a id=&quot;steps&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;STC meanly includes four logical steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Cleaning
+    &lt;ul&gt;
+      &lt;li&gt;Stemming&lt;/li&gt;
+      &lt;li&gt;Sentence boundary identification&lt;/li&gt;
+      &lt;li&gt;Punctuation elimination&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Suffix tree construction
+    &lt;ul&gt;
+      &lt;li&gt;Produces base clusters (internal nodes)&lt;/li&gt;
+      &lt;li&gt;Base clusters are scored based on size and phrase score (which depends on length and word)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Merging base clusters
+    &lt;ul&gt;
+      &lt;li&gt;Highly overlapping clusters are merged&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;advantages-a-idadvantagesa&quot;&gt;Advantages &lt;a id=&quot;advantages&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;STC has linear complexity $O(n)$&lt;/p&gt;
+
+&lt;p&gt;Linear complexity puts STC in the top of clustering algorithms. The low complexity return fast search in suffix tree. 
+Because of that reason, this algorithm is used in online clustering.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/clu/2015/06/12/suffix-tree-clustering</link>
+                <guid>http://maximustann.github.io/clu/2015/06/12/suffix-tree-clustering</guid>
+                <pubDate>2015-06-12T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 06 Summary</title>
+                <description>
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#extraction&quot;&gt;Feature Extraction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#selection&quot;&gt;Feature Selection&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#filter&quot;&gt;Filter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#wrapper&quot;&gt;Wrapper&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;feature-extraction-a-idextractiona&quot;&gt;Feature Extraction &lt;a id=&quot;extraction&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Feature extraction is an attribute reduction process. Unlike feature selection, which ranks the existing attributes according to their
+predictive significance, feature extraction actually transforms the attributes. The transformed attributes, or &lt;strong&gt;features&lt;/strong&gt;, are linear
+combination of the original attributes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The feature extraction process results in a much smaller and richer set of attributes.&lt;/p&gt;
+
+&lt;p&gt;Feature extraction projects a data set with higher dimensionality onto a smaller number of dimensions.&lt;/p&gt;
+
+&lt;p&gt;Feature extraction can be used to extract the themes of a document collection, where documents are represents by a set of key words and 
+their frequencies.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;feature-selection-a-idselectiona&quot;&gt;Feature Selection &lt;a id=&quot;selection&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Performance of text classification algorithms can be optimized by selecting only a subset of the discriminative terms.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Filter:&lt;/strong&gt; &lt;a id=&quot;filter&quot;&gt;&lt;/a&gt;
+Filter model relies on general characteristics of the data to evaluate and select feature subsets without involving any mining 
+algorithm. Filter type methods select variables regardless of the model. It tend to select redundant variables because they does 
+not consider the relationships between variables.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Wrapper:&lt;/strong&gt; &lt;a id=&quot;wrapper&quot;&gt;&lt;/a&gt;
+The wrapper model requires one predetermined mining algorithm and uses its performance as the evaluation criterion. It searches 
+for features better suited to the mining algorithm aimming to improve mining performance, but it also tends to be more 
+computationally expensive than the filter model.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;general-procedure-of-feature-selection&quot;&gt;General procedure of feature selection&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Subset generation, this is a process of heuristic search with each state in the search space specifying a candidate subset for
+evaluation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Subset evaluation&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;approach&quot;&gt;Approach&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Greedy Search
+    &lt;ul&gt;
+      &lt;li&gt;Start from empty set or full set and add/delete one at a time&lt;/li&gt;
+      &lt;li&gt;Heuristic for adding/deleting&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/12/intelligent-agent-06-summary</link>
+                <guid>http://maximustann.github.io/ia/2015/06/12/intelligent-agent-06-summary</guid>
+                <pubDate>2015-06-12T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>K means clustering algorithm</title>
+                <description>
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;k-means-clustering&quot;&gt;K-means clustering&lt;/h1&gt;
+
+&lt;p&gt;input: K set of points $X_i \dots X_n$&lt;/p&gt;
+
+&lt;p&gt;place centroids $C_i, \dots, C_n$ at &lt;strong&gt;random&lt;/strong&gt; locations&lt;/p&gt;
+
+&lt;p&gt;Repeat until convergence:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for each point $x_i$
+    &lt;ul&gt;
+      &lt;li&gt;find nearest centroid $c_j$ (average min $D(x_i, c_j)$)&lt;/li&gt;
+      &lt;li&gt;assign the point $x_i$ to cluster $j$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;for each cluster $j = 1 \dots k$: (recompute each cluster centroid position)
+    &lt;ul&gt;
+      &lt;li&gt;new centroid $c_j = $ mean of all points $x_i$ assigned to cluster $j$ in previous step.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nngazhf.png&quot; alt=&quot;initial&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Initially, the random placed centroids &lt;strong&gt;red&lt;/strong&gt; and &lt;strong&gt;yellow&lt;/strong&gt; triangles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/NNl0XC4.png&quot; alt=&quot;assign&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Calculate distance from $x_i$ to each centroid, and assign them into either cluster.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KcsH5xR.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recompute the centroids of clusters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/NwBMqS2.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeat the steps until there is no items re-assign to a different cluster.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;advantages-and-disadvantages&quot;&gt;Advantages and Disadvantages&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Euclidean distance is used as a metric and variance is used as a measure of cluster scatter (Can not apply for categorical attributes).&lt;/li&gt;
+  &lt;li&gt;The number of clusters $k$ is an input parameter: an inappropriate choice of $k$ may yield poor results.&lt;/li&gt;
+  &lt;li&gt;Convergence to a local minimum may produce wrong results&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt; K-means is fast.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/clu/2015/06/11/k-means-clustering-algorithm</link>
+                <guid>http://maximustann.github.io/clu/2015/06/11/k-means-clustering-algorithm</guid>
+                <pubDate>2015-06-11T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Hierachical Clustering</title>
+                <description>
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#top&quot;&gt;Top down&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#kmeans&quot;&gt;Hierachical K-means&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bottom&quot;&gt;Bottom up&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#agglomerative&quot;&gt;Agglomerative clustering&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#distance&quot;&gt;Distance Metrics&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#single&quot;&gt;Single links&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#complete&quot;&gt;Complete links&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#average&quot;&gt;Average links&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#centroids&quot;&gt;Centroids&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We try to separate a set into several subset of the population. One of the problems of 
+K-Means and other clustering algorithms is &lt;strong&gt;picking the number of clusters&lt;/strong&gt;. You need to
+pre-define $K$. Most of algorithms you either specify the number of cluster or some parameters
+like a threshold that dictates how many clusters you end up with. We want the algorithm to pick
+$K$ automatically. But, so far there is no good way to do it universally.&lt;/p&gt;
+
+&lt;p&gt;The root of this problem is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The number of clusters is an ambiguous thing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When you dealing with real world data, the data has multiple scales, it is a problem related to
+the &lt;strong&gt;granularity&lt;/strong&gt; of the data.&lt;/p&gt;
+
+&lt;p&gt;So, &lt;strong&gt;the idea of&lt;/strong&gt; hierachical clustering is instead of picking the number of clusters, build
+a hierachy.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;top levels - coarse effects. low levels - fine grained&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;two-strategies&quot;&gt;Two Strategies&lt;/h2&gt;
+
+&lt;h3 id=&quot;top-down-a-idtopa&quot;&gt;Top down &lt;a id=&quot;top&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;start with all items in one cluster, split recursively&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Hierachical K-Means&lt;/strong&gt; &lt;a id=&quot;kmeans&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We know how to split the data into fine number of clusters (e.g., number = 2).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;run K-means algorithm on the original data $x_1 \dots x_n$&lt;/li&gt;
+  &lt;li&gt;for each of the clustering clusters: $c_j$ $j = 1 \dots k$
+    &lt;ul&gt;
+      &lt;li&gt;recursively run K-means on points in $c_j$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eCvzEgL.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantage:&lt;/strong&gt; Fast&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disadvantage:&lt;/strong&gt; Greedy, can’t cross boundries. Nearby points may end up in different clusters.&lt;/p&gt;
+
+&lt;h3 id=&quot;bottom-up-a-idbottoma&quot;&gt;Bottom up &lt;a id=&quot;bottom&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;start with singletons. Merge by some criteria.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Agglomerative clustering&lt;/strong&gt; &lt;a id=&quot;agglomerative&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Idea: ensure nearby points end up in the same cluster&lt;/p&gt;
+
+&lt;p&gt;Start with a collection $C$ of $n$ singleton clusters&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;each cluster contains one data point: $c_i = $ {$x_i$}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Rpeat until only one cluster is remain:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;find a pair of clusters that is closest&lt;/li&gt;
+  &lt;li&gt;merge the cluster $c_i, c_j$ into a new cluster $c_{i + j}$&lt;/li&gt;
+  &lt;li&gt;rename $c_i, c_j$ from the collection $C$, add $c_{i + j}$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is not the distance between two instances. This is the distance between two clusters.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/qKnAzqd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It produces a dendrogram: hierachical tree of clusters&lt;/p&gt;
+
+&lt;p&gt;In this algorithm, you need to define a &lt;strong&gt;distance metric&lt;/strong&gt; over clusters.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt; Slow (much slower than K-means)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt; If you want to produce a flat clustering, you pick a threshold on the distance, and cut the tree. Once you have a 
+dendrogram, you can cut the data into any granularity.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;distance-metrics-a-iddistancea&quot;&gt;Distance metrics &lt;a id=&quot;distance&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;single-link-a-idsinglea&quot;&gt;Single Link &lt;a id=&quot;single&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/QIPm4Zx.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Look for distance between cloest elements in clusters.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt; Simple, in many situations, it works well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt; Produce long chains. Eventually, you will put two points that far away into a same cluster.&lt;/p&gt;
+
+&lt;h3 id=&quot;complete-link-a-idcompletea&quot;&gt;Complete Link &lt;a id=&quot;complete&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/t1DZPnM.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Measure the distance between farthest elements in clusters.&lt;/p&gt;
+
+&lt;p&gt;But once compute the distance, still compare the cloest.&lt;/p&gt;
+
+&lt;p&gt;In the above two measures, they produce different results. In &lt;strong&gt;Single Link&lt;/strong&gt;, red and yellow will combine. 
+However, In &lt;strong&gt;Complete Link&lt;/strong&gt;, red and yellow will not combine, instead, yellow will combine with blue.&lt;/p&gt;
+
+&lt;h3 id=&quot;average-link-a-idaveragea&quot;&gt;Average Link &lt;a id=&quot;average&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/FEghD6J.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Average of all pairwise distance. Less affected by outliers.&lt;/p&gt;
+
+&lt;h3 id=&quot;centroids-a-idcentroidsa&quot;&gt;Centroids &lt;a id=&quot;centroids&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/QKh8jiW.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Distance between Centroids (means) of two clusters&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/clu/2015/06/11/hierachical-clustering</link>
+                <guid>http://maximustann.github.io/clu/2015/06/11/hierachical-clustering</guid>
+                <pubDate>2015-06-11T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 05 Summary</title>
+                <description>
+&lt;p&gt;Text Representation&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#bog&quot;&gt;Bag of words&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ngram&quot;&gt;N-grams&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;bag-of-words-a-idboga&quot;&gt;Bag of words &lt;a id=&quot;bog&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Vector Space model&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Documents are term Vectors&lt;/li&gt;
+  &lt;li&gt;TF.IDF for term weights&lt;/li&gt;
+  &lt;li&gt;Cosine similarity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disadvantages&quot;&gt;Disadvantages&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The ignorance of any relation between words. Learn algorithm could only detect terminology, conceptual patterns (synatatic meaning)
+are totally ignored.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dimensionality problem&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;other-representation&quot;&gt;Other Representation&lt;/h2&gt;
+
+&lt;h3 id=&quot;n-grams-model-a-idngrama&quot;&gt;N-grams model &lt;a id=&quot;ngram&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;n-grams model is a contiguous sequence of $n$ items from a given sequence of text or speech. An n-grams model is a type of 
+probabilistic language model for predicting the next item in such a sequence in the form of a (n - 1) other &lt;strong&gt;Markov Model&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bi-grams&lt;/li&gt;
+  &lt;li&gt;Tri-grams&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two advantages of n-gram models:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;similarity&lt;/li&gt;
+  &lt;li&gt;Scale up efficiently&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/10/intelligent-agent-05-summary</link>
+                <guid>http://maximustann.github.io/ia/2015/06/10/intelligent-agent-05-summary</guid>
+                <pubDate>2015-06-10T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Explicit semantic analysis</title>
+                <description>
+&lt;blockquote&gt;
+  &lt;p&gt;Explicit semantic analysis (ESA) is a vectorial representation of text that uses a document corpus as a knowledge base.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In ESA, a word is represented as a column vector in the tf-idf matrix of the text corpus and a document is represented as the 
+centroid of the vectors representing its words. Typicall, the text corpus is Wikipedia, though other corpora have been used.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Represent texts as weighted mix of predetermined set of natural concepts&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Natrual concepts: Defined by humans, easily explained&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+&lt;p&gt;Wikipedia titles are the source of the concepts.&lt;/p&gt;
+
+&lt;p&gt;Utilised machine learning techniques to build a Semantic Interpreter, this maps fragments of text wo wiki concepts (attribute vector 
+of words weighted by TF-IDF)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Wikipedia is a large and diverse knowledge base where each article can be considered a distinct concepts. In Wikipedia based ESA, a 
+concept is generated for each article. Each concept is then represented as a vector of the words which occur in the article, weighted
+by their tf-idf score.&lt;/p&gt;
+
+&lt;p&gt;Every Wikipedia article represents a &lt;strong&gt;concept&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/5pwYXbV.jpg?1&quot; alt=&quot;catwiki&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;strong&gt;semantics&lt;/strong&gt; of a word is the vector of its &lt;strong&gt;associations&lt;/strong&gt; with Wikipedia concepts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/pqHMvyh.png?1&quot; alt=&quot;vector&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The meaning of any given word can then be represented as vector of that word’s relatedness, or “association weighting” to the Wikipedia
+based concepts.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;word&quot; &amp;lt;concept1, weight1&amp;gt;, &amp;lt;concept2, weight2&amp;gt;, &amp;lt;concept3, weight3&amp;gt;...
+&quot;Mars&quot; &amp;lt;planet, 0.90&amp;gt;, &amp;lt;Solar system, 0.85&amp;gt;, &amp;lt;jupiter, 0.30&amp;gt;...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;explicit-semantic-analysis-documents&quot;&gt;Explicit Semantic Analysis Documents&lt;/h3&gt;
+
+&lt;p&gt;Large documents are represented as a combination of individual word vectors derived from the words within a document.
+The resultant document vectors are known as “concept” vectors.&lt;/p&gt;
+
+&lt;p&gt;For example, a concept vector might look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;Mars&quot; &amp;lt;planet, 0.90&amp;gt;, &amp;lt;Solar system, 0.85&amp;gt;, &amp;lt;jupiter, 0.30&amp;gt;...
+&quot;explorer&quot; &amp;lt;adventurer, 0.90&amp;gt;, &amp;lt;pioneer, 0.85&amp;gt; ...
+...
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Graphically, we can represent a concept vector as the centroid of the word vectors it is composed of. The image below illustrates
+the centroid of a set of vectors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Z3hbLfK.png&quot; alt=&quot;centroid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, to compare how similar two phrases are we can create their concept vectors from their constituent word vectors and then
+compare the two, again using cosine similarity.&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/10/explicit-semantic-analysis</link>
+                <guid>http://maximustann.github.io/ia/2015/06/10/explicit-semantic-analysis</guid>
+                <pubDate>2015-06-10T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 04 Summary</title>
+                <description>
+&lt;p&gt;Recommender System&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#overview&quot;&gt;Recommender System Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#collaborative&quot;&gt;Collaborative filtering&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#memory&quot;&gt;Memory-based&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#user&quot;&gt;User-based&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#item&quot;&gt;Item-based&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#model&quot;&gt;Model-based&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot;&gt;Content-based filtering&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;recommender-system-overview-a-idoverviewa&quot;&gt;Recommender System Overview &lt;a id=&quot;overview&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Recommender Systems provide a lot of recommendations in one of two ways:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Collaborative filtering:&lt;/strong&gt; building a model from a user’s past behavior, as well as similar decisions made by other people&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;content-based filtering:&lt;/strong&gt; use a series of discrete characteristics of an item in order to recommend additional items with similar properties.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;an-example&quot;&gt;An Example&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;last.fm&lt;/strong&gt; creates a “station” of recommended songs by observing what bands and individual tracks the user has listened to on a regular basis and comparing those
+against the listening behavior of ther users. &lt;strong&gt;Collaborative Filtering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pandora&lt;/strong&gt; uses the properties of a song or artist (a subset of the 400 attributes) in order to seed a “station” that plays music with similar properties. &lt;strong&gt;Content-based filtering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;strengths-and-weakness&quot;&gt;Strengths and weakness&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Last.fm&lt;/strong&gt; requires large amount of information on a user in order to make accurate recommendation. Th is an example of &lt;strong&gt;the cold start problem&lt;/strong&gt; and it is the common problem in Collaborative filtering.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pandora&lt;/strong&gt; needs little information to start. But it is far limited in scope (Only recommend similar musics).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;collaborative-filtering-a-idcollaborativea&quot;&gt;Collaborative filtering &lt;a id=&quot;collaborative&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Collaborative filtering methods are based on collecting and analyzing a large amount of information on user’s behaviors, activities or preferences and predicting what users will like based 
+on their similarity to other users.&lt;/p&gt;
+
+&lt;p&gt;Collaborative filtering is based on the assumption that people agree on past will agree in the future.&lt;/p&gt;
+
+&lt;p&gt;A key &lt;strong&gt;advantage&lt;/strong&gt; of the collaborative filtering methods is that it does not rely on machine analyzable content and therefore it is capable of accurately recommending complex items such as “movie”
+without require an “understanding” of the item itself.&lt;/p&gt;
+
+&lt;p&gt;Algorithms to measure user similarity or item similarity:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;KNN&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pearson correlation&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;weakness&quot;&gt;Weakness&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Collaborative filtering approaches often suffer from three problems:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Cold Start:&lt;/strong&gt; These systems often require a large amount of existing data on a user in order to make accurate predications.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; In many of the environments in which these systems make recommendations, there are millions of users and products.
+Thus, a large number of computation power is often necessary to calculate recommendations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Sparsity:&lt;/strong&gt; The most active user will only rated a small subset of the overall database. When the matrix is sparse, the clustering
+algorithms do not work well.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;memory-based-a-idmemorya&quot;&gt;Memory-based &lt;a id=&quot;memory&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This approach uses user rating data to compute the similarity between users or items. This was an early approach userd in many commercial
+systems. It’s effective and easy to implement.&lt;/p&gt;
+
+&lt;p&gt;Typical examples of this approach are neighbour-based collaborative filtering and item-based/user-based top-N recommendations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User-based algorithms&lt;/strong&gt; &lt;a id=&quot;user&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The first step of the algorithm is to obtain the user history profile, which can be represented as a ratings matrix, each entry is the
+rate of a user given to an item. A ratings matrix consists of a table where each row represents a user, each column represented an item.&lt;/p&gt;
+
+&lt;p&gt;The second step is to calculate the similarity between users and find their nearest neighbours. There are many similarity measure methods
+such as Pearson correlation.&lt;/p&gt;
+
+&lt;p&gt;The last step is to calculate the items rating (Prediction). The rating is computed by a weighted average of 
+the ratings by the neighbours.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Item-based algorithms&lt;/strong&gt; &lt;a id=&quot;item&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Same matrix with user-based matrix. But the critical step is to compute the similarity between items. And get top-N similar items.
+The prediction is then computed by taking a weighted average of the target user’s ratings on these similar items.&lt;/p&gt;
+
+&lt;h3 id=&quot;model-based-a-idmodela&quot;&gt;Model-based &lt;a id=&quot;model&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Models are developed using dataming, machine learning algorithms to find patterns based on training data, such as &lt;strong&gt;Bayesian network, 
+clustering, and rule-based approaches&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;content-based-a-idcontenta&quot;&gt;Content-based &lt;a id=&quot;content&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Content-based filtering methods on a description of the item and a profile of the user’s preferences. 
+In a content-based Recommender system, keywords are used to describe the items. A user’s profile is built to indicate the type of 
+item this user likes. These algorithms try to recommend items that one similar to those a user liked in the past.&lt;/p&gt;
+
+&lt;p&gt;To create user profile, the system most focus on two types of information:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A model of the user’s preferences&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A history of the user’s interaction with the Recommender system&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These methods use an item profile (features) characterizing the item within the system. The system creates a 
+content-based profile of users based on a weighted vector of item features.&lt;/p&gt;
+
+&lt;p&gt;A key issue with content-based filtering is whether the system is able to learn user preferences from user’s 
+actions regarding one content source and user them across other content type.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+
+&lt;p&gt;When building a model from a user’s profile, a distribution is often made between explicit and implicit forms of data collection.&lt;/p&gt;
+
+&lt;p&gt;Explicit data:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rate items&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compare items&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a like-list&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Implicit data:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Item viewed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click through data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;…&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/09/intelligent-agent-04-summary</link>
+                <guid>http://maximustann.github.io/ia/2015/06/09/intelligent-agent-04-summary</guid>
+                <pubDate>2015-06-09T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 03 Summary</title>
+                <description>
+&lt;p&gt;Information Extraction&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#approaches&quot;&gt;Approaches&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#man&quot;&gt;Manually crafted patterns&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mac&quot;&gt;Machine learning Approaches&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tasks&quot;&gt;Tasks and subtasks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#eva&quot;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;intelligent-agent-summary&quot;&gt;Intelligent Agent Summary&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Information Extraction is the task of automatically extracting structured information from a unstructured and semi-structured documents.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;approaches-a-idapproachesa&quot;&gt;Approaches &lt;a id=&quot;approaches&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;manually-crafted-patterns-a-idmana&quot;&gt;Manually crafted patterns &lt;a id=&quot;man&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;regular expression&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Automata&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NLP-based&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule-based/knowledge based&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[person][office]of[org]
+[org][person][office]
+[org]in[loc]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;machine-learning-approaches-a-idmaca&quot;&gt;Machine learning Approaches &lt;a id=&quot;mac&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Label documents&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learn rules and patterns&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;tasks-and-subtasks-a-idtasksa&quot;&gt;Tasks and subtasks &lt;a id=&quot;tasks&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Typical subtasks of IE include:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Named entity recognition:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;a Named entity Extraction&lt;/p&gt;
+
+    &lt;p&gt;b Coreference Resolution (指代消解)&lt;/p&gt;
+
+    &lt;p&gt;c Relationship Extraction&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Semi-structured information Extraction:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Table extract: Finding and extracting tables from documents&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Comment extract&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Language and vocabulary analysis&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Terminology extraction&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;evaluation-a-idevaa&quot;&gt;Evaluation &lt;a id=&quot;eva&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Model solutions as labelled facts&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Precision: $\frac{correctFoundFacts}{allFoundFacts}$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Recall: $\frac{correctFoundFacts}{allFacts}$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;F-measure&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$F-measure = \frac{2 \times precision \times recall}{Precision + Recall}$&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/09/intelligent-agent-03-summary</link>
+                <guid>http://maximustann.github.io/ia/2015/06/09/intelligent-agent-03-summary</guid>
+                <pubDate>2015-06-09T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 02 Summary</title>
+                <description>
+&lt;p&gt;Personalised Search&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#personal&quot;&gt;Personalized Search&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#expansion&quot;&gt;Query Expansion&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#filtering&quot;&gt;Search results filtering&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gathering&quot;&gt;Personal information gathering&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#implicit&quot;&gt;Implicit&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#explicit&quot;&gt;Explicit&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#disadvantages&quot;&gt;Disadvantages&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mobile&quot;&gt;Personalized Mobile Search Engine&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#architecture&quot;&gt;Client-Server architecture&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#client&quot;&gt;Client&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#server&quot;&gt;Server&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#evalution&quot;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pagerank&quot;&gt;PageRank&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#hypothesis&quot;&gt;Two hypothesis&lt;/a&gt;
+        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#quantitative&quot;&gt;Quantitative&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#qualitative&quot;&gt;Qualitative&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#initial&quot;&gt;Initial Stage&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#update&quot;&gt;Update Stage&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;intelligent-agent-summary&quot;&gt;Intelligent Agent Summary&lt;/h1&gt;
+
+&lt;h2 id=&quot;personalized-search-a-idpersonala&quot;&gt;Personalized Search &lt;a id=&quot;personal&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Personalized search refers to search experiences that are tailored specifically to an individual’s interests 
+by incorporating information about the individual beyond specific query provided.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Two general approaches to personalizing search results:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modifying the user’s query &lt;a id=&quot;expansion&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Re-ranking search results &lt;a id=&quot;filtering&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Modifying the user’s query is also called &lt;strong&gt;query expansion&lt;/strong&gt;, 
+&lt;strong&gt;query expansion&lt;/strong&gt; involves evaluting a user’s input (typed into the 
+search query area and sometimes other type of data), and expanding the 
+search to match additional documents.&lt;/p&gt;
+
+&lt;p&gt;Re-ranking search results are also called &lt;strong&gt;Search results filtering/adaptation&lt;/strong&gt; 
+are based on personal preference, therefore, the data type can be various.&lt;/p&gt;
+
+&lt;p&gt;Personal information gathering: &lt;a id=&quot;gathering&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Implicit:&lt;/strong&gt; to gather data about the user in an implicit, non-invasive way &lt;a id=&quot;implicit&quot;&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;click-through data&lt;/li&gt;
+      &lt;li&gt;dwell time on page&lt;/li&gt;
+      &lt;li&gt;bookmarks &amp;amp; tags&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Explicit:&lt;/strong&gt; user supplied information &lt;a id=&quot;explicit&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Typically use supervised machine learning:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Relevant(Binary: Yes or No)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Training data:
+    &lt;ul&gt;
+      &lt;li&gt;Labeled data&lt;/li&gt;
+      &lt;li&gt;Assume clicked docs are relevent&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Machine learning methods&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;KNN&lt;/li&gt;
+  &lt;li&gt;SVM&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;disadvantages-for-personalised-search-a-iddisadvantagesa&quot;&gt;Disadvantages for Personalised Search &lt;a id=&quot;disadvantages&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The personalised search narrows the search space. Therefore, it might limits the diversity of search result.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Privacy issues. Selling users’ profile or preference to other companies.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;personalised-mobile-search-engine-a-idmobilea&quot;&gt;Personalised Mobile Search Engine &lt;a id=&quot;mobile&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Motivation:&lt;/strong&gt; It’s hard for user to type on Mobile. So the query can
+be short. PMSE aims to tailor search result to user’s preference.&lt;/p&gt;
+
+&lt;h4 id=&quot;terms&quot;&gt;Terms&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ontology:&lt;/strong&gt; Formal naming, defining and ordering of the entities in a 
+given domain, and their interrelationships.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ARR:&lt;/strong&gt; Average Relevant Ranking&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Entropy:&lt;/strong&gt; The uncertainty about the information content&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Top-N Precision:&lt;/strong&gt; Precision of results, considering only those in the top $N$ entities&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;client-server-architecture-a-idarchitecturea&quot;&gt;Client-Server architecture &lt;a id=&quot;architecture&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; The client is the user’s interface, it collects user’s data (clickthrough data, ontology data, history) and send them &lt;a id=&quot;client&quot;&gt;&lt;/a&gt;
+to the server. It displays the results. (&lt;strong&gt;Naive Bayes &amp;amp; Voting System&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Server:&lt;/strong&gt; Responsile for forwarding queries to a search engine and extracts the ontological information from the results and stores it. &lt;a id=&quot;server&quot;&gt;&lt;/a&gt;
+Then, the ontological information combines with the input vectors in RSVM training to create weighted content. Then, combines with GPS 
+data. In the end, use these information to re-rank the results.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Evaluation of Personalised search system&lt;/strong&gt; &lt;a id=&quot;evaluation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quantitative &amp;amp; Qualitative&lt;/p&gt;
+
+&lt;p&gt;User rank all search results $\Rightarrow$ ARR and Top-N precision. There is no qualitative data collected in this experiment.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;pagerank&quot;&gt;PageRank&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Terms&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Forward links: a hyperlink to a page 
+Back links: a hyperlink to the current page
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PageRank is based on two hypothesis: &lt;a id=&quot;hypothesis&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Quantitative hypothesis:&lt;/strong&gt; More back links, more important the page &lt;a id=&quot;quantitative&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Qualitative hypothesis:&lt;/strong&gt; The link from highly ranked Page has high weight &lt;a id=&quot;qualitative&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Initial Stage:&lt;/strong&gt; Built a network based on links. Assign same PageRank value to each page. &lt;a id=&quot;initial&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update Stage:&lt;/strong&gt; Every Page divide its PageRank value equally by the number of its forward links. Therefore, every link has its weight. &lt;a id=&quot;update&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;$Link weight = \frac{PageRank}{\parallel forward links \parallel}$&lt;/p&gt;
+
+&lt;p&gt;Because there are some dangling links which has 0 forward link. The PageRank formula makes use of damping factor $q$. The meaning of 
+$q$ is the probability of a user continue browsing from current page. $1 - q$ is the probability that user stop browsing.&lt;/p&gt;
+
+&lt;p&gt;PageRank formula:&lt;/p&gt;
+
+&lt;p&gt;$PR = \sum_{n} \text{backlink’s weight} \times q \times (1 - q)$&lt;/p&gt;
+
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/08/intelligent-agent-02-summary</link>
+                <guid>http://maximustann.github.io/ia/2015/06/08/intelligent-agent-02-summary</guid>
+                <pubDate>2015-06-08T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Intelligent Agent 01 Summary</title>
+                <description>
+&lt;p&gt;Basic concepts.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#retrival&quot;&gt;Information Retrieval&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#agent&quot;&gt;Information Agent&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#percepts&quot;&gt;Percepts&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#actions&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goals&quot;&gt;Goals&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#env&quot;&gt;Environment&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#drawbacks&quot;&gt;Drawbacks&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#search&quot;&gt;Search Engine&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#dowhat&quot;&gt;What search engines do?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#indexing&quot;&gt;Indexing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#retrival&quot;&gt;Popular Retrieval models&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vector&quot;&gt;Vector Space Model&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#cosine&quot;&gt;Cosine Similarity&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#representation&quot;&gt;Text representation&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#tfidf&quot;&gt;Term weights&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#evaluation&quot;&gt;Evaluation&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#criteria&quot;&gt;Criteria&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#precisionrecall&quot;&gt;How to evaluate two IR systems?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;intelligent-agent-summary&quot;&gt;Intelligent Agent Summary&lt;/h1&gt;
+
+&lt;h2 id=&quot;basic-concepts&quot;&gt;Basic Concepts:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Agent:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through effectors.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;information-retrieval-a-idretrievala&quot;&gt;Information Retrieval &lt;a id=&quot;retrieval&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;The field of information Retrival deals with the representation, storage, organization of, access of Information items.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;information-agent-a-idagenta&quot;&gt;Information Agent &lt;a id=&quot;agent&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Percepts:&lt;/strong&gt; what the agents perceives from its environment &lt;a id=&quot;percepts&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;User’s query&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Documents&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Users’ feedback&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Users’ actions&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Actions:&lt;/strong&gt; what the agent can do in its environment &lt;a id=&quot;actions&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow links&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Retrieve documents&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Query search engine&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Expand query&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; what should the agent try to achieve &lt;a id=&quot;goals&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Find the exact information, orgainse the Information&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Environment:&lt;/strong&gt; what the agent acts and perceives within &lt;a id=&quot;env&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the Internet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Some technical drawbacks&lt;/strong&gt; &lt;a id=&quot;drawbacks&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Different tasks, interfaces, formats are hard to combine&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Domain knowledge does not scale well&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;search-engine-a-idsearcha&quot;&gt;Search Engine &lt;a id=&quot;search&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;Search a large collection documents to find the ones that satisfied an information need
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;What search Engines do:&lt;/strong&gt; &lt;a id=&quot;dowhat&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Indexing(Scape &amp;amp; Store)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Document representation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Comparison with query&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Evaluation/feedback&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Indexing:&lt;/strong&gt; &lt;a id=&quot;indexing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mannual indexing: libraries&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Automatic indexing: indexing program assigns keywords, pharases, other features&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Popular Retrieval models:&lt;/strong&gt; &lt;a id=&quot;retrival&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exact Match: Boolean (Yes or No)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Best Match:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Vector Space (Cosine Similarity)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Citation analysis models&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Probabilistic models&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;vector-space-model-a-idvectora&quot;&gt;Vector space model &lt;a id=&quot;vector&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Any text object can be represented by a term vector.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;D1: 0.3, 0.1, 0.4
+D2: 0.8, 0.5, 0.6
+Query: 0.0, 0.2, 0.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Cosine Similarity:&lt;/strong&gt; Similarity is determined by distance in a vector space. &lt;a id=&quot;cosine&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;$Cosine Similarity = \frac{A \cdot B}{\parallel A \parallel \parallel B \parallel}$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;text-representation-a-idrepresentationa&quot;&gt;Text representation &lt;a id=&quot;representation&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Term weights&lt;/strong&gt; reflect the estimated importance of each term. &lt;a id=&quot;tfidf&quot;&gt;&lt;/a&gt;
+The more often a word occurs in a document, the better that term is in describing what the document is about.
+On the other hand, terms that appear in many documents in the collection are not very useful for distinguishing documents.&lt;/p&gt;
+
+&lt;p&gt;Term weight $W_{ij} = TF \times IDF $&lt;/p&gt;
+
+&lt;p&gt;$TF$: Term Frequency&lt;/p&gt;
+
+&lt;p&gt;$TF = \frac{termCount}{documentLength}$&lt;/p&gt;
+
+&lt;p&gt;$IDF$: Inverse Document Frequency&lt;/p&gt;
+
+&lt;p&gt;$IDF = \log (\frac{N}{\mid {d \in D : t \in d} \mid})$&lt;/p&gt;
+
+&lt;p&gt;Where&lt;/p&gt;
+
+&lt;p&gt;$N:$ total number of documents in the corpus&lt;/p&gt;
+
+&lt;p&gt;$\mid {d \in D : t \in d} \mid:$ the number of documents where term $t$ appears. If the term is not in the corpus, this will
+lead to a division-by-zero. It is therefore common to adjust the donominator to 1 + $\mid {d \in D : t \in d} \mid:$&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;D1: cat eat mouse, mouse eat chocolate
+D2: cat eat mouse
+D3: mouse eat chocolate mouse 
+Query: cat 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Term Frequency of D1:&lt;/p&gt;
+
+&lt;p&gt;$TF: \frac{1}{6}, \frac{2}{6}, \frac{2}{6}, \frac{1}{6}$&lt;/p&gt;
+
+&lt;p&gt;$IDF$ of D1:&lt;/p&gt;
+
+&lt;p&gt;$IDF: \log(\frac{4}{4}), \log(\frac{4}{3}), \log(\frac{4}{3}), \log(\frac{4}{2})$&lt;/p&gt;
+
+&lt;p&gt;$Weights = IDF \times TF$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;evaluation-a-idevaluationa&quot;&gt;Evaluation &lt;a id=&quot;evaluation&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;evaluation-criteria-a-idcriteriaa&quot;&gt;Evaluation Criteria &lt;a id=&quot;criteria&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Recall&lt;/strong&gt; is the fraction of the documents that are relevant to the query that are successfully retrieved&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$Recall = \frac{\mid {\text{relevant documents}} \cap {\text{retrieved documents}} \mid}{\mid {\text{relevant documents}}\mid}$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Precision&lt;/strong&gt; is the fraction of retrieved documents that are relevant to the query.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$Precision = \frac{\mid {\text{relevant documents}} \cap {\text{retrieved documents}} \mid}{\mid {\text{retrieved documents}}\mid}$&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-evaluate-two-ir-systems--a-idprecisionrecalla&quot;&gt;How to evaluate two IR systems ? &lt;a id=&quot;precisionrecall&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Traditionally, one uses a “test collection” composed of three entities:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a set of queries (or “information needs”)&lt;/li&gt;
+  &lt;li&gt;a target dataset (where to look for items that will satisfy the information needs)&lt;/li&gt;
+  &lt;li&gt;a set of relevant assessments (the items satisfy the information needs)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Based on this test collection one can compare the resuls of a query using two different IR systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Systems effectiveness: evaluation measures&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Set-based measures:&lt;/strong&gt; documents in the ranking are treated as unique and the ordering of result is ignored.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Precision&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Recall&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Precision and Recall hold an approximate inverse relationship. But it is not always the case.&lt;/p&gt;
+
+&lt;p&gt;Compared with other measures, Precision is simple to compute because one only considers the set of retrieved documents. However to compute
+recall requires comparing the set of retrieved documents with entire collection. Which is impossible in many cases (web search).&lt;/p&gt;
+
+&lt;p&gt;In web search, the focus is typicall on obtaining high precision by finding as many relevant documents in the top $n$ results. However,
+there are certain domain, the focus is on find all relevant document through an exhaustive-search, alternative recall-oriented 
+measures can be employed: $e$ measure and $f$ measure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rank-based measures:&lt;/strong&gt; Based on evaluating ranked retrieval results where not only the number of relevant documents, but also
+returning relevant documents higher in the ranked lists. A common way to evaluate ranked documents is to compute precision at various
+levels of recall.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/ia/2015/06/08/information-retrieval-summary-1</link>
+                <guid>http://maximustann.github.io/ia/2015/06/08/information-retrieval-summary-1</guid>
+                <pubDate>2015-06-08T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Model Thinking 01 Summary</title>
+                <description>
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#sorting&quot;&gt;Sorting&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#schelling&quot;&gt;Schelling&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#peer&quot;&gt;Peer Effects&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#granovetter&quot;&gt;Granovetter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#standing&quot;&gt;Standing Ovation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#identification&quot;&gt;Identification&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;lecture-one&quot;&gt;Lecture One&lt;/h2&gt;
+
+&lt;h3 id=&quot;sorting-and-peer-effects&quot;&gt;Sorting and Peer Effects&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TvtYxb7.png?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sorting:&lt;/strong&gt; When you looking at this map, the segregation is quite clear. This shows people choose to live with people a lot like they do.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Peer Effects:&lt;/strong&gt; We change our behaviors to match other people. For example, if you hang out with a group of people who smoke, you will probably start smoking.&lt;/p&gt;
+
+&lt;p&gt;So, these forces make people to choose where they live and what kind of 
+people they wanna to be, to believe what other people believe, to act like other people.&lt;/p&gt;
+
+&lt;p&gt;So, we are going to construct some models to understand these behaviors.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;models&quot;&gt;Models&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Schelling&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Granovetter&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Standing Ovation&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;two-model-categories&quot;&gt;Two Model Categories&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Equation Based Model&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Score = 50 + 5 Hours
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is a linear model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Agent Based Model&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;individuals (people, countries …)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;behaviors (If the behavior might be optimize, then the model is called game theory model, each individual optimize its behavior)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;outcomes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;sorting-a-idsortinga&quot;&gt;Sorting &lt;a id=&quot;sorting&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;schelling-a-idschellinga&quot;&gt;Schelling &lt;a id=&quot;schelling&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Schelling try to understand segregation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/EQni893.png&quot; alt=&quot;Segregation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Schelling construct an &lt;strong&gt;Agent based model&lt;/strong&gt;
+Schelling’s model is about people choosing where to live.
+He simplified the problem:
+Each person now thinking about should I stay or should I move.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZMP6ubs.png&quot; alt=&quot;Checkerboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, the person has been allocated on a checker board, 
+a person live in X, and No.3 is blank. Red represents rich people, grey represents poor people. So, now the person lived in X is thinking about $\frac{3}{7}$ neighbors are like me. Should I stay or leave?&lt;/p&gt;
+
+&lt;p&gt;This is called &lt;strong&gt;Threshold based rule&lt;/strong&gt;. Based on this threshold, he decided whether move or stay.&lt;/p&gt;
+
+&lt;p&gt;The empirical experiments show that the higher the threshold, the 
+stronger segregation there will be until the threshold “hits” on a upper bound that the algorithms will never converge, it just running forever because it never satisfied the requirements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tipping phenomenon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Exodus Tip&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;One person leave the system causes other people leave.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Genesis Tip&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;One person come in, causes other people leave.&lt;/p&gt;
+
+&lt;p&gt;One of the important thing that this model tells us is the macro behavior does not consist with what people want.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;## Measurement
+### Index Similarity&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/N0sN0nd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$Rich = 12 \times 10 + 6 \times 5 = 150 $&lt;/p&gt;
+
+&lt;p&gt;$Poor = 6 \times 10 + 4 \times 5 = 90$&lt;/p&gt;
+
+&lt;p&gt;$BlueIndex = \mid \frac{10}{150} - \frac{0}{90} \mid = \frac{1}{15}$&lt;/p&gt;
+
+&lt;p&gt;$YellowIndex = \mid \frac{0}{150} - \frac{10}{90} \mid = \frac{1}{9}$&lt;/p&gt;
+
+&lt;p&gt;$GreenIndex = \mid \frac{5}{150} - \frac{5}{90} \mid = \frac{1}{45}$&lt;/p&gt;
+
+&lt;p&gt;$Total = 12 \times \frac{1}{15} + 6 \times \frac{1}{9} + 6 \times \frac{1}{45} = \frac{72}{45}$&lt;/p&gt;
+
+&lt;p&gt;Normally, we divide the result by 2 to scale it down&lt;/p&gt;
+
+&lt;p&gt;$\frac{Total}{2}= \frac{72}{90} = 0.8 $&lt;/p&gt;
+
+&lt;p&gt;Therefore, the segregation is 80%.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;peer-effects-a-idpeera&quot;&gt;Peer Effects &lt;a id=&quot;peer&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Granovetter&lt;/strong&gt; &lt;a id=&quot;granovetter&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;N Individuals&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Each has a Threshold&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$T_j$ for person j&lt;/li&gt;
+      &lt;li&gt;Join if $T_j$ others join&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you have 5 friends, the threshold for each of them willing to buy a purple hat is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0 1 1 1 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;0 means he is not influenced by other people, just wanna buy a purple hat.&lt;/p&gt;
+
+&lt;p&gt;1 means if only one of his friend get a purple hat, he will also get one&lt;/p&gt;
+
+&lt;p&gt;In the end, all people wearing purple hat.&lt;/p&gt;
+
+&lt;p&gt;Another example:&lt;/p&gt;
+
+&lt;p&gt;If you have 5 friends,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0 1 2 3 4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the end, all people wearing purple hat, but actually not so many people really want one. This is tail wagged the dog.&lt;/p&gt;
+
+&lt;p&gt;Collection Action&lt;/p&gt;
+
+&lt;p&gt;More Likely if:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lower Thresholds&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;More Variation in thresholds&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s why it is very hard to predict collective behavior, because you not only need to know the average threshold, you also need to know the distributions, and how people connect to each other.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Standing Ovations&lt;/strong&gt; &lt;a id=&quot;standing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After a show, Do I stand up or not? You don’t have much time to decide, 
+you have a short time to make a judgement. This simplified this problem.&lt;/p&gt;
+
+&lt;p&gt;Standing Ovations is very suitable to let people thinking about rule based domain.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Peer Effect: other people stand, you stand&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Information: other people seems know more information, you learn from them&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Threshold to Stand: $T$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Quality: $Q$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Signal: $S = Q + E$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Initial Rule
+    &lt;ul&gt;
+      &lt;li&gt;If $S &amp;gt; T$,  Stand&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Subsequent Rule
+    &lt;ul&gt;
+      &lt;li&gt;Stand if more X% stand&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Claim 1:&lt;/strong&gt; Higher Quality $Q$, Stand if $Q + error &amp;gt; T$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Claim 2:&lt;/strong&gt; Lower Threshold $T$, more people stand, if $Q + error &amp;gt; T$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Claim 3:&lt;/strong&gt; Lower X, more ovations. Stand if more than X%&lt;/p&gt;
+
+&lt;p&gt;Signal: $S = Q + E$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;$E = Error$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$E = Diversity$ People could have different preference or taste&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1000 people
+T = 60
+Q = 50
+T &amp;lt; Q Nobody will stand up
+
+E in [-50, +50]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/pmFNIEv.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, large variation, more people will stand up&lt;/p&gt;
+
+&lt;p&gt;So, in what situation, the Error $E$ is high?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Audience&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Diverse&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Unsophisticated&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Performance&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Multidimensional&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Complex&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Higher Quality&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lower Threshold&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Larger Peer Effects&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;More Variation&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Two more facts could influence this model:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Use Celebrities/Academic (People in front don’t aware other people,
+                     People in back knows everyone, but nobody see them)&lt;/li&gt;
+  &lt;li&gt;Large group&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;where-can-we-apply-the-model&quot;&gt;Where can we apply the model?&lt;/h3&gt;
+
+&lt;p&gt;Collective Action&lt;/p&gt;
+
+&lt;p&gt;Academic Performance&lt;/p&gt;
+
+&lt;p&gt;Urban Renewal&lt;/p&gt;
+
+&lt;p&gt;Fitness/Health&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;identification-a-ididentificationa&quot;&gt;Identification &lt;a id=&quot;identification&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Schelling or Standing Ovation&lt;/p&gt;
+
+&lt;p&gt;Homophily or Peer Effect?&lt;/p&gt;
+
+&lt;p&gt;Sorting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;AABBAA
+
+BBABBA
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We will observe Bs move to second group&lt;/p&gt;
+
+&lt;p&gt;Peer Effects:&lt;/p&gt;
+
+&lt;p&gt;We will observe Bs turn into A.&lt;/p&gt;
+
+&lt;p&gt;However, if we only take a snapshot, there is no way to distinguish to identify it. We need more data, dynamic data. On the other hand, it guide us to collect the data.&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/model/2015/06/05/model_lecture1</link>
+                <guid>http://maximustann.github.io/model/2015/06/05/model_lecture1</guid>
+                <pubDate>2015-06-05T00:00:00+12:00</pubDate>
+        </item>
+
+        <item>
+                <title>Arch Linux Installation Guide</title>
+                <description>
+&lt;p&gt;This is a simple guild that is much simpler than the official guild. It tells you how to install an Arch Linux &amp;amp; Windows dual system step by step. &lt;strong&gt;Don’t Panic!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#Prepare&quot;&gt;Prepare USB stick&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Partition&quot;&gt;Partition the disks &amp;amp; Formats the partitions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Internet&quot;&gt;Connect to the Internet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Mirrors&quot;&gt;Select the mirrors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Packages&quot;&gt;Install the base packages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Configuration&quot;&gt;Configure the System&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Bootloader&quot;&gt;Install a bootloader&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Reboot&quot;&gt;Reboot&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;prepare-usb-stick-a-idpreparea&quot;&gt;Prepare USB stick &lt;a id=&quot;Prepare&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Remember to backup the USB, the &lt;strong&gt;dd&lt;/strong&gt; command will erase the USB completely. 
+Use &lt;strong&gt;lsblk&lt;/strong&gt; command to find out the name of your USB drive.
+DO &lt;strong&gt;not&lt;/strong&gt; append a partition number, so do &lt;strong&gt;not&lt;/strong&gt; use something like &lt;code&gt;/dev/sdb1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+lsblk
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+dd bs=4M if=archlinux.iso of=/dev/sdx &amp;amp;&amp;amp; sync
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, you can use the USB stick boot the system.
+Remember, if your system is 64 bit, then choose x86 64 archlinux. i686 is for 32 bit.&lt;/p&gt;
+
+&lt;h1 id=&quot;partition-the-disks--formats-the-partitionsa-idpartitiona&quot;&gt;Partition the disks &amp;amp; Formats the partitions&lt;a id=&quot;Partition&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Partition can be tricky.&lt;/p&gt;
+
+&lt;h4 id=&quot;identify-the-devices&quot;&gt;Identify the devices&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;
+lsblk
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;partitioning-tools&quot;&gt;Partitioning tools&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;parted&lt;/li&gt;
+  &lt;li&gt;fdisk&lt;/li&gt;
+  &lt;li&gt;others&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fdisk-usage&quot;&gt;fdisk usage&lt;/h4&gt;
+
+&lt;p&gt;I start fdisk from the shell prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+fdisk /dev/sdb
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Command (m for help): p
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Command (m for help): n
+
+Command action
+
+	e extend
+
+	p primary partition (1-4)
+
+p
+
+Partition number (1-4): 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then , you need to follow the fdisk, calculate the size of each partition.
+After you finish all the partitioning, use &lt;strong&gt;w&lt;/strong&gt; to write to disk.&lt;/p&gt;
+
+&lt;p&gt;The partition plan can be different. Personally, I choose 20G for &lt;code&gt;&#39;/&#39;&lt;/code&gt;, then 40G for &lt;code&gt;&#39;/home&#39;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;create-filesystems&quot;&gt;Create filesystems&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;
+mkfs.ext4 /dev/sdxY
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;mount-the-partitions&quot;&gt;Mount the partitions&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;/&lt;/code&gt;  (root) partition must be mounted &lt;strong&gt;first&lt;/strong&gt;.  If the root partition’s name is sdxR. Do:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+mount /dev/sdxR /mnt
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The general procedure is to first create the mount point, and then mount the partition to it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir -p /mnt/home
+mount /dev/sdxB /mnt/home
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;connect-to-the-interneta-idinterneta&quot;&gt;Connect to the Internet&lt;a id=&quot;Internet&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;use wifi-menu to connect to a wireless network:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+wifi-menu
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;select-the-mirrorsa-idmirrorsa&quot;&gt;Select the mirrors&lt;a id=&quot;Mirrors&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;You may want to edit the mirrorlist file and place your preferred mirror first.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+vi /etc/pacman.d/mirrorlist
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want, you can delete all other lines but leave your favourite one. For example, I leave 3 US servers and a NZ server.&lt;/p&gt;
+
+&lt;p&gt;After change the file, use:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+pacman -Syyu
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To refresh all package lists.&lt;/p&gt;
+
+&lt;h1 id=&quot;install-the-base-packagesa-idpackagesa&quot;&gt;Install the base packages&lt;a id=&quot;Packages&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h4 id=&quot;install-the-base-system&quot;&gt;Install the base system&lt;/h4&gt;
+
+&lt;p&gt;The base system is installed using the pacstrap script.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+pacstrap -i /mnt base base-devel
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;configure-the-system-a-idconfigurationa&quot;&gt;Configure the System &lt;a id=&quot;Configuration&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;configure-fstab&quot;&gt;Configure fstab&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;genfstab -U -p /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+cat /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; The fstab file should always be checked after genering it. If you encounter errors running genfstab or later in the install process, do &lt;strong&gt;not&lt;/strong&gt; run genfstab; just edit the fstab file.&lt;/p&gt;
+
+&lt;h4 id=&quot;choot-and-configure-the-base-system&quot;&gt;Choot and configure the base system&lt;/h4&gt;
+
+&lt;p&gt;chroot into your newly installed system:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+arch-chroot /mnt /bin/bash
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;locale&quot;&gt;Locale&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;
+vi /etc/locale.gen
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Un comment en_US.UTF-8 UTF-8 or other locale.
+Before locaes can be enabled, they must be generated:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+locale-gen
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;/etc/locale.conf&lt;/code&gt;, where LANG refers to the first column of an uncommented entry in &lt;code&gt;/etc/locale.gen&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+echo LANG=en_US.UTF-8 &amp;gt; /etc/locale.conf
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Export the chosen locale:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+export LANG=en_US.UTF-8
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;time-zone&quot;&gt;Time zone&lt;/h4&gt;
+&lt;p&gt;Available time zones and subzones can be found in the &lt;code&gt;/usr/share/zoneinfo/Zone/subZone&lt;/code&gt; directories.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ln -s /usr/share/zoneinfo/Zone/SubZone /etc/locatime
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;hardware-clock&quot;&gt;Hardware clock&lt;/h4&gt;
+
+&lt;p&gt;Use UTC time&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+hwclock --systohc --utc
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;hostname&quot;&gt;Hostname&lt;/h4&gt;
+
+&lt;p&gt;Define a name replace the ‘myhostname’ below:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+echo myhostname &amp;gt; /etc/hostname
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the same hostname to /etc/hosts:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#&amp;lt;ip-address&amp;gt; &amp;lt;hostname.domain.org&amp;gt; &amp;lt;hostname&amp;gt;
+127.0.0.1 localhost.localdomain localhost myhostname
+::1 localhost.localdomain localhost myhostname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;configure-the-network&quot;&gt;Configure the network&lt;/h4&gt;
+
+&lt;p&gt;Install &lt;code&gt;iw&lt;/code&gt; and &lt;code&gt;wpa-supplicant&lt;/code&gt; which you will need to connect to a network:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+pacman -S iw wpa_supplicant
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;adding-wireless-networks&quot;&gt;Adding wireless networks&lt;/h5&gt;
+
+&lt;p&gt;using &lt;code&gt;wifi-menu&lt;/code&gt;
+install &lt;code&gt;dialog&lt;/code&gt;, which is required for &lt;code&gt;wifi-menu&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+pacman -S dialog
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next time you start the system, use wifi-menu to connect to the Internet.&lt;/p&gt;
+
+&lt;h4 id=&quot;set-the-root-password&quot;&gt;Set the root password&lt;/h4&gt;
+&lt;p&gt;Set the root password with&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+passwd
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;install-a-bootloadera-idbootloadera&quot;&gt;Install a bootloader&lt;a id=&quot;Bootloader&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Install the grub package, to have search for other installed operating system, install os-prober in addition:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+pacman -S grub os-prober
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Install the bootloader to the drive Arch was installed to.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+grub-install --target=i386-pc --recheck /dev/sda
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Automatically generate grub.cfg:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;reboota-idreboota&quot;&gt;Reboot&lt;a id=&quot;Reboot&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;
+exit
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+reboot
+&lt;/code&gt;&lt;/p&gt;
+</description>
+                <link>http://maximustann.github.io/unix/2015/05/15/archlinux_install</link>
+                <guid>http://maximustann.github.io/unix/2015/05/15/archlinux_install</guid>
+                <pubDate>2015-05-15T00:00:00+12:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

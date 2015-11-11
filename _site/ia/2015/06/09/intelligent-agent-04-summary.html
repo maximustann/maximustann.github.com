@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Intelligent Agent 04 Summary</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#IA-ref" title="IA">
+	IA
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Intelligent Agent 04 Summary<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<p>Recommender System</p>
+
+<ol>
+  <li><a href="#overview">Recommender System Overview</a></li>
+  <li><a href="#collaborative">Collaborative filtering</a>
+    <ul>
+      <li><a href="#memory">Memory-based</a>
+        <ol>
+          <li><a href="#user">User-based</a></li>
+          <li><a href="#item">Item-based</a></li>
+        </ol>
+      </li>
+      <li><a href="#model">Model-based</a></li>
+    </ul>
+  </li>
+  <li><a href="#content">Content-based filtering</a></li>
+</ol>
+
+<!--more-->
+
+<hr />
+
+<h2 id="recommender-system-overview-a-idoverviewa">Recommender System Overview <a id="overview"></a></h2>
+<hr />
+
+<p>Recommender Systems provide a lot of recommendations in one of two ways:</p>
+
+<ol>
+  <li>
+    <p><strong>Collaborative filtering:</strong> building a model from a user’s past behavior, as well as similar decisions made by other people</p>
+  </li>
+  <li>
+    <p><strong>content-based filtering:</strong> use a series of discrete characteristics of an item in order to recommend additional items with similar properties.</p>
+  </li>
+</ol>
+
+<h3 id="an-example">An Example</h3>
+
+<p><strong>last.fm</strong> creates a “station” of recommended songs by observing what bands and individual tracks the user has listened to on a regular basis and comparing those
+against the listening behavior of ther users. <strong>Collaborative Filtering</strong></p>
+
+<p><strong>Pandora</strong> uses the properties of a song or artist (a subset of the 400 attributes) in order to seed a “station” that plays music with similar properties. <strong>Content-based filtering</strong></p>
+
+<h3 id="strengths-and-weakness">Strengths and weakness</h3>
+
+<p><strong>Last.fm</strong> requires large amount of information on a user in order to make accurate recommendation. Th is an example of <strong>the cold start problem</strong> and it is the common problem in Collaborative filtering.</p>
+
+<p><strong>Pandora</strong> needs little information to start. But it is far limited in scope (Only recommend similar musics).</p>
+
+<hr />
+
+<h3 id="collaborative-filtering-a-idcollaborativea">Collaborative filtering <a id="collaborative"></a></h3>
+
+<p>Collaborative filtering methods are based on collecting and analyzing a large amount of information on user’s behaviors, activities or preferences and predicting what users will like based 
+on their similarity to other users.</p>
+
+<p>Collaborative filtering is based on the assumption that people agree on past will agree in the future.</p>
+
+<p>A key <strong>advantage</strong> of the collaborative filtering methods is that it does not rely on machine analyzable content and therefore it is capable of accurately recommending complex items such as “movie”
+without require an “understanding” of the item itself.</p>
+
+<p>Algorithms to measure user similarity or item similarity:</p>
+
+<ol>
+  <li>
+    <p>KNN</p>
+  </li>
+  <li>
+    <p>Pearson correlation</p>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="weakness">Weakness</h3>
+
+<hr />
+
+<p>Collaborative filtering approaches often suffer from three problems:</p>
+
+<ol>
+  <li>
+    <p><strong>Cold Start:</strong> These systems often require a large amount of existing data on a user in order to make accurate predications.</p>
+  </li>
+  <li>
+    <p><strong>Scalability:</strong> In many of the environments in which these systems make recommendations, there are millions of users and products.
+Thus, a large number of computation power is often necessary to calculate recommendations.</p>
+  </li>
+  <li>
+    <p><strong>Sparsity:</strong> The most active user will only rated a small subset of the overall database. When the matrix is sparse, the clustering
+algorithms do not work well.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="memory-based-a-idmemorya">Memory-based <a id="memory"></a></h3>
+
+<p>This approach uses user rating data to compute the similarity between users or items. This was an early approach userd in many commercial
+systems. It’s effective and easy to implement.</p>
+
+<p>Typical examples of this approach are neighbour-based collaborative filtering and item-based/user-based top-N recommendations.</p>
+
+<p><strong>User-based algorithms</strong> <a id="user"></a></p>
+
+<p>The first step of the algorithm is to obtain the user history profile, which can be represented as a ratings matrix, each entry is the
+rate of a user given to an item. A ratings matrix consists of a table where each row represents a user, each column represented an item.</p>
+
+<p>The second step is to calculate the similarity between users and find their nearest neighbours. There are many similarity measure methods
+such as Pearson correlation.</p>
+
+<p>The last step is to calculate the items rating (Prediction). The rating is computed by a weighted average of 
+the ratings by the neighbours.</p>
+
+<p><strong>Item-based algorithms</strong> <a id="item"></a></p>
+
+<p>Same matrix with user-based matrix. But the critical step is to compute the similarity between items. And get top-N similar items.
+The prediction is then computed by taking a weighted average of the target user’s ratings on these similar items.</p>
+
+<h3 id="model-based-a-idmodela">Model-based <a id="model"></a></h3>
+
+<p>Models are developed using dataming, machine learning algorithms to find patterns based on training data, such as <strong>Bayesian network, 
+clustering, and rule-based approaches</strong>.</p>
+
+<hr />
+
+<h3 id="content-based-a-idcontenta">Content-based <a id="content"></a></h3>
+
+<p>Content-based filtering methods on a description of the item and a profile of the user’s preferences. 
+In a content-based Recommender system, keywords are used to describe the items. A user’s profile is built to indicate the type of 
+item this user likes. These algorithms try to recommend items that one similar to those a user liked in the past.</p>
+
+<p>To create user profile, the system most focus on two types of information:</p>
+
+<ol>
+  <li>
+    <p>A model of the user’s preferences</p>
+  </li>
+  <li>
+    <p>A history of the user’s interaction with the Recommender system</p>
+  </li>
+</ol>
+
+<p>These methods use an item profile (features) characterizing the item within the system. The system creates a 
+content-based profile of users based on a weighted vector of item features.</p>
+
+<p>A key issue with content-based filtering is whether the system is able to learn user preferences from user’s 
+actions regarding one content source and user them across other content type.</p>
+
+<hr />
+
+<h3 id="model">Model</h3>
+
+<p>When building a model from a user’s profile, a distribution is often made between explicit and implicit forms of data collection.</p>
+
+<p>Explicit data:</p>
+
+<ol>
+  <li>
+    <p>Rate items</p>
+  </li>
+  <li>
+    <p>Compare items</p>
+  </li>
+  <li>
+    <p>Create a like-list</p>
+  </li>
+</ol>
+
+<p>Implicit data:</p>
+
+<ol>
+  <li>
+    <p>Item viewed.</p>
+  </li>
+  <li>
+    <p>Click through data.</p>
+  </li>
+  <li>
+    <p>…</p>
+  </li>
+</ol>
+
+
+				</span>
+				<div class="journal-date">Published 09 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

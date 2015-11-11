@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Linear Regression</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Mach-ref" title="Mach">
+	Mach
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Linear Regression<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<h2 id="linear-regression">Linear Regression</h2>
+
+<blockquote>
+  <p>In statistics, linear regression is an approach for modeling the
+relationship between a scalar dependent variable $y$ and one or more
+explanatory variable denoted $X$.</p>
+</blockquote>
+
+<p><img src="http://i.imgur.com/B9X1R7M.png" alt="Imgur" /></p>
+
+<p>In other words, we try to fit the data using a line.</p>
+
+<p>$y = kx + b$</p>
+
+<p>which can best represent the trainning data. We can write the function as
+following:</p>
+
+<p>$h(x) = \theta_0 + \theta_1x$</p>
+
+<!--more-->
+
+<p>Then we define a cost function, which normally the least square error function.</p>
+
+<p>$CostFunction = \frac{1}{2m}\displaystyle\sum_{i=1}^m (h(x) - y)^2$</p>
+
+<p>$m$ denotes the number of input instance, $h(x)$ denotes the 
+linear function.$h(x) - y$ denotes a single error from an instance. So
+the meaning of this cost function is simply <strong>aggregation of errors</strong>.</p>
+
+<p>Then the task become <strong>Minimize the Error Function</strong>.</p>
+
+<p>It is easy to notices that the $CostFunction$ is a quadratic function.
+The graph of this function might looks like this:</p>
+
+<p><img src="http://i.imgur.com/HvKVK0z.gif" alt="Imgur" /></p>
+
+<p>We’d like to find the global minima (in this case there is one minima).</p>
+
+<p>We might rewrite the $CostFunction$ in terms of two parameters $\theta_0$,
+$\theta_1$.</p>
+
+<p>$J(\theta_0, \theta_1) = \frac{1}{2m}\displaystyle\sum_{i = 1}^m(h(\theta_0,\theta_1) - y)^2$</p>
+
+<p>The gradient descent works like this,</p>
+
+<p>We first compute the partial derivative of $J(\theta_0, \theta_1)$,</p>
+
+<p>$\theta_0 = \theta_0 - \alpha\frac{\mathrm d}{\mathrm d x} J(\theta_0))$</p>
+
+<p>$\theta_1 = \theta_1 - \alpha\frac{\mathrm d}{\mathrm d x} J(\theta_1))$</p>
+
+<p>$\alpha$ stand for learning rate, which means moving a step forward towards
+the local minima, if the learning rate is small, then the accuracy is high
+but the iteration is large. If the learning rate is large. Then the accuracy
+is decreasing because when it is close to local minima, it will bouncing 
+around the local minima.</p>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>We use matrix multiplication as follows.</p>
+
+<p><img src="http://i.imgur.com/r8VOK6r.png" alt="Imgur" /></p>
+
+<p>$N \times 2$ Matrix $\times$ $2 \times 1$ Matrix</p>
+
+<p>So we can use $vector$ representation</p>
+
+<p>$h(\bar x_i) = \bar\theta \bar x_i$</p>
+
+<p>$h(\bar x) = \bar\theta \bar x$</p>
+
+<p>Go back to partial derivative:</p>
+
+<p>$\theta_j = \theta_j - \alpha\frac{1}{m}\displaystyle\sum_{i = 1}^m(h(\bar x) - \bar y) \cdot \bar x$</p>
+
+<p>where $j = 1,2$</p>
+
+<p>This is R Implementation of gradient decent</p>
+
+<pre><code>gradient_descent &lt;- function(x, y, theta){
+	m &lt;- length(y)
+		iterations &lt;- 1500
+		learning_rate &lt;- 0.01
+
+		for(i in 1:iterations){
+			temp &lt;- (x %*% theta - y)
+				theta[1] &lt;- theta[1] - learning_rate * (1 / m) * sum(temp)
+				theta[2] &lt;- theta[2] - learning_rate * (1 / m) * sum(temp * x[, 2])
+				if(i %% 100 == 0){
+					abline(theta[1], theta[2], col = "red")
+				}
+		}
+	theta
+}
+</code></pre>
+
+				</span>
+				<div class="journal-date">Published 18 July 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Machine Learning-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Machine Learning</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

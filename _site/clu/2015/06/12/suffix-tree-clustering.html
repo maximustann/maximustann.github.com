@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Suffix Tree Clustering</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Clu-ref" title="Clu">
+	Clu
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Suffix Tree Clustering<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<ol>
+  <li><a href="#webclustering">Web Search Results Clustering</a>
+    <ul>
+      <li><a href="#main">Main issues</a></li>
+      <li><a href="#algorithms">Clustering algorithms</a></li>
+    </ul>
+  </li>
+  <li><a href="#traditional">Traditional clustering algorithms</a></li>
+  <li><a href="#stc">Suffix Tree Clustering (STC)</a>
+    <ul>
+      <li><a href="#steps">Steps</a></li>
+      <li><a href="#advantages">Advantages</a></li>
+    </ul>
+  </li>
+</ol>
+
+<!--more-->
+
+<h3 id="web-search-results-clustering-a-idwebclusteringa">Web Search Results Clustering <a id="webclustering"></a></h3>
+
+<p>Clustering methods are more challenging than classification methods, because they are conducted in a fully unsupervised way. 
+Moreover, most traditional clustering algorithms cannot be directly used for search result clustering because of some practical issues.</p>
+
+<p>For example, the algorithm should take the document snippets instead of the whole documents as input, since the downloading of original documents is time-consuming. 
+The clustering algorithm should be fast enough for online calculation.</p>
+
+<h3 id="main-issues-a-idmaina">Main issues <a id="main"></a></h3>
+
+<ol>
+  <li>Online or offline clustering?</li>
+  <li>What to use as input?
+    <ul>
+      <li>Entire Documents</li>
+      <li>Snippets</li>
+      <li>Structured information</li>
+      <li>Other data</li>
+    </ul>
+  </li>
+  <li>How to define similarity?
+    <ul>
+      <li>Content (i.e. vector space model)</li>
+      <li>Link analysis</li>
+      <li>Usage statistics</li>
+    </ul>
+  </li>
+  <li>How to group similar Documents?</li>
+  <li>How to label the groups?</li>
+</ol>
+
+<h3 id="clustering-algorithms-a-idalgorithmsa">Clustering algorithms <a id="algorithms"></a></h3>
+
+<ol>
+  <li>Distance-based
+    <ul>
+      <li>Hierarchical
+        <ol>
+          <li>Agglomerative Hierarchical Clustering (AHC)</li>
+        </ol>
+      </li>
+      <li>Flat
+        <ol>
+          <li>K-means</li>
+          <li>Single-pass</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Other
+    <ul>
+      <li>Suffix Tree clustering  (Grouper)</li>
+      <li>Self-organizing maps</li>
+      <li>LSI (reducing the dimensinality of the vector-space)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="traditional-clustering-algorithms-a-idtraditionala">Traditional clustering algorithms <a id="traditional"></a></h3>
+
+<p>Cluster Documents into topically-coherent groups according to content similarity and generate descriptive summaries for clusters.</p>
+
+<p>However, these summaries are often unreadable, which make it difficult for web users to identify relevant clusters.</p>
+
+<hr />
+
+<h2 id="suffix-tree-clustering-stc-a-idstca">Suffix Tree Clustering (STC) <a id="stc"></a></h2>
+
+<p>STC not treats documents as a collection of words but as a string of words. On that way thus operates using the proximity information
+between words. STC uses suffix tree structure to efficiently identify sets of documents that share common phrases and terms and uses
+this information to create clusters and to concisely present their content.</p>
+
+<ol>
+  <li>linear</li>
+  <li>Incremental</li>
+  <li>Overlapping</li>
+  <li>Can be extended to hierarchical</li>
+</ol>
+
+<h3 id="steps-a-idstepsa">Steps <a id="steps"></a></h3>
+
+<p>STC meanly includes four logical steps:</p>
+
+<ol>
+  <li>Cleaning
+    <ul>
+      <li>Stemming</li>
+      <li>Sentence boundary identification</li>
+      <li>Punctuation elimination</li>
+    </ul>
+  </li>
+  <li>Suffix tree construction
+    <ul>
+      <li>Produces base clusters (internal nodes)</li>
+      <li>Base clusters are scored based on size and phrase score (which depends on length and word)</li>
+    </ul>
+  </li>
+  <li>Merging base clusters
+    <ul>
+      <li>Highly overlapping clusters are merged</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="advantages-a-idadvantagesa">Advantages <a id="advantages"></a></h3>
+
+<p>STC has linear complexity $O(n)$</p>
+
+<p>Linear complexity puts STC in the top of clustering algorithms. The low complexity return fast search in suffix tree. 
+Because of that reason, this algorithm is used in online clustering.</p>
+
+
+				</span>
+				<div class="journal-date">Published 12 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Clustering-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Clustering</div>
+			<div class="tag-r"></div>
+		</a>
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

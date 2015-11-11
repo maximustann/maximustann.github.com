@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Probabilistic inference</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#pro-ref" title="pro">
+	pro
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Probabilistic inference<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<h1 id="probabilistic-inference">Probabilistic Inference</h1>
+
+<p><img src="http://i.imgur.com/tgNl43y.png" alt="Imgur" /></p>
+
+<p>Hidden variable is the variable we don’t need to know, don’t need to output,
+but we need to compute during the process.</p>
+
+<hr />
+
+<h2 id="eumeration">Eumeration</h2>
+
+<blockquote>
+  <p>Eumeration goes through all the possibilities, adds them up and comes with an answer.</p>
+</blockquote>
+
+<!--more-->
+
+<p>For example,</p>
+
+<p>$p(+b \mid +j, +m)$ can be determined by enumerate all hidden variables.</p>
+
+<p>$p(+b, +j, +m) = \displaystyle\sum_A \displaystyle\sum_E p(+b)p(+j \mid A)p(+m \mid A)p(E)p(B)$</p>
+
+<p>$p(+j, +m) = \displaystyle \sum_A p(+j \mid A)p(+m \mid A)$</p>
+
+<p>$p(+b \mid +j, +m) = \frac{p(+b, +j, +m)}{p(+j, +m)}$</p>
+
+<p>If the network is too big, practically, it is impossible to do. Therefore,
+it needs some techniques.</p>
+
+<h3 id="pulling-out-terms">Pulling out terms</h3>
+
+<p>For example,</p>
+
+<p>$\sum_e\sum_a p(+b)p(e)p(a\mid +b, e), p(+j \mid a)p(+m, a)$</p>
+
+<p>The term $p(+b)$ has nothing to do with the summing up. Therefore, we 
+can pull it out from the equation.</p>
+
+<h3 id="variable-elimination">Variable Elimination</h3>
+
+<p><img src="http://i.imgur.com/KOO9SpQ.png" alt="Imgur" /></p>
+
+<p>$p(c, a, b) = \sum_a\sum_bp(c \mid b, a)p(b \mid a)p(a)$</p>
+
+<p>First technique is called <strong>elimination</strong>:</p>
+
+<p>Simply, calculate $p(b \mid a)$ first.</p>
+
+<p>Second technique is called <strong>marginalisation</strong>:</p>
+
+<p>It is just: $p(b, a) = \sum_a p(b \mid a)p(a)$</p>
+
+<p>Nothing special, just doing calculation step by step.</p>
+
+<h3 id="approximate-inference---sampling">Approximate Inference - Sampling</h3>
+
+<p>Bascially, it is by sampling the observable result, and collect data
+from the experiments.</p>
+
+<p>The sampling has two advantages: 1. Computationally low cost 2. If we 
+don’t know the condition, we can still do Sampling.</p>
+
+<p>If we want to compute conditional probability. We will have to use the 
+technique called <strong>Rejection Sampling</strong></p>
+
+<p>For example, we want to sampling $p(a \mid c = cloudy)$, if the weather
+is not cloudy, then we don’t sampling until it is a cloudy day.</p>
+
+<p>It is also consistent.</p>
+
+<p>But if we are sampling a small probability event, we ends up waiting 
+forever and reject most of the samples.</p>
+
+<h3 id="likelihood-weighting">Likelihood Weighting</h3>
+
+<p>We fix the evidence variable. We say C is always positive and we
+sample the rest variables.</p>
+
+<p>+b, +c
+-b, +c
++b, +c</p>
+
+<p>But we has a problem. The resulting sample end up being inconsistent.</p>
+
+<p>We can fix this problem by assign probability to each sample and
+weighting them correctly.</p>
+
+<p>We are going to collect sample as before. But we add a probabilitic
+weighting to each sample.</p>
+
+<h3 id="gibbs-sampling">Gibbs Sampling</h3>
+
+<p>Gibbs sampling uses Markov chain Monte Carlo</p>
+
+<p>The idea is that we re-sample just one variable at a time conditioning 
+on others.</p>
+
+<p>That is, we have a set of variables.</p>
+
+<p>And we initialise them to random variable keep the evidence fixed.</p>
+
+<p><img src="http://i.imgur.com/SkjeIwJ.png" alt="Imgur" /></p>
+
+<p>Now at each iteration through the loop. We select just one non-evidence 
+variable and resample it. Based on all the other variables. And that will give us another sample.</p>
+
+<hr />
+
+
+				</span>
+				<div class="journal-date">Published 12 July 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Probability-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Probability</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Intelligent Agent 01 Summary</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#IA-ref" title="IA">
+	IA
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Intelligent Agent 01 Summary<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<p>Basic concepts.</p>
+
+<ol>
+  <li><a href="#retrival">Information Retrieval</a></li>
+  <li><a href="#agent">Information Agent</a>
+    <ul>
+      <li><a href="#percepts">Percepts</a></li>
+      <li><a href="#actions">Actions</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#env">Environment</a></li>
+      <li><a href="#drawbacks">Drawbacks</a></li>
+    </ul>
+  </li>
+  <li><a href="#search">Search Engine</a>
+    <ul>
+      <li><a href="#dowhat">What search engines do?</a></li>
+      <li><a href="#indexing">Indexing</a></li>
+      <li><a href="#retrival">Popular Retrieval models</a></li>
+    </ul>
+  </li>
+  <li><a href="#vector">Vector Space Model</a>
+    <ul>
+      <li><a href="#cosine">Cosine Similarity</a></li>
+    </ul>
+  </li>
+  <li><a href="#representation">Text representation</a>
+    <ul>
+      <li><a href="#tfidf">Term weights</a></li>
+    </ul>
+  </li>
+  <li><a href="#evaluation">Evaluation</a>
+    <ul>
+      <li><a href="#criteria">Criteria</a></li>
+      <li><a href="#precisionrecall">How to evaluate two IR systems?</a></li>
+    </ul>
+  </li>
+</ol>
+
+<!--more-->
+
+<h1 id="intelligent-agent-summary">Intelligent Agent Summary</h1>
+
+<h2 id="basic-concepts">Basic Concepts:</h2>
+
+<p><strong>Agent:</strong></p>
+
+<p>An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through effectors.</p>
+
+<hr />
+
+<h3 id="information-retrieval-a-idretrievala">Information Retrieval <a id="retrieval"></a></h3>
+
+<p>The field of information Retrival deals with the representation, storage, organization of, access of Information items.</p>
+
+<hr />
+
+<h3 id="information-agent-a-idagenta">Information Agent <a id="agent"></a></h3>
+
+<p><strong>Percepts:</strong> what the agents perceives from its environment <a id="percepts"></a></p>
+
+<ol>
+  <li>
+    <p>User’s query</p>
+  </li>
+  <li>
+    <p>Documents</p>
+  </li>
+  <li>
+    <p>Users’ feedback</p>
+  </li>
+  <li>
+    <p>Users’ actions</p>
+  </li>
+</ol>
+
+<p><strong>Actions:</strong> what the agent can do in its environment <a id="actions"></a></p>
+
+<ol>
+  <li>
+    <p>Follow links</p>
+  </li>
+  <li>
+    <p>Retrieve documents</p>
+  </li>
+  <li>
+    <p>Query search engine</p>
+  </li>
+  <li>
+    <p>Expand query</p>
+  </li>
+</ol>
+
+<p><strong>Goals:</strong> what should the agent try to achieve <a id="goals"></a></p>
+
+<p>Find the exact information, orgainse the Information</p>
+
+<p><strong>Environment:</strong> what the agent acts and perceives within <a id="env"></a></p>
+
+<ol>
+  <li>the Internet</li>
+</ol>
+
+<p><strong>Some technical drawbacks</strong> <a id="drawbacks"></a></p>
+
+<ul>
+  <li>
+    <p>Different tasks, interfaces, formats are hard to combine</p>
+  </li>
+  <li>
+    <p>Domain knowledge does not scale well</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="search-engine-a-idsearcha">Search Engine <a id="search"></a></h2>
+
+<pre><code>Search a large collection documents to find the ones that satisfied an information need
+</code></pre>
+
+<p><strong>What search Engines do:</strong> <a id="dowhat"></a></p>
+
+<ol>
+  <li>
+    <p>Indexing(Scape &amp; Store)</p>
+  </li>
+  <li>
+    <p>Document representation</p>
+  </li>
+  <li>
+    <p>Comparison with query</p>
+  </li>
+  <li>
+    <p>Evaluation/feedback</p>
+  </li>
+</ol>
+
+<p><strong>Indexing:</strong> <a id="indexing"></a></p>
+
+<ol>
+  <li>
+    <p>Mannual indexing: libraries</p>
+  </li>
+  <li>
+    <p>Automatic indexing: indexing program assigns keywords, pharases, other features</p>
+  </li>
+</ol>
+
+<p><strong>Popular Retrieval models:</strong> <a id="retrival"></a></p>
+
+<ol>
+  <li>
+    <p>Exact Match: Boolean (Yes or No)</p>
+  </li>
+  <li>
+    <p>Best Match:</p>
+
+    <ul>
+      <li>
+        <p>Vector Space (Cosine Similarity)</p>
+      </li>
+      <li>
+        <p>Citation analysis models</p>
+      </li>
+      <li>
+        <p>Probabilistic models</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="vector-space-model-a-idvectora">Vector space model <a id="vector"></a></h2>
+
+<p>Any text object can be represented by a term vector.</p>
+
+<p>Example:</p>
+
+<pre><code>D1: 0.3, 0.1, 0.4
+D2: 0.8, 0.5, 0.6
+Query: 0.0, 0.2, 0.0
+</code></pre>
+
+<p><strong>Cosine Similarity:</strong> Similarity is determined by distance in a vector space. <a id="cosine"></a></p>
+
+<p>$Cosine Similarity = \frac{A \cdot B}{\parallel A \parallel \parallel B \parallel}$</p>
+
+<hr />
+
+<h2 id="text-representation-a-idrepresentationa">Text representation <a id="representation"></a></h2>
+
+<p><strong>Term weights</strong> reflect the estimated importance of each term. <a id="tfidf"></a>
+The more often a word occurs in a document, the better that term is in describing what the document is about.
+On the other hand, terms that appear in many documents in the collection are not very useful for distinguishing documents.</p>
+
+<p>Term weight $W_{ij} = TF \times IDF $</p>
+
+<p>$TF$: Term Frequency</p>
+
+<p>$TF = \frac{termCount}{documentLength}$</p>
+
+<p>$IDF$: Inverse Document Frequency</p>
+
+<p>$IDF = \log (\frac{N}{\mid {d \in D : t \in d} \mid})$</p>
+
+<p>Where</p>
+
+<p>$N:$ total number of documents in the corpus</p>
+
+<p>$\mid {d \in D : t \in d} \mid:$ the number of documents where term $t$ appears. If the term is not in the corpus, this will
+lead to a division-by-zero. It is therefore common to adjust the donominator to 1 + $\mid {d \in D : t \in d} \mid:$</p>
+
+<p>Example:</p>
+
+<pre><code>D1: cat eat mouse, mouse eat chocolate
+D2: cat eat mouse
+D3: mouse eat chocolate mouse 
+Query: cat 
+</code></pre>
+
+<p>Term Frequency of D1:</p>
+
+<p>$TF: \frac{1}{6}, \frac{2}{6}, \frac{2}{6}, \frac{1}{6}$</p>
+
+<p>$IDF$ of D1:</p>
+
+<p>$IDF: \log(\frac{4}{4}), \log(\frac{4}{3}), \log(\frac{4}{3}), \log(\frac{4}{2})$</p>
+
+<p>$Weights = IDF \times TF$</p>
+
+<hr />
+
+<h2 id="evaluation-a-idevaluationa">Evaluation <a id="evaluation"></a></h2>
+
+<h3 id="evaluation-criteria-a-idcriteriaa">Evaluation Criteria <a id="criteria"></a></h3>
+
+<ol>
+  <li><strong>Recall</strong> is the fraction of the documents that are relevant to the query that are successfully retrieved</li>
+</ol>
+
+<p>$Recall = \frac{\mid {\text{relevant documents}} \cap {\text{retrieved documents}} \mid}{\mid {\text{relevant documents}}\mid}$</p>
+
+<ol>
+  <li><strong>Precision</strong> is the fraction of retrieved documents that are relevant to the query.</li>
+</ol>
+
+<p>$Precision = \frac{\mid {\text{relevant documents}} \cap {\text{retrieved documents}} \mid}{\mid {\text{retrieved documents}}\mid}$</p>
+
+<h3 id="how-to-evaluate-two-ir-systems--a-idprecisionrecalla">How to evaluate two IR systems ? <a id="precisionrecall"></a></h3>
+
+<p>Traditionally, one uses a “test collection” composed of three entities:</p>
+
+<ol>
+  <li>a set of queries (or “information needs”)</li>
+  <li>a target dataset (where to look for items that will satisfy the information needs)</li>
+  <li>a set of relevant assessments (the items satisfy the information needs)</li>
+</ol>
+
+<p>Based on this test collection one can compare the resuls of a query using two different IR systems.</p>
+
+<p><strong>Systems effectiveness: evaluation measures</strong></p>
+
+<p><strong>Set-based measures:</strong> documents in the ranking are treated as unique and the ordering of result is ignored.</p>
+
+<ol>
+  <li>
+    <p>Precision</p>
+  </li>
+  <li>
+    <p>Recall</p>
+  </li>
+</ol>
+
+<p>Precision and Recall hold an approximate inverse relationship. But it is not always the case.</p>
+
+<p>Compared with other measures, Precision is simple to compute because one only considers the set of retrieved documents. However to compute
+recall requires comparing the set of retrieved documents with entire collection. Which is impossible in many cases (web search).</p>
+
+<p>In web search, the focus is typicall on obtaining high precision by finding as many relevant documents in the top $n$ results. However,
+there are certain domain, the focus is on find all relevant document through an exhaustive-search, alternative recall-oriented 
+measures can be employed: $e$ measure and $f$ measure.</p>
+
+<p><strong>Rank-based measures:</strong> Based on evaluating ranked retrieval results where not only the number of relevant documents, but also
+returning relevant documents higher in the ranked lists. A common way to evaluate ranked documents is to compute precision at various
+levels of recall.</p>
+
+				</span>
+				<div class="journal-date">Published 08 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

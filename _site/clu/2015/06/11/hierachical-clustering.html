@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Hierachical Clustering</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Clu-ref" title="Clu">
+	Clu
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Hierachical Clustering<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<ol>
+  <li><a href="#top">Top down</a>
+    <ul>
+      <li><a href="#kmeans">Hierachical K-means</a></li>
+    </ul>
+  </li>
+  <li><a href="#bottom">Bottom up</a>
+    <ul>
+      <li><a href="#agglomerative">Agglomerative clustering</a></li>
+    </ul>
+  </li>
+  <li><a href="#distance">Distance Metrics</a>
+    <ul>
+      <li><a href="#single">Single links</a></li>
+      <li><a href="#complete">Complete links</a></li>
+      <li><a href="#average">Average links</a></li>
+      <li><a href="#centroids">Centroids</a></li>
+    </ul>
+  </li>
+</ol>
+
+<!--more-->
+
+<p>We try to separate a set into several subset of the population. One of the problems of 
+K-Means and other clustering algorithms is <strong>picking the number of clusters</strong>. You need to
+pre-define $K$. Most of algorithms you either specify the number of cluster or some parameters
+like a threshold that dictates how many clusters you end up with. We want the algorithm to pick
+$K$ automatically. But, so far there is no good way to do it universally.</p>
+
+<p>The root of this problem is:</p>
+
+<blockquote>
+  <p>The number of clusters is an ambiguous thing.</p>
+</blockquote>
+
+<p>When you dealing with real world data, the data has multiple scales, it is a problem related to
+the <strong>granularity</strong> of the data.</p>
+
+<p>So, <strong>the idea of</strong> hierachical clustering is instead of picking the number of clusters, build
+a hierachy.</p>
+
+<blockquote>
+  <p>top levels - coarse effects. low levels - fine grained</p>
+</blockquote>
+
+<hr />
+
+<h2 id="two-strategies">Two Strategies</h2>
+
+<h3 id="top-down-a-idtopa">Top down <a id="top"></a></h3>
+
+<blockquote>
+  <p>start with all items in one cluster, split recursively</p>
+</blockquote>
+
+<p><strong>Hierachical K-Means</strong> <a id="kmeans"></a></p>
+
+<p>We know how to split the data into fine number of clusters (e.g., number = 2).</p>
+
+<ul>
+  <li>run K-means algorithm on the original data $x_1 \dots x_n$</li>
+  <li>for each of the clustering clusters: $c_j$ $j = 1 \dots k$
+    <ul>
+      <li>recursively run K-means on points in $c_j$</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="http://i.imgur.com/eCvzEgL.png" alt="Imgur" /></p>
+
+<p><strong>Advantage:</strong> Fast</p>
+
+<p><strong>Disadvantage:</strong> Greedy, can’t cross boundries. Nearby points may end up in different clusters.</p>
+
+<h3 id="bottom-up-a-idbottoma">Bottom up <a id="bottom"></a></h3>
+
+<blockquote>
+  <p>start with singletons. Merge by some criteria.</p>
+</blockquote>
+
+<p><strong>Agglomerative clustering</strong> <a id="agglomerative"></a></p>
+
+<p>Idea: ensure nearby points end up in the same cluster</p>
+
+<p>Start with a collection $C$ of $n$ singleton clusters</p>
+
+<ul>
+  <li>each cluster contains one data point: $c_i = $ {$x_i$}</li>
+</ul>
+
+<p>Rpeat until only one cluster is remain:</p>
+
+<ul>
+  <li>find a pair of clusters that is closest</li>
+  <li>merge the cluster $c_i, c_j$ into a new cluster $c_{i + j}$</li>
+  <li>rename $c_i, c_j$ from the collection $C$, add $c_{i + j}$</li>
+</ul>
+
+<blockquote>
+  <p>This is not the distance between two instances. This is the distance between two clusters.</p>
+</blockquote>
+
+<p><img src="http://i.imgur.com/qKnAzqd.png" alt="Imgur" /></p>
+
+<p>It produces a dendrogram: hierachical tree of clusters</p>
+
+<p>In this algorithm, you need to define a <strong>distance metric</strong> over clusters.</p>
+
+<p><strong>Disadvantages:</strong> Slow (much slower than K-means)</p>
+
+<p><strong>Advantages:</strong> If you want to produce a flat clustering, you pick a threshold on the distance, and cut the tree. Once you have a 
+dendrogram, you can cut the data into any granularity.</p>
+
+<hr />
+
+<h2 id="distance-metrics-a-iddistancea">Distance metrics <a id="distance"></a></h2>
+
+<h3 id="single-link-a-idsinglea">Single Link <a id="single"></a></h3>
+
+<p><img src="http://i.imgur.com/QIPm4Zx.png" alt="Imgur" /></p>
+
+<p>Look for distance between cloest elements in clusters.</p>
+
+<p><strong>Advantages:</strong> Simple, in many situations, it works well.</p>
+
+<p><strong>Disadvantages</strong> Produce long chains. Eventually, you will put two points that far away into a same cluster.</p>
+
+<h3 id="complete-link-a-idcompletea">Complete Link <a id="complete"></a></h3>
+
+<p><img src="http://i.imgur.com/t1DZPnM.png" alt="Imgur" /></p>
+
+<p>Measure the distance between farthest elements in clusters.</p>
+
+<p>But once compute the distance, still compare the cloest.</p>
+
+<p>In the above two measures, they produce different results. In <strong>Single Link</strong>, red and yellow will combine. 
+However, In <strong>Complete Link</strong>, red and yellow will not combine, instead, yellow will combine with blue.</p>
+
+<h3 id="average-link-a-idaveragea">Average Link <a id="average"></a></h3>
+
+<p><img src="http://i.imgur.com/FEghD6J.png" alt="Imgur" /></p>
+
+<p>Average of all pairwise distance. Less affected by outliers.</p>
+
+<h3 id="centroids-a-idcentroidsa">Centroids <a id="centroids"></a></h3>
+
+<p><img src="http://i.imgur.com/QKh8jiW.png" alt="Imgur" /></p>
+
+<p>Distance between Centroids (means) of two clusters</p>
+
+				</span>
+				<div class="journal-date">Published 11 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	 
+		<a class="tag-cont" href="/tags.html#Clustering-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Clustering</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

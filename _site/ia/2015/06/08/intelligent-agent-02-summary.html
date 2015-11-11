@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Intelligent Agent 02 Summary</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#IA-ref" title="IA">
+	IA
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Intelligent Agent 02 Summary<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<p>Personalised Search</p>
+
+<ol>
+  <li><a href="#personal">Personalized Search</a>
+    <ul>
+      <li><a href="#expansion">Query Expansion</a></li>
+      <li><a href="#filtering">Search results filtering</a></li>
+      <li><a href="#gathering">Personal information gathering</a>
+        <ol>
+          <li><a href="#implicit">Implicit</a></li>
+          <li><a href="#explicit">Explicit</a></li>
+        </ol>
+      </li>
+      <li><a href="#disadvantages">Disadvantages</a></li>
+    </ul>
+  </li>
+  <li><a href="#mobile">Personalized Mobile Search Engine</a>
+    <ul>
+      <li><a href="#architecture">Client-Server architecture</a>
+        <ol>
+          <li><a href="#client">Client</a></li>
+          <li><a href="#server">Server</a></li>
+        </ol>
+      </li>
+      <li><a href="#evalution">Evaluation</a></li>
+    </ul>
+  </li>
+  <li><a href="#pagerank">PageRank</a>
+    <ul>
+      <li><a href="#hypothesis">Two hypothesis</a>
+        <ol>
+          <li><a href="#quantitative">Quantitative</a></li>
+          <li><a href="#qualitative">Qualitative</a></li>
+        </ol>
+      </li>
+      <li><a href="#initial">Initial Stage</a></li>
+      <li><a href="#update">Update Stage</a></li>
+    </ul>
+  </li>
+</ol>
+
+<!--more-->
+
+<h1 id="intelligent-agent-summary">Intelligent Agent Summary</h1>
+
+<h2 id="personalized-search-a-idpersonala">Personalized Search <a id="personal"></a></h2>
+
+<blockquote>
+  <p>Personalized search refers to search experiences that are tailored specifically to an individual’s interests 
+by incorporating information about the individual beyond specific query provided.</p>
+</blockquote>
+
+<p>Two general approaches to personalizing search results:</p>
+
+<ol>
+  <li>
+    <p>Modifying the user’s query <a id="expansion"></a></p>
+  </li>
+  <li>
+    <p>Re-ranking search results <a id="filtering"></a></p>
+  </li>
+</ol>
+
+<p>Modifying the user’s query is also called <strong>query expansion</strong>, 
+<strong>query expansion</strong> involves evaluting a user’s input (typed into the 
+search query area and sometimes other type of data), and expanding the 
+search to match additional documents.</p>
+
+<p>Re-ranking search results are also called <strong>Search results filtering/adaptation</strong> 
+are based on personal preference, therefore, the data type can be various.</p>
+
+<p>Personal information gathering: <a id="gathering"></a></p>
+
+<ol>
+  <li><strong>Implicit:</strong> to gather data about the user in an implicit, non-invasive way <a id="implicit"></a>
+    <ul>
+      <li>click-through data</li>
+      <li>dwell time on page</li>
+      <li>bookmarks &amp; tags</li>
+    </ul>
+  </li>
+  <li><strong>Explicit:</strong> user supplied information <a id="explicit"></a></li>
+</ol>
+
+<p>Typically use supervised machine learning:</p>
+
+<ol>
+  <li>
+    <p>Relevant(Binary: Yes or No)</p>
+  </li>
+  <li>Training data:
+    <ul>
+      <li>Labeled data</li>
+      <li>Assume clicked docs are relevent</li>
+    </ul>
+  </li>
+  <li>Machine learning methods</li>
+</ol>
+
+<ul>
+  <li>KNN</li>
+  <li>SVM</li>
+  <li>…</li>
+</ul>
+
+<hr />
+
+<h3 id="disadvantages-for-personalised-search-a-iddisadvantagesa">Disadvantages for Personalised Search <a id="disadvantages"></a></h3>
+
+<ol>
+  <li>
+    <p>The personalised search narrows the search space. Therefore, it might limits the diversity of search result.</p>
+  </li>
+  <li>
+    <p>Privacy issues. Selling users’ profile or preference to other companies.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="personalised-mobile-search-engine-a-idmobilea">Personalised Mobile Search Engine <a id="mobile"></a></h3>
+
+<p><strong>Motivation:</strong> It’s hard for user to type on Mobile. So the query can
+be short. PMSE aims to tailor search result to user’s preference.</p>
+
+<h4 id="terms">Terms</h4>
+
+<ol>
+  <li>
+    <p><strong>Ontology:</strong> Formal naming, defining and ordering of the entities in a 
+given domain, and their interrelationships.</p>
+  </li>
+  <li>
+    <p><strong>ARR:</strong> Average Relevant Ranking</p>
+  </li>
+  <li>
+    <p><strong>Entropy:</strong> The uncertainty about the information content</p>
+  </li>
+  <li>
+    <p><strong>Top-N Precision:</strong> Precision of results, considering only those in the top $N$ entities</p>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="client-server-architecture-a-idarchitecturea">Client-Server architecture <a id="architecture"></a></h3>
+
+<p><strong>Client:</strong> The client is the user’s interface, it collects user’s data (clickthrough data, ontology data, history) and send them <a id="client"></a>
+to the server. It displays the results. (<strong>Naive Bayes &amp; Voting System</strong>)</p>
+
+<p><strong>Server:</strong> Responsile for forwarding queries to a search engine and extracts the ontological information from the results and stores it. <a id="server"></a>
+Then, the ontological information combines with the input vectors in RSVM training to create weighted content. Then, combines with GPS 
+data. In the end, use these information to re-rank the results.</p>
+
+<p><strong>Evaluation of Personalised search system</strong> <a id="evaluation"></a></p>
+
+<p>Quantitative &amp; Qualitative</p>
+
+<p>User rank all search results $\Rightarrow$ ARR and Top-N precision. There is no qualitative data collected in this experiment.</p>
+
+<hr />
+
+<h3 id="pagerank">PageRank</h3>
+
+<p><strong>Terms</strong></p>
+
+<pre><code>Forward links: a hyperlink to a page 
+Back links: a hyperlink to the current page
+</code></pre>
+
+<p>PageRank is based on two hypothesis: <a id="hypothesis"></a></p>
+
+<ol>
+  <li>
+    <p><strong>Quantitative hypothesis:</strong> More back links, more important the page <a id="quantitative"></a></p>
+  </li>
+  <li>
+    <p><strong>Qualitative hypothesis:</strong> The link from highly ranked Page has high weight <a id="qualitative"></a></p>
+  </li>
+</ol>
+
+<p><strong>Initial Stage:</strong> Built a network based on links. Assign same PageRank value to each page. <a id="initial"></a></p>
+
+<p><strong>Update Stage:</strong> Every Page divide its PageRank value equally by the number of its forward links. Therefore, every link has its weight. <a id="update"></a></p>
+
+<p>$Link weight = \frac{PageRank}{\parallel forward links \parallel}$</p>
+
+<p>Because there are some dangling links which has 0 forward link. The PageRank formula makes use of damping factor $q$. The meaning of 
+$q$ is the probability of a user continue browsing from current page. $1 - q$ is the probability that user stop browsing.</p>
+
+<p>PageRank formula:</p>
+
+<p>$PR = \sum_{n} \text{backlink’s weight} \times q \times (1 - q)$</p>
+
+
+				</span>
+				<div class="journal-date">Published 08 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#IA-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">IA</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

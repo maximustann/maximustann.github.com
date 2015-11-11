@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Discussion with Yi</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Mach-ref" title="Mach">
+	Mach
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Discussion with Yi<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<p>I had a nice discussion with Yi Mei last week.</p>
+
+<p>Some important intuition was mentioned in the conversation:</p>
+
+<ol>
+  <li>Heuristic algorithm can be interpreter as a sampling process</li>
+</ol>
+
+<!--more-->
+
+<p><img src="http://i.imgur.com/VTC1wZ9.png" alt="Imgur" /></p>
+
+<p>We are basically sampling from the search space. 
+Two main concerns, because there are many local minima, we have two criterions:</p>
+
+<ol>
+  <li>Diversity</li>
+  <li>Convergence</li>
+</ol>
+
+<p>We mainly want to keep the sampling diversity enough so that we 
+don’t stuck at local minima(although it is inevitable because the 
+global optimal is unknown). Meanwhile, we also want to quickly converge so that the algorithm runs fast.</p>
+
+<ol>
+  <li>It is hard to do theoretical over the heuristic algorithms, 
+because it involve not only stochastic parameters but also highly depend on the test dataset(overfitting to the data).</li>
+</ol>
+
+<p>But the most important fact is that it works, it works perfectly well and beyond what the most advanced math could do. Because so far the apply math could not really solve the complicated real world problems. Math always try to simplified problems until it can be solved but when it looks back, the problem is over simplified so that it becomes useless.</p>
+
+<p>On the other hand, heuristic algorithms does not have many concrete the theory. Basically what it does is sampling. Based on the simple assumption of affinity. The search space might not be completely discrete. However, because in the high dimensionality world, no algorithm could guarantee to find global minima. Everyone just care about find a reasonably good result in a feasible period of time. The heuristic algorithm does just that.</p>
+
+<p>Every “genetic operator” like mutation, crossover serves the two main criterions mentioned above.</p>
+
+<p>Crossover can be see as a convergence mechanism. Mutation can be see as a “jump out” mechanism that jump out the local minima and keep the population diverse enough.</p>
+
+<p>So as we can’t really do theoretical study of heuristic algorithms. What we can do is sensitivity analysis which can be interpreted as:</p>
+
+<ol>
+  <li>intuition</li>
+  <li>empirical</li>
+</ol>
+
+<p>Okay, so intuition comes from (might be) background knowledge or domain specific knowledge of the problem that you’re going to solve.</p>
+
+<p>So, heuristic algorithm is just like other machine learning algorithms, you have to has more or less domain specific knowledge about the problem.</p>
+
+<p>Empirical can be explained as, when we don’t have such intuition, maybe we don’t really know what kind of parameter will do well in this kind of data or problem. What we can do is basically try.</p>
+
+<p>It kinds make the study an experimental study. That’s kind of strange in terms of computer science because there is no guarantee about the results where in computer science, most of things are deterministic.</p>
+
+<hr />
+
+<p>First we make a convergence graph so that it is easy for us to analyze the behavior of the heuristic algorithm. It allows us easily compare between different algorithms and see if they are stuck at local minima.</p>
+
+<p>The phenotype-genotype redundancy problem seems an issue. Which should be considered as the main problem with the current algorithm.</p>
+
+<hr />
+
+<p>For the NSGA-II initialization,  because adding an instance could potentially drag the population toward to this instance, therefore, it still tend to cause the population “not” diversity enough. Because when the population starts to move towards this instance, they already miss the chance to go the opposite way where might exist better solutions. Therefore, one of the important measure is convergence.</p>
+
+<p><img src="http://i.imgur.com/9Zedvtd.png" alt="Imgur" /></p>
+
+<p>Maybe the NSGA-II with initialization would be fast at first, because adding an instance would accelerate the convergence. But after a certain generations, because NSGA-II does not really moving towards any direction, it is less likely to stuck at same local minimum, so it could find better solutions.</p>
+
+<p>Therefore, as we analyse the convergence, we will confident to claim whether our algorithm is better than the original in both time efficiency and solution quality.</p>
+
+<p>So there are mainly two convergence measurements that everyone in the field would do:</p>
+
+<ol>
+  <li>Inverted generational Distance (IGP)</li>
+  <li>Hypervolume</li>
+</ol>
+
+<p>Both are try to measure the quality of the Pareto front in terms of diversity and convergence.</p>
+
+<hr />
+<p>Discussion about Memetic search
+The basic idea is doing local search when there is a local minima found.</p>
+
+<p>Therefore, we could apply local search over (maybe) 5% top results.
+This kind of idea could accelerate the convergence as well as does not affect diversity. If we apply incremental fitness function evaluation, the cost of local search is actually small. It seems like a quite reasonable thing to do.</p>
+
+<hr />
+
+<p>Discussion about:</p>
+
+<ol>
+  <li>Constructive Heuristic:
+    <ul>
+      <li>greedy</li>
+      <li>…</li>
+    </ul>
+  </li>
+  <li>Meta-heuristic: like a superset of constructive heuristic
+    <ul>
+      <li>PSO</li>
+    </ul>
+  </li>
+  <li>Hyper-heuristic
+    <ul>
+      <li>automatically decide of what meta-heuristic algorithm to use</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The above is for the NSGA-II.
+Now the PSO issue, because of the phenotype and genotype mapping issue. It potentially waste some computation power therefore the continuous PSO can be improved. The first thing we might do is observed the results from every generation, which we would see how much computation power is actually wasted.</p>
+
+<p>Because it is mainly a representation issue, the most straightforward solution is use a binary algorithm to solve this problem. Therefore, we are going to use binary PSO. So far we compared two multi-objective algorithms Multi-objective PSO and NSGA-II, but we don’t have a single-objective algorithm to compare with.</p>
+
+<p>We can also do convergence study on multi-objective PSO, see if it fast convergence.</p>
+
+<hr />
+
+<p>So basically, there are two things to do this tri:</p>
+
+<ol>
+  <li>Continue doing evaluation of the current algorithm by analysing the convergence.</li>
+  <li>Develop a single-objective binary PSO and imply on this problem.</li>
+</ol>
+
+<p>Some new idea about the project or general heuristic algorithms.</p>
+
+<p>Basic idea is, we are developing algorithms that applied on specific dataset, which is overfitting. Can we do generalization on the dataset first and apply algorithm on the generalization dataset, therefore, it kinds of prove the algorithm works well in this kind of problem without huge modification.</p>
+
+<p>By applying generalization over dataset, I mean maybe we can apply clustering algorithm (e.g., EM) over the dataset and try to make an assumptions over the dataset says: the dataset is constructed by several  gaussian distribution. Maybe we can construct fake test dataset by randomly generate from these distributions. So that we can make a claim that our algorithm does not overfitting to a specific dataset.</p>
+
+
+				</span>
+				<div class="journal-date">Published 22 July 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Machine Learning-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Machine Learning</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

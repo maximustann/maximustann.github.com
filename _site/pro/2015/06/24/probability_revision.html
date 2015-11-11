@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Probability Revision</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Pro-ref" title="Pro">
+	Pro
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Probability Revision<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<!--more-->
+
+<h2 id="math-notations">Math notations</h2>
+
+<p>$\sum_x f(x) \equiv \sum_{s \in dom(x)} f(x = s)$</p>
+
+<p><strong>Definition 1.1</strong> (Rules of Probability for Discrete Variables)</p>
+
+<p>The summation of the probability over all the state is 1:</p>
+
+<p>$\sum_{x \in dom(x)} p(x = x) = 1$</p>
+
+<p>This is called normalisation condition. We write $\sum_x p(x) = 1$ for short.</p>
+
+<p>Two variables $x$ and $y$ can interact through</p>
+
+<p>$p(x, y) = p(x) + p(y) - p(x \cap y)$</p>
+
+<p><strong>Definition 1.2 (Set notation) An alternative notation in terms of set theory is to write</strong></p>
+
+<p>$p(\text{x or y}) \equiv p(x \cup y)$</p>
+
+<p>$p(x, y) \equiv p(x \cap y)$</p>
+
+<p><strong>Definition 1.3 (Marginals)</strong></p>
+
+<p>$p(x) = \sum_y p(x, y)$</p>
+
+<p><strong>Definition 1.4 (Conditional Probability / Bayes’ Rule)</strong></p>
+
+<p>$p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}$</p>
+
+<p><strong>Definition 1.5 (Probability Density Functions) For a continuous variable x, the probability density f(x) is defined
+such that</strong></p>
+
+<p>$f(x) \geq 0, \int_{-\infty}^\infty f(x) \mathrm{d}x = 1$</p>
+
+<p>and the probability that $x$ falls in an interval [a, b] is given by</p>
+
+<p>$p(a \leq x \leq b) = \int_a^b f(x) \mathrm{d}x$</p>
+
+<p>Unlike probabilities, probability densities can take positive values greater than 1.</p>
+
+<p><strong>Definition 1.6 (Independence)</strong></p>
+
+<p>$p(x, y) = p(x)p(y)$</p>
+
+<p>Provided that $p(x) \neq \text{0 and }p(y) \neq$0 independence of x and y is equivalent to</p>
+
+<p>$p(x \mid y) = p(x)$</p>
+
+<p>$\Leftrightarrow$</p>
+
+<p>$p(y \mid x) = p(y)$</p>
+
+<p>we write $x \bot y$</p>
+
+<p><strong>Definition 1.7 (Conditional Independence)</strong></p>
+
+<p>$X \bot Y \mid Z$</p>
+
+<p>denotes that the two sets of variables $X$ and $Y$ are independent of each other provided we know the state of the set
+of variables $Z$. For conditional independence, $X$ and $Y$ must be independent given all states of $Z$, means:</p>
+
+<p>$p(X, Y \mid Z) = p(X \mid Z)p(y \mid Z)$</p>
+
+<p>If $X$ and $Y$ are not conditionally independent, they are conditionally dependent, This is written:</p>
+
+<p>$X \top Y \mid Z$</p>
+
+<p>Similarly $X \top Y \mid \emptyset$ can be written as $X \top Y$</p>
+
+<hr />
+
+<h2 id="probabilistic-reasoning">Probabilistic Reasoning</h2>
+
+<p>The central paradigm of probabilistic reasoning is to identify all relevant variables $x_1, \dots, x_N$ in the 
+environment, and make a probabilistic model $p(x_1, \dots, x_N)$ of their interaction. Reasoning(inference) is then 
+performed by introducing <em>evidence</em> that sets variables in known states, and subsequently computing probabilities
+of interest, conditioned on this evidence.</p>
+
+<hr />
+
+<h2 id="prior-likelihood-and-posterior">Prior, Likelihood and Posterior</h2>
+
+<p>Much of science deals with problems of the form: tell me something about the variable $\theta$ given that 
+I have observed data $D$ and have some knowledge of the underlying data generating mechanism. Our interest is 
+then the quantity</p>
+
+<p>$p(\theta \mid D) = \frac{p(D \mid \theta)p(\theta)}{p(D)}$</p>
+
+<p>We know, for continuous situation,</p>
+
+<p>$p(D)$ = $\int_{\theta}p(D, \theta)$</p>
+
+<p>$= \int_{\theta} p(D \mid \theta)p(\theta)$</p>
+
+<p>Therefore,</p>
+
+<p>$p(\theta \mid D) = \frac{p(D \mid \theta)p(\theta)}{\int_{\theta}p(D \mid \theta)p(\theta)}$</p>
+
+<p>This shows how form a forward or <em>generative model</em> $p(D \mid \theta)$ of the dataset, and coupled with a <em>prior</em> belief
+$p(\theta)$ about which variable values are appropriate, we can infer the <em>posterior</em> distribution $p(\theta \mid D)$
+of the variable in light of the observed data. The <em>most probable a posteriori (MAP)</em> setting is that which maximises
+the posterior,$\theta{\ast} = \text{arg }max_{\theta}$ $p(\theta \mid D)$, namely that $\theta$ that maximises the Likelihood $p(D \mid \theta)$
+of the model generating the observed data.</p>
+
+<p><img src="http://i.imgur.com/bmWzqrR.png" alt="Imgur" /></p>
+
+<p>The interesting thing is the probability are reverted. We know 
+about evidence B, but we really care about the variable A.</p>
+
+<p>For example B is a test result. This diagnostic reasoning which is from 
+evidence to its causes is turned up-side-down into cause-reasoning.</p>
+
+<p>Worth noting that the marginal likelihood or evidence $p(B)$ is hard 
+to compute. It is always expanded by total probability formula.</p>
+
+<p>$p(B) = \displaystyle\sum_a p(B \mid A = a)p(A = a)$</p>
+
+<p><img src="http://i.imgur.com/FPhy3Cu.png" alt="Imgur" /></p>
+
+<p>How many parameters does it take to specify the entire Bayes network?</p>
+
+<p>The answer is 3.</p>
+
+<p>It takes one parameter to specify $p(A)$, and two parameters to 
+specify $p(B \mid A)$ and $p(B \mid \neg A)$</p>
+
+<hr />
+
+<h2 id="computing-trick">Computing trick</h2>
+
+<p>we know:</p>
+
+<p>$p(A \mid B) + p(\neg A \mid B) = 1$</p>
+
+<p>We specify:</p>
+
+<p>$p’(A \mid B) = p(B \mid A)p(A)$</p>
+
+<p>$p’(\neg A \mid B) = p(B \mid \neg A)p(\neg A)$</p>
+
+<p>Therefore,</p>
+
+<p>$p(A \mid B) = \eta * p’(A \mid B)$</p>
+
+<p>$p(\neg A \mid B) = \eta *  p’(\neg A \mid B)$</p>
+
+<p>$\eta = \frac{1}{p’(A \mid B) + p’(\neg A \mid B)}$</p>
+
+<p>This could let us avoid calculating the evidence $p(B)$</p>
+
+<hr />
+
+<h2 id="graphs">Graphs</h2>
+
+<p><strong>Definition 2.1 (Graphs)</strong></p>
+
+<p>A graph G consists of nodes (vertices) and edges (links) between nodes. Edges may be directed or undirected. Edges can also have associated weight.</p>
+
+
+				</span>
+				<div class="journal-date">Published 24 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Probability-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Probability</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+

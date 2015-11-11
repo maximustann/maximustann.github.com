@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Model Thinking 01 Summary</title>
+    <meta name="description" content="">
+	
+	<meta name="author" content="Max">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+	{
+		tex2jax: 
+			{
+				inlineMath: [
+								['$','$'], 
+								['\\(','\\)']]
+			}
+	});
+	</script>
+
+
+	<script type="text/JavaScript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+	<div id="page-container">
+		<div>
+			<nav>
+
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags">Tags</a></li>
+					
+				  
+				
+			 
+			
+			
+		</ul>
+		<!--<form id="nav-search" method="GET" action="/search.html">-->
+		<!--<div id="search-right-pix">-->
+		<!--<div id="search-left-pix">-->
+		<!--<div id="search-center-pix">-->
+		<!--<div id="search-icon-pix"></div>-->
+		<!--<input name="query" type="text" placeholder="Search">-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</form>-->
+		<form id="nav-search" action="search.html" width="80">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+
+			<div id="page-content">
+			
+<div id="page-content">
+	<div class="cont932">
+	<div id="journal-articles-block">
+		<div class="journal-article">
+			<div class="journal-post-info">
+				<div class="journal-cat-box">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#Model-ref" title="Model">
+	Model
+
+</a>
+</div>
+				
+				</div>
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title">Model Thinking 01 Summary<span class="author"></span>
+				</h1>
+				<span class="the-article">
+				
+<ol>
+  <li><a href="#sorting">Sorting</a>
+    <ul>
+      <li><a href="#schelling">Schelling</a></li>
+    </ul>
+  </li>
+  <li><a href="#peer">Peer Effects</a>
+    <ul>
+      <li><a href="#granovetter">Granovetter</a></li>
+      <li><a href="#standing">Standing Ovation</a></li>
+    </ul>
+  </li>
+  <li><a href="#identification">Identification</a></li>
+</ol>
+
+<!--more-->
+
+<h2 id="lecture-one">Lecture One</h2>
+
+<h3 id="sorting-and-peer-effects">Sorting and Peer Effects</h3>
+
+<p><img src="http://i.imgur.com/TvtYxb7.png?1" alt="Imgur" /></p>
+
+<p><strong>Sorting:</strong> When you looking at this map, the segregation is quite clear. This shows people choose to live with people a lot like they do.</p>
+
+<p><strong>Peer Effects:</strong> We change our behaviors to match other people. For example, if you hang out with a group of people who smoke, you will probably start smoking.</p>
+
+<p>So, these forces make people to choose where they live and what kind of 
+people they wanna to be, to believe what other people believe, to act like other people.</p>
+
+<p>So, we are going to construct some models to understand these behaviors.</p>
+
+<hr />
+
+<h3 id="models">Models</h3>
+
+<ol>
+  <li>
+    <p>Schelling</p>
+  </li>
+  <li>
+    <p>Granovetter</p>
+  </li>
+  <li>
+    <p>Standing Ovation</p>
+  </li>
+</ol>
+
+<hr />
+
+<h4 id="two-model-categories">Two Model Categories</h4>
+
+<p><strong>Equation Based Model</strong></p>
+
+<pre><code>Score = 50 + 5 Hours
+</code></pre>
+
+<p>This is a linear model.</p>
+
+<p><strong>Agent Based Model</strong></p>
+
+<ol>
+  <li>
+    <p>individuals (people, countries …)</p>
+  </li>
+  <li>
+    <p>behaviors (If the behavior might be optimize, then the model is called game theory model, each individual optimize its behavior)</p>
+  </li>
+  <li>
+    <p>outcomes</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="sorting-a-idsortinga">Sorting <a id="sorting"></a></h2>
+
+<h3 id="schelling-a-idschellinga">Schelling <a id="schelling"></a></h3>
+
+<p>Schelling try to understand segregation.</p>
+
+<p><img src="http://i.imgur.com/EQni893.png" alt="Segregation" /></p>
+
+<p>Schelling construct an <strong>Agent based model</strong>
+Schelling’s model is about people choosing where to live.
+He simplified the problem:
+Each person now thinking about should I stay or should I move.</p>
+
+<p><img src="http://i.imgur.com/ZMP6ubs.png" alt="Checkerboard" /></p>
+
+<p>For example, the person has been allocated on a checker board, 
+a person live in X, and No.3 is blank. Red represents rich people, grey represents poor people. So, now the person lived in X is thinking about $\frac{3}{7}$ neighbors are like me. Should I stay or leave?</p>
+
+<p>This is called <strong>Threshold based rule</strong>. Based on this threshold, he decided whether move or stay.</p>
+
+<p>The empirical experiments show that the higher the threshold, the 
+stronger segregation there will be until the threshold “hits” on a upper bound that the algorithms will never converge, it just running forever because it never satisfied the requirements.</p>
+
+<p><strong>Tipping phenomenon</strong></p>
+
+<ol>
+  <li>Exodus Tip</li>
+</ol>
+
+<p>One person leave the system causes other people leave.</p>
+
+<ol>
+  <li>Genesis Tip</li>
+</ol>
+
+<p>One person come in, causes other people leave.</p>
+
+<p>One of the important thing that this model tells us is the macro behavior does not consist with what people want.</p>
+
+<hr />
+<p>## Measurement
+### Index Similarity</p>
+
+<p><img src="http://i.imgur.com/N0sN0nd.png" alt="Imgur" /></p>
+
+<p>$Rich = 12 \times 10 + 6 \times 5 = 150 $</p>
+
+<p>$Poor = 6 \times 10 + 4 \times 5 = 90$</p>
+
+<p>$BlueIndex = \mid \frac{10}{150} - \frac{0}{90} \mid = \frac{1}{15}$</p>
+
+<p>$YellowIndex = \mid \frac{0}{150} - \frac{10}{90} \mid = \frac{1}{9}$</p>
+
+<p>$GreenIndex = \mid \frac{5}{150} - \frac{5}{90} \mid = \frac{1}{45}$</p>
+
+<p>$Total = 12 \times \frac{1}{15} + 6 \times \frac{1}{9} + 6 \times \frac{1}{45} = \frac{72}{45}$</p>
+
+<p>Normally, we divide the result by 2 to scale it down</p>
+
+<p>$\frac{Total}{2}= \frac{72}{90} = 0.8 $</p>
+
+<p>Therefore, the segregation is 80%.</p>
+
+<hr />
+
+<h3 id="peer-effects-a-idpeera">Peer Effects <a id="peer"></a></h3>
+
+<p><strong>Granovetter</strong> <a id="granovetter"></a></p>
+
+<ol>
+  <li>
+    <p>N Individuals</p>
+  </li>
+  <li>
+    <p>Each has a Threshold</p>
+    <ul>
+      <li>$T_j$ for person j</li>
+      <li>Join if $T_j$ others join</li>
+    </ul>
+  </li>
+</ol>
+
+<p>If you have 5 friends, the threshold for each of them willing to buy a purple hat is:</p>
+
+<pre><code>0 1 1 1 2
+</code></pre>
+
+<p>0 means he is not influenced by other people, just wanna buy a purple hat.</p>
+
+<p>1 means if only one of his friend get a purple hat, he will also get one</p>
+
+<p>In the end, all people wearing purple hat.</p>
+
+<p>Another example:</p>
+
+<p>If you have 5 friends,</p>
+
+<pre><code>0 1 2 3 4
+</code></pre>
+
+<p>In the end, all people wearing purple hat, but actually not so many people really want one. This is tail wagged the dog.</p>
+
+<p>Collection Action</p>
+
+<p>More Likely if:</p>
+
+<ul>
+  <li>
+    <p>Lower Thresholds</p>
+  </li>
+  <li>
+    <p>More Variation in thresholds</p>
+  </li>
+</ul>
+
+<p>That’s why it is very hard to predict collective behavior, because you not only need to know the average threshold, you also need to know the distributions, and how people connect to each other.</p>
+
+<hr />
+
+<p><strong>Standing Ovations</strong> <a id="standing"></a></p>
+
+<p>After a show, Do I stand up or not? You don’t have much time to decide, 
+you have a short time to make a judgement. This simplified this problem.</p>
+
+<p>Standing Ovations is very suitable to let people thinking about rule based domain.</p>
+
+<ul>
+  <li>
+    <p>Peer Effect: other people stand, you stand</p>
+  </li>
+  <li>
+    <p>Information: other people seems know more information, you learn from them</p>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <p>Threshold to Stand: $T$</p>
+  </li>
+  <li>
+    <p>Quality: $Q$</p>
+  </li>
+  <li>
+    <p>Signal: $S = Q + E$</p>
+  </li>
+  <li>Initial Rule
+    <ul>
+      <li>If $S &gt; T$,  Stand</li>
+    </ul>
+  </li>
+  <li>Subsequent Rule
+    <ul>
+      <li>Stand if more X% stand</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Claim 1:</strong> Higher Quality $Q$, Stand if $Q + error &gt; T$</p>
+
+<p><strong>Claim 2:</strong> Lower Threshold $T$, more people stand, if $Q + error &gt; T$</p>
+
+<p><strong>Claim 3:</strong> Lower X, more ovations. Stand if more than X%</p>
+
+<p>Signal: $S = Q + E$</p>
+
+<ul>
+  <li>
+    <p>$E = Error$</p>
+  </li>
+  <li>
+    <p>$E = Diversity$ People could have different preference or taste</p>
+  </li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>1000 people
+T = 60
+Q = 50
+T &lt; Q Nobody will stand up
+
+E in [-50, +50]
+</code></pre>
+
+<p><img src="http://i.imgur.com/pmFNIEv.jpg" alt="Imgur" /></p>
+
+<p>So, large variation, more people will stand up</p>
+
+<p>So, in what situation, the Error $E$ is high?</p>
+
+<ul>
+  <li>
+    <p>Audience</p>
+
+    <ul>
+      <li>
+        <p>Diverse</p>
+      </li>
+      <li>
+        <p>Unsophisticated</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Performance</p>
+
+    <ul>
+      <li>
+        <p>Multidimensional</p>
+      </li>
+      <li>
+        <p>Complex</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <p>Higher Quality</p>
+  </li>
+  <li>
+    <p>Lower Threshold</p>
+  </li>
+  <li>
+    <p>Larger Peer Effects</p>
+  </li>
+  <li>
+    <p>More Variation</p>
+  </li>
+</ol>
+
+<p>Two more facts could influence this model:</p>
+
+<ol>
+  <li>Use Celebrities/Academic (People in front don’t aware other people,
+                     People in back knows everyone, but nobody see them)</li>
+  <li>Large group</li>
+</ol>
+
+<hr />
+
+<h3 id="where-can-we-apply-the-model">Where can we apply the model?</h3>
+
+<p>Collective Action</p>
+
+<p>Academic Performance</p>
+
+<p>Urban Renewal</p>
+
+<p>Fitness/Health</p>
+
+<hr />
+
+<h3 id="identification-a-ididentificationa">Identification <a id="identification"></a></h3>
+
+<p>Schelling or Standing Ovation</p>
+
+<p>Homophily or Peer Effect?</p>
+
+<p>Sorting:</p>
+
+<pre><code>AABBAA
+
+BBABBA
+</code></pre>
+
+<p>We will observe Bs move to second group</p>
+
+<p>Peer Effects:</p>
+
+<p>We will observe Bs turn into A.</p>
+
+<p>However, if we only take a snapshot, there is no way to distinguish to identify it. We need more data, dynamic data. On the other hand, it guide us to collect the data.</p>
+
+				</span>
+				<div class="journal-date">Published 05 June 2015</div>
+				<div class="journal-tags">
+				
+				
+	 
+		<a class="tag-cont" href="/tags.html#Model-ref">
+			<div class="tag-l"></div>
+			<div class="tag-c">Model</div>
+			<div class="tag-r"></div>
+		</a>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+	<div class="clearboth"></div>
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'maximustanngithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+	<div class="clearboth"></div>
+</div>
+
+
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Max.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#Unix-ref">
+    		Unix <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Model-ref">
+    		Model <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#IA-ref">
+    		IA <span>7</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Clu-ref">
+    		Clu <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Pro-ref">
+    		Pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Gra-ref">
+    		Gra <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Mach-ref">
+    		Mach <span>16</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#pro-ref">
+    		pro <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#Cloud-ref">
+    		Cloud <span>1</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://maximustann.github.io">Max's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:maximus.tann@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/maximustann">Github</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+</body>
+</html>
+
