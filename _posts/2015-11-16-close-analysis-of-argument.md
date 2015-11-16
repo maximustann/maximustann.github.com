@@ -74,6 +74,10 @@ Three ways to do guarding:
 2. Probability
 3. Mental
 
+###Extent
+
+Use weaker terms: All $\Rightarrow$ Most $\Rightarrow$ Many $\Rightarrow$ Some
+
 
 ---
 
