@@ -50,28 +50,28 @@ Stage I: Close Analysis
 
 Stage II: GET Down to basics
 
-	1. Remove all excess verbiage 
-	2. List all explicit premises and conclusion in standard form
+1. Remove all excess verbiage 
+2. List all explicit premises and conclusion in standard form
 
 Stage III: Sharpen Edges
 
-	1. Clarify where needed
-	2. Break up where possible without distortion
+1. Clarify where needed
+2. Break up where possible without distortion
 
 Stage IV: Organize parts
 	
-	1. Divide the argument into sub-arguments, and arrange them in order 
+1. Divide the argument into sub-arguments, and arrange them in order 
 
 Stage V: Fill in gaps
 
-	1. Assess whether each argument is valid 
-	2. Add suppressed premises where needed 
-	3. Check each premise for truth 
-	4. Qualify premises to make them true where needed if possible 
+1. Assess whether each argument is valid 
+2. Add suppressed premises where needed 
+3. Check each premise for truth 
+4. Qualify premises to make them true where needed if possible 
 
 Stage VI: Assess the argument 
 	
-	1. Conclude
+1. Conclude
 
 
 
