@@ -7,7 +7,6 @@ tags: ["Reason"]
 ---
 {% include JB/setup %}
 
-<!--more-->
 
 Virtues in arguments:
 
@@ -20,6 +19,8 @@ In a deductive argument, the conclusion should **follow from** the premises
 
 A **deductive** argument is supposed to be valid.
 An **Inductive** argument is not supposed to be valid.
+
+<!--more-->
 
 ##Validity
 
@@ -98,4 +99,5 @@ saying too much.
 
 1. Linear structure: One argument depends on another argument linearly
 2. Branching structure: Multiple premises support one argument
+3. Joint structure: two premises working together (&)
 
